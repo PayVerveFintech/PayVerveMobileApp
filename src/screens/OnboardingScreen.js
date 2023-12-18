@@ -2,6 +2,7 @@ import { View, Image, Text, TouchableOpacity, ImageBackground } from 'react-nati
 import { styles } from '../styles/styles';
 import SignUp from './SignUp';
 import { Login } from './Login';
+import EmailConfirmation from './EmailConfirmation';
 
 const OnboardingScreen = () => {
     return (
@@ -48,7 +49,7 @@ const OnboardingScreen = () => {
 
                     {/* Login Button */}
                     <TouchableOpacity
-                        onPress={Login}
+                        onPress={EmailConfirmation}
                         style={styles.loginButton}
                     >
                         <Text style={

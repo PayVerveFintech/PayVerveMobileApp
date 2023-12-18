@@ -1,43 +1,45 @@
-import { KeyboardAvoidingView, Platform, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
-import { styles } from "../styles/styles";
-import { useState } from "react";
-import EmailConfirmation from "./EmailConfirmation";
+import React, { useState } from 'react';
+import {
+    KeyboardAvoidingView,
+    Platform,
+    ScrollView,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    View,
+} from 'react-native';
+import { styles } from '../styles/styles';
+import EmailConfirmation from './EmailConfirmation';
+import { Login } from './Login';
 
-const SignUp = () => {
-
+export const SignUp = () => {
     const baseText = [
         "Creating an account with PayVerve is completely ",
-        "Already have an account?"
+        "Already have an account?",
     ];
-    const appendText = [
-        "FREE",
-        "Login"
-    ];
-    const {email, onChangeEmail} = useState('');
-    const {fullName, onChangeFullName} = useState('');
-    const {userName, onChangeUserName} = useState('');
-    const {password, onChangePassword} = useState('');
-    const {confirmPasword, onChangeConfirmPassword} = useState('');
+    const appendText = ["FREE", "Login"];
+    const [email, onChangeEmail] = useState('');
+    const [fullName, onChangeFullName] = useState('');
+    const [userName, onChangeUserName] = useState('');
+    const [password, onChangePassword] = useState('');
+    const [confirmPassword, onChangeConfirmPassword] = useState('');
 
     return (
-        <View >
-            <Text style={styles.header_Text_1}>
-                SignUp
-            </Text>
+        <View>
+            <Text style={styles.header_Text_1}>SignUp</Text>
 
             <Text style={styles.header_Text_2}>
-                {`${baseText[0]}${appendText[0] }`}
+                {`${baseText[0]}${appendText[0]}`}
             </Text>
 
             <KeyboardAvoidingView
                 behavior={Platform.OS === 'ios' ? 'padding' : null}
             >
-                <ScrollView contentContainerStyle = {{flexGrow: null}}>
+                <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
                     <View style={styles.container}>
-
                         {/* Email */}
-                        <Text> Email </Text>
-                        <TextInput 
+                        <Text>Email</Text>
+                        <TextInput
                             value={email}
                             placeholder="Email"
                             onChangeText={onChangeEmail}
@@ -45,59 +47,53 @@ const SignUp = () => {
                         />
 
                         {/* Full name */}
-                        <Text> Full Name </Text>
-                        <TextInput 
+                        <Text>Full Name</Text>
+                        <TextInput
                             value={fullName}
-                            placeholder="full name"
+                            placeholder="Full name"
                             onChangeText={onChangeFullName}
                             style={styles.textInput}
                         />
 
                         {/* User name */}
-                        <Text> Username </Text>
-                        <TextInput 
+                        <Text>Username</Text>
+                        <TextInput
                             value={userName}
-                            placeholder="username"
+                            placeholder="Username"
                             onChangeText={onChangeUserName}
                             style={styles.textInput}
                         />
 
                         {/* Password */}
-                        <Text> Password </Text>
-                        <TextInput 
+                        <Text>Password</Text>
+                        <TextInput
                             value={password}
                             secureTextEntry
-                            placeholder="password"
+                            placeholder="Password"
                             onChangeText={onChangePassword}
                             style={styles.textInput}
                         />
 
                         {/* Confirm password */}
-                        <Text> Confirm Password </Text>
-                        <TextInput 
+                        <Text>Confirm Password</Text>
+                        <TextInput
+                            value={confirmPassword}
                             secureTextEntry
-                            value={confirmPasword}
-                            placeholder="Confirm password"
+                            placeholder="Confirm Password"
                             onChangeText={onChangeConfirmPassword}
                             style={styles.textInput}
                         />
 
-                        <TouchableOpacity
-                            onPress={EmailConfirmation}
-                        >
-                            <Text style={styles.buttonText}> SignUp</Text>
+                        <TouchableOpacity onPress={EmailConfirmation}>
+                            <Text style={styles.buttonText}>SignUp</Text>
                         </TouchableOpacity>
 
-                        <Text 
-                            onPress={Login}
-                        >
+                        <Text onPress={Login}>
                             {`${baseText[1]}${appendText[1]}`}
                         </Text>
                     </View>
                 </ScrollView>
             </KeyboardAvoidingView>
         </View>
-    )
-}
-
-export default SignUp;
+    );
+};
