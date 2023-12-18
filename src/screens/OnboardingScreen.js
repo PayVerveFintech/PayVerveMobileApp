@@ -2,6 +2,7 @@ import { View, Image, Text, TouchableOpacity, ImageBackground } from 'react-nati
 import { styles } from '../styles/styles';
 import SignUp from './SignUp';
 import { Login } from './Login';
+import LinearGradient from 'react-native-linear-gradient';
 
 const OnboardingScreen = () => {
     return (
@@ -13,35 +14,56 @@ const OnboardingScreen = () => {
                 style={styles.logo}
             />
 
-            {/* Background Image */}
-            <ImageBackground 
-                source={require('../../assets/onboarding_screen_phone.png')} 
-                style={styles.onboarding_bg_img} 
-            />
-            
-            {/* Welcome Text */}
-            <Text
-                style={styles.onboarding_body_txt}
-            >
-                The Safest and Easiest Method For Online Banking
-            </Text>
+            <View style={styles.bg_circle}>
+                {/* Background Image */}
+                <ImageBackground 
+                    source={require('../../assets/onboarding_image.png')} 
+                    style={styles.onboarding_bg_img} 
+                />
+            </View>
 
-            {/* SignUp Button */}
-            <TouchableOpacity 
-                onPress={SignUp}
-                style={styles.signUpButton}
-            >
-                <Text style={styles.buttonText}> SignUp </Text>
-            </TouchableOpacity>
+            <View style={{backgroundColor: 'white', height: "100%"}}>
+                {/* Welcome Text */}
+                <Text
+                    style={styles.onboarding_body_txt}
+                >
+                    The Safest and Easiest Method For Online Banking.
+                </Text>
 
-            {/* Login Button */}
-            <TouchableOpacity
-                onPress={Login}
-                style={styles.loginButton}
-            >
-                <Text style={styles.buttonText}> Login</Text>
-            </TouchableOpacity>
+                <View style={{flexDirection: 'row', marginTop: 20, marginHorizontal: 5, alignSelf: 'center'}}>
+                        {/* SignUp Button */}
+                    <TouchableOpacity 
+                        onPress={SignUp}
+                        style={styles.signUpButton}
+                    >
+                        <Text style={
+                            {
+                                color: 'white', 
+                                fontWeight: 'bold', 
+                                fontSize: 25, 
+                                alignSelf: 'center',
+                                padding: 10
+                            }
+                        }> SignUp </Text>
+                    </TouchableOpacity>
 
+                    {/* Login Button */}
+                    <TouchableOpacity
+                        onPress={Login}
+                        style={styles.loginButton}
+                    >
+                        <Text style={
+                            {
+                                fontWeight: 'bold', 
+                                fontSize: 25, 
+                                alignSelf: 'center',
+                                padding: 10
+                            }
+                        }> Login</Text>
+                    </TouchableOpacity>
+                    </View>
+
+            </View>
         </View>
     )
 }
