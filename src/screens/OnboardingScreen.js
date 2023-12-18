@@ -2,7 +2,6 @@ import { View, Image, Text, TouchableOpacity, ImageBackground } from 'react-nati
 import { styles } from '../styles/styles';
 import SignUp from './SignUp';
 import { Login } from './Login';
-import LinearGradient from 'react-native-linear-gradient';
 
 const OnboardingScreen = () => {
     return (
