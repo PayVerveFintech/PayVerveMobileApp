@@ -1,7 +1,8 @@
-import OnboardingScreen from "./src/screens/OnboardingScreen";
+import NotificationScreen from "./src/screens/NotificationScreen";
+
 
 export default function App() {
   return (
-    < OnboardingScreen />
+    <NotificationScreen />
   );
 }
