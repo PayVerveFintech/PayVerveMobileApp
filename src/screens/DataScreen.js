@@ -20,7 +20,7 @@ const DataScreen = () => {
 
                 <MobileNetworks />
 
-                <View>
+                <View style={styles.data_screen}>
                     <View style={styles.data_form_input_wrapper}>
                         <Text style={styles.data_form_label}>Select a Package</Text>
                         <Picker style={styles.data_form_input}>
