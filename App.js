@@ -1,7 +1,10 @@
-import OnboardingScreen from "./src/screens/OnboardingScreen";
+import { NavigationContainer } from "@react-navigation/native";
+import { HomePage } from "./src/navigation/HomeNavigation";
 
 export default function App() {
   return (
-    < OnboardingScreen />
+    <NavigationContainer>
+      <HomePage />
+    </NavigationContainer>
   );
 }
