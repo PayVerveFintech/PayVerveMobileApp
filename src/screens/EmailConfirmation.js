@@ -20,7 +20,7 @@ const EmailConfirmation = () => {
             <Text
                 style={{fontWeight: 'bold', fontSize: 30}}
             >
-                {}
+                {SignUp['']}
             </Text>
 
             <Text>Confirmation Code</Text>

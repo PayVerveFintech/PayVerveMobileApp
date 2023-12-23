@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
-import { useAuth } from '../hooks/userAuth';
+// import { useAuth } from '../hooks/userAuth';
 import { styles } from '../styles/styles';
-import { SignUp } from './SignUp';
+import { AuthProvider } from '../hooks/userAuth';
 
-export const Login = () => {
+const Login = () => {
+    // const { login } = useAuth();
+    
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
 
-    // Login authentication
-    const { login } = useAuth();
-
     const handleLogin = () => {
         try {
-            login(userName, password); // calling the login function from useAuth hook
+           AuthProvider.login(userName, password);
         } catch (error) {
             console.error('Login failed', error.message);
         }
@@ -56,3 +55,5 @@ export const Login = () => {
         </View>
     );
 };
+
+export default Login;

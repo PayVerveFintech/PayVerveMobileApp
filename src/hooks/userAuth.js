@@ -1,4 +1,5 @@
 import React, { createContext, useState, useContext } from "react";
+import KYCVerification from "../screens/KYCVerification";
 
 const AuthContext = createContext();
 
@@ -7,7 +8,7 @@ export const AuthProvider = ({children}) => {
 
     const login = (userName, password) => {
         if (userName === "admin" && password === "admin") {
-            setUser({Welcome});
+            setUser({KYCVerification});
         } else {
             setUser(null);
             throw new Error('Invaild credentials');
