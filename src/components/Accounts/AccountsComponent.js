@@ -1,9 +1,10 @@
-import { View, Text, Pressable } from "react-native"
+import { View, Text, Pressable, Image } from "react-native"
 // import Clipboard from "@react-native-clipboard/clipboard";
 import { Ionicons } from '@expo/vector-icons';
 import { styles } from "./Styles";
 import { useState, useEffect } from "react";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import copyImg from '../../../assets/copyImage.png'
 
 export const AccountsComponent = ({ account, accountNum }) => {
     const [copiedValue, setCopiedValue] = useState("")
@@ -45,7 +46,8 @@ export const AccountsComponent = ({ account, accountNum }) => {
                     {
                         copied
                             ? <MaterialCommunityIcons name="clipboard-check-multiple-outline" size={24} color="green" />
-                            : <Ionicons name="copy-outline" size={24} color="black" />
+                            // : <Ionicons name="copy-outline" size={24} color="black" />
+                            : <Image source={copyImg} style={styles.copy_btn} />
                     }
                 </Pressable>
             </View>

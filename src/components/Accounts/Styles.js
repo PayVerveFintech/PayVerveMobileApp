@@ -33,5 +33,10 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         alignSelf: "flex-end",
+    },
+
+    copy_btn: {
+        width: 20,
+        height: 20
     }
 })

@@ -7,7 +7,7 @@ import { useState } from "react"
 const AddMoneyScreen = () => {
     const [isNaira, setIsNaira] = useState(true)
     const [isDollar, setIsDollar] = useState(false)
-    const [isPounds, setIsPounds] = useState(false)
+    const [isPounds, setIsPounds] = useState(true)
 
     const accounts = []
 
