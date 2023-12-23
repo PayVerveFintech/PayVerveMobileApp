@@ -5,8 +5,27 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     container: {
-        padding: 20,
+        padding: 10,
         flex: 1,
+        backgroundColor: 'white',
+        marginTop: 15
+    },
+
+    signupContainer: {
+        backgroundColor: 'white',
+        marginTop: 15
+    },
+
+    signUpcontainer1: {
+        alignContent: 'center',
+        paddingLeft: 20,
+        paddingBottom: '100%',
+        marginTop: 40
+    },
+
+    signupTexts: {
+        fontSize: 18,
+        fontWeight: 'bold'
     },
 
     logo: {
@@ -58,13 +77,25 @@ export const styles = StyleSheet.create({
         paddingTop: 50
     },
 
-    signUpButton: {
+    onboardingSignUpButton: {
         backgroundColor: '#2196F3',
         width: 161,
         height: 50,
         elevation: 10,
         borderRadius: 8,
         marginRight: 10
+    },
+
+    signupButton: {
+        backgroundColor: '#2196F3',
+        width: 200,
+        height: 50,
+        elevation: 10,
+        borderRadius: 8,
+        justifyContent: "center",
+        alignSelf: "center",
+        marginTop: 40,
+        marginBottom: 10
     },
 
     loginButton: {
@@ -84,12 +115,16 @@ export const styles = StyleSheet.create({
 
     textInput: {
         height: 40,
-        width: 271,
+        width: '92%',
         marginVertical: 10,
         borderWidth: 1,
         // borderColor: '#205922',
         borderRadius: 8,
         paddingHorizontal: 10,
         fontWeight: 'bold'
-    }
+    },
+
+    freeBold: {
+        fontWeight: 'bold'
+    },
 })

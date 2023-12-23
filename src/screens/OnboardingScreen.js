@@ -1,10 +1,21 @@
 import { View, Image, Text, TouchableOpacity, ImageBackground } from 'react-native';
 import { styles } from '../styles/styles';
-import SignUp from './SignUp';
-import { Login } from './Login';
-import EmailConfirmation from './EmailConfirmation';
+import SignUp1 from './SignUp1';
+import Login from './Login';
+// import { useNavigation } from '@react-navigation/native';
 
-const OnboardingScreen = () => {
+const OnboardingScreen = ({navigation}) => {
+
+    // const navigation = useNavigation();
+
+    const handleSignUp = () => {
+        navigation.navigate('SignUp1'); 
+    };
+
+    const handleLogin = () => {
+        navigation.navigate('Login'); 
+    };
+
     return (
         <View style={styles.container}>
 
@@ -22,7 +33,7 @@ const OnboardingScreen = () => {
                 />
             </View>
 
-            <View style={{backgroundColor: 'white', height: "100%"}}>
+            <View style={{backgroundColor: 'white', height: "100%", width: '100%'}}>
                 {/* Welcome Text */}
                 <Text
                     style={styles.onboarding_body_txt}
@@ -33,8 +44,8 @@ const OnboardingScreen = () => {
                 <View style={{flexDirection: 'row', marginTop: 20, marginHorizontal: 5, alignSelf: 'center'}}>
                         {/* SignUp Button */}
                     <TouchableOpacity 
-                        onPress={SignUp}
-                        style={styles.signUpButton}
+                        onPress={handleSignUp}
+                        style={styles.onboardingSignUpButton}
                     >
                         <Text style={
                             {
@@ -49,7 +60,7 @@ const OnboardingScreen = () => {
 
                     {/* Login Button */}
                     <TouchableOpacity
-                        onPress={EmailConfirmation}
+                        onPress={handleLogin}
                         style={styles.loginButton}
                     >
                         <Text style={

@@ -1,8 +1,8 @@
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import { styles } from "../styles/styles";
-import SignUp from "./SignUp";
+// import SignUp from "./SignUp";
 
-const EmailConfirmation = () => {
+const EmailConfirmation = ({email}) => {
     return (
         <View style={styles.container}>
             <Text
@@ -20,7 +20,7 @@ const EmailConfirmation = () => {
             <Text
                 style={{fontWeight: 'bold', fontSize: 30}}
             >
-                {SignUp['']}
+                {email}
             </Text>
 
             <Text>Confirmation Code</Text>

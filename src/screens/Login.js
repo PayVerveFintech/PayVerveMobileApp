@@ -1,20 +1,28 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 // import { useAuth } from '../hooks/userAuth';
 import { styles } from '../styles/styles';
-import { AuthProvider } from '../hooks/userAuth';
+// import { AuthProvider } from '../hooks/userAuth';
+import SignUp1 from './SignUp1';
 
 const Login = () => {
     // const { login } = useAuth();
+
+    const CORRECT_EMAIL = 'admin';
+    const CORRECT_PASSWORD = 'admin'
     
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
 
     const handleLogin = () => {
-        try {
-           AuthProvider.login(userName, password);
-        } catch (error) {
-            console.error('Login failed', error.message);
+        if (CORRECT_EMAIL && CORRECT_PASSWORD === 'admin') {
+            navigation.navigate('')
+        } else if (CORRECT_EMAIL === 'admin' && CORRECT_PASSWORD != 'admin') {
+            Alert.alert('Invalid password')
+        } else if (CORRECT_EMAIL != 'admin' && CORRECT_PASSWORD === 'admin') {
+            Alert.alert('Incorrect email')
+        }{
+            Alert.alert('Invaild credentials')
         }
     };
 
@@ -50,7 +58,7 @@ const Login = () => {
 
             <Text>
                 Don't have an account?{' '}
-                <Text onPress={SignUp} style={{ color: 'blue', fontWeight: 'bold' }}> Sign Up</Text>
+                <Text onPress={SignUp1} style={{ color: 'blue', fontWeight: 'bold' }}> Sign Up</Text>
             </Text>
         </View>
     );
