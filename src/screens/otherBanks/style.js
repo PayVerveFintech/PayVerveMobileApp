@@ -14,13 +14,13 @@ export const styles = StyleSheet.create({
         paddingHorizontal: wp(3)
     },
     textContainer: {
-        marginTop: hp(5),
+        marginTop: hp(2),
         alignItems: "center",
-        marginBottom: hp(3)
+        marginBottom: hp(2)
     },
     text: {
         fontSize: hp(1.9),
-        fontWeight: "700",
+        fontWeight: "800",
         
     },
     textInputContainer: {
@@ -28,7 +28,7 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         paddingHorizontal: wp(3),
-        height: hp(7),
+        height: hp(6),
         borderRadius: 4,
         borderColor: Color.gray,
         alignItems: "center"
@@ -51,6 +51,6 @@ export const styles = StyleSheet.create({
         justifyContent: "center",
         marginHorizontal: wp(20),
         borderRadius: 8,
-        marginTop: hp(10)
+        marginTop: hp(2)
     },
 })

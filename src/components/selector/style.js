@@ -11,5 +11,6 @@ export const styles = StyleSheet.create({
         borderRadius: 4,
         backgroundColor: Color.white,
         borderColor: Color.gray,
+        height: hp(6)
     }
 })
