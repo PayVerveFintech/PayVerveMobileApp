@@ -25,7 +25,10 @@ const VerificationCode = ({verifyCode}) => {
                 style={styles.textInput}
             />
 
-            <TouchableOpacity style={styles.signupButton}>
+            <TouchableOpacity 
+                style={styles.signupButton}
+                onPress={navigation.navigate('CreateNewPW')}
+            >
                 <Text style={styles.touchableOpacityText}> Next </Text>
             </TouchableOpacity>
 

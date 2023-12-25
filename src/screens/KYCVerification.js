@@ -3,7 +3,7 @@ import { View, Text, ScrollView, TextInput, TouchableOpacity } from "react-nativ
 import { styles } from "../styles/styles";
 import KYCVerification2 from "./KYCVerification2";
 
-const KYCVerification = () => {
+const KYCVerification = ({navigation}) => {
 
     const [fullname, setFullname] = useState('');
     const [email, setEmail] = useState('');
@@ -129,7 +129,7 @@ const KYCVerification = () => {
 
                 <TouchableOpacity 
                     style={styles.buttonText}
-                    onPress={KYCVerification2}
+                    onPress={navigation.navigate('KYCVerification')}
                 >
                     <Text>Next</Text>
                 </TouchableOpacity>

@@ -3,7 +3,7 @@ import { TextInput, TouchableOpacity, View } from 'react-native';
 import { styles } from '../styles/styles';
 import { useState } from 'react';
 
-const ForgetPassword = () => {
+const ForgetPassword = ({navigation}) => {
     const [email, setEmail] = useState('');
     return(
         <View style={styles.container}>
@@ -28,6 +28,7 @@ const ForgetPassword = () => {
 
             <TouchableOpacity
                 style={styles.buttonText}
+                onPress={navigation.navigate('EmailConfirmation')}
             >
                 <Text style={styles.touchableOpacityText}> 
                     Next

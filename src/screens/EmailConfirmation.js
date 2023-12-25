@@ -1,7 +1,8 @@
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import { styles } from "../styles/styles";
+import SignUp1 from './SignUp1'
 
-const EmailConfirmation = ({ email }) => {
+const EmailConfirmation = ({ email, navigation }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.header_Text_1}> 
@@ -25,7 +26,10 @@ const EmailConfirmation = ({ email }) => {
                 onChangeText={email}
             />
 
-            <TouchableOpacity style={styles.signupButton}>
+            <TouchableOpacity 
+                style={styles.signupButton}
+                onPress={navigation.navigate('SignUp1')}
+            >
                 <Text style={styles.touchableOpacityText}> Sign Up</Text>
             </TouchableOpacity>
         </View>

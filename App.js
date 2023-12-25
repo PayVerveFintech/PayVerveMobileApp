@@ -7,6 +7,10 @@ import Login from './src/screens/Login';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import EmailConfirmation from './src/screens/EmailConfirmation';
+import VerificationCode from './src/screens/VerificationCode';
+import ForgetPassword from './src/screens/ForgetPassword';
+import KYCVerification2 from './src/screens/KYCVerification2';
+import KYCVerification from './src/screens/KYCVerification';
 
 function App() {
 
@@ -50,6 +54,56 @@ function App() {
                 <Stack.Screen
                     name="EmailConfirmation"
                     component={EmailConfirmation}
+                    options={
+                        {
+                            headerShown: false
+                        }
+                    }
+                />
+
+                <Stack.Screen
+                    name="VerificationCode"
+                    component={VerificationCode}
+                    options={
+                        {
+                            headerShown: false
+                        }
+                    }
+                />
+
+                <Stack.Screen 
+                    name='CreateNewPW'
+                    component={CreateNewPW}
+                    options={
+                        {
+                            headerShown: false
+                        }
+                    }
+                />
+
+                <Stack.Screen 
+                    name='ForgetPassword'
+                    component={ForgetPassword}
+                    options={
+                        {
+                            headerShown: false
+                        }
+                    }
+                />
+
+<Stack.Screen 
+                    name='KYCVerify'
+                    component={KYCVerification}
+                    options={
+                        {
+                            headerShown: false
+                        }
+                    }
+                />
+
+<Stack.Screen 
+                    name='KYCVerify2'
+                    component={KYCVerification2}
                     options={
                         {
                             headerShown: false
