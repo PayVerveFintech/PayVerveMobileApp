@@ -6,6 +6,7 @@ import Login from './src/screens/Login';
 // import HomeNav from "./src/navigation/HomeNav";
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import EmailConfirmation from './src/screens/EmailConfirmation';
 
 function App() {
 
@@ -39,6 +40,16 @@ function App() {
                 <Stack.Screen 
                     name="Login" 
                     component={Login} 
+                    options={
+                        {
+                            headerShown: false
+                        }
+                    }
+                />
+
+                <Stack.Screen
+                    name="EmailConfirmation"
+                    component={EmailConfirmation}
                     options={
                         {
                             headerShown: false

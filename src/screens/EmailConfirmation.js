@@ -1,26 +1,19 @@
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import { styles } from "../styles/styles";
-// import SignUp from "./SignUp";
 
-const EmailConfirmation = ({email}) => {
+const EmailConfirmation = ({ email }) => {
     return (
         <View style={styles.container}>
-            <Text
-                style={styles.header_Text_1}
-            > 
+            <Text style={styles.header_Text_1}> 
                 Confirm Email Address
             </Text>
 
-            <Text
-                style={styles.header_Text_2}
-            >
-                A confirmation code as been sent to the email below
+            <Text style={styles.header_Text_2}>
+                A confirmation code as been sent to the email below 
             </Text>
 
-            <Text
-                style={{fontWeight: 'bold', fontSize: 30}}
-            >
-                {email}
+            <Text style={{fontWeight: 'bold', fontSize: 30}}>
+                {''}
             </Text>
 
             <Text>Confirmation Code</Text>
@@ -28,12 +21,12 @@ const EmailConfirmation = ({email}) => {
             <TextInput 
                 placeholder="123456"
                 value={''}
+                style={styles.textInput}
+                onChangeText={email}
             />
 
-            <TouchableOpacity
-                style={styles.signUpButton}
-            >
-                <Text> Sign Up</Text>
+            <TouchableOpacity style={styles.signupButton}>
+                <Text style={styles.touchableOpacityText}> Sign Up</Text>
             </TouchableOpacity>
         </View>
     )

@@ -7,6 +7,7 @@ import {
     TextInput,
     TouchableOpacity,
     View,
+    Alert
 } from 'react-native';
 import { styles } from '../styles/styles';
 import EmailConfirmation from './EmailConfirmation';
@@ -15,7 +16,7 @@ import Login from './Login';
 const SignUp1 = ({navigation}) => {
     const baseText = [
         "Creating an account with PayVerve is completely ",
-        "Already have an account?",
+        "Already have an account? ",
     ];
     const appendText = ["FREE", "Log in"];
     const [email, onChangeEmail] = useState('');
@@ -24,6 +25,15 @@ const SignUp1 = ({navigation}) => {
     const [password, onChangePassword] = useState('');
     const [confirmPassword, onChangeConfirmPassword] = useState('');
 
+    const handlePasswordMatch =() => {
+        if (password !== confirmPassword) {
+            Alert.alert('Password Mismatch')
+        } else {
+            navigation.navigate("EmailConfirmation", { email: email})
+
+        }
+    }
+    
     return (
         <View style={styles.signupContainer}>
             <Text style={styles.header_Text_1}>SignUp</Text>
@@ -85,23 +95,18 @@ const SignUp1 = ({navigation}) => {
                             value={confirmPassword}
                             secureTextEntry
                             placeholder="Confirm Password"
-                            onChangeText={onChangeConfirmPassword}
+                            onChangeText={(text) => {
+                                onChangeConfirmPassword(text);
+                                handlePasswordMatch();
+                            }}
                             style={styles.textInput}
                         />
 
                         <TouchableOpacity 
                             style={styles.signupButton} 
-                            onPress={() => navigation.navigate('EmailConfirmation')}
+                            onPress={() => navigation.navigate(handlePasswordMatch())}
                         >
-                            <Text style={
-                                {
-                                    color: 'white', 
-                                    fontWeight: 'bold', 
-                                    fontSize: 25, 
-                                    alignSelf: 'center',
-                                    padding: 10
-                                }
-                            }>
+                            <Text style={styles.touchableOpacityText}>
                                 SignUp
                             </Text>
                         </TouchableOpacity>
@@ -111,7 +116,6 @@ const SignUp1 = ({navigation}) => {
                             <Text style={{color: 'skyblue', fontSize: 16}}>{appendText[1]}</Text>
                         </Text>
 
-                        {/* <EmailConfirmation email={email} /> */}
                     </View>
                 </ScrollView>
             </KeyboardAvoidingView>

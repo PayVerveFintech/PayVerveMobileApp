@@ -56,7 +56,7 @@ export const styles = StyleSheet.create({
     },
 
     header_Text_1: {
-        fontSize: 22,
+        fontSize: 40,
         paddingTop: 50,
         alignSelf: 'center',
         fontWeight: 'bold'
@@ -68,6 +68,14 @@ export const styles = StyleSheet.create({
         paddingLeft: 50,
         paddingRight: 50,
         textAlign: 'center',
+    },
+
+    touchableOpacityText: {
+        color: 'white', 
+        fontWeight: 'bold',                 
+        fontSize: 25, 
+        alignSelf: 'center',
+        padding: 10
     },
 
     onboarding_body_txt: {
