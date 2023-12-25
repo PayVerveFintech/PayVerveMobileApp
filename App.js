@@ -1,8 +1,13 @@
-import NotificationScreen from "./src/screens/NotificationScreen";
 
+import { AuthProvider } from "./src/hooks/userAuth";
+import OnboardingScreen from "./src/screens/OnboardingScreen";
+import SignUp from "./src/screens/SignUp";
 
 export default function App() {
   return (
-    <NotificationScreen />
+    
+    <AuthProvider>
+      <OnboardingScreen />
+    </AuthProvider>
   );
 }
