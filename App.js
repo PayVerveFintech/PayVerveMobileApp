@@ -1,10 +1,11 @@
-import AddMoneyScreen from "./src/screens/AddMoneyScreen";
-import AirtimeScreen from "./src/screens/AirtimeScreen";
-import OnboardingScreen from "./src/screens/OnboardingScreen";
+import { NavigationContainer } from "@react-navigation/native";
+import { HomePage } from "./src/navigation/HomeNavigation";
 
 export default function App() {
   return (
-    // <AirtimeScreen />
-    <AddMoneyScreen />
+    <NavigationContainer>
+      <HomePage />
+    </NavigationContainer>
+
   );
 }
