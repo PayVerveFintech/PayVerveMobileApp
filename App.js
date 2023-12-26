@@ -1,13 +1,11 @@
-
-import { AuthProvider } from "./src/hooks/userAuth";
-import OnboardingScreen from "./src/screens/OnboardingScreen";
-import SignUp from "./src/screens/SignUp";
+import { NavigationContainer } from "@react-navigation/native";
+import { HomePage } from "./src/navigation/HomeNavigation";
 
 export default function App() {
   return (
-    
-    <AuthProvider>
-      <OnboardingScreen />
-    </AuthProvider>
+    <NavigationContainer>
+      <HomePage />
+    </NavigationContainer>
+
   );
 }
