@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-
+  
 // primaryColor = rgba(33, 150, 243, 1)
 // primaryColor-1 = #2196F3
 
@@ -91,5 +91,19 @@ export const styles = StyleSheet.create({
         borderRadius: 8,
         paddingHorizontal: 10,
         fontWeight: 'bold'
-    }
+    },
+      
+    notification_headerText: {
+        fontSize: 30,
+        fontWeight: '600',
+        paddingHorizontal: 10,
+        alignItems: 'center'
+    },
+
+    notificationBody: {
+        height: '100%',
+        marginTop: 40,
+        gap: 23
+        
+    },
 })
