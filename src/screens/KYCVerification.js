@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { View, Text, ScrollView, TextInput, TouchableOpacity, KeyboardAvoidingView } from "react-native"
 import { styles } from "../styles/styles";
-import KYCVerification2 from "./KYCVerification2";
 
 const KYCVerification = ({navigation}) => {
 
@@ -14,6 +13,7 @@ const KYCVerification = ({navigation}) => {
     const [dob, setDOB] = useState('');
     const [address, setAddress] = useState('');
     const [ occupation, setOccupation] = useState('');
+
     return (
         <View style={styles.container}>
             <Text style={styles.header_Text_1}>
@@ -133,7 +133,7 @@ const KYCVerification = ({navigation}) => {
 
                         <TouchableOpacity 
                             style={styles.signupButton}
-                            onPress={navigation.navigate('KYCVerify2')}
+                            onPress={() => navigation.navigate('KYCVerify2')}
                         >
                             <Text style={styles.touchableOpacityText}>Next</Text>
                         </TouchableOpacity>

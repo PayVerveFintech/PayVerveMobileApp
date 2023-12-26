@@ -1,7 +1,8 @@
+import React from 'react' 
 import { View, Text, TouchableOpacity } from "react-native"
 import { styles } from "../styles/styles";
 
-const KYCVerification2 = () => {
+const KYCVerification2 = ({navigation}) => {
 
     return (
         <View style={styles.container}>
@@ -29,7 +30,7 @@ const KYCVerification2 = () => {
                 Kindly face the camera and tilt your head left to the right and finally to the center.
             </Text>
 
-            <TouchableOpacity style={styles.signupButton}>
+            <TouchableOpacity style={styles.signupButton} onPress={ () => navigation.navigate('VerificationCode')}>
                 <Text style={styles.touchableOpacityText}> Start</Text>
             </TouchableOpacity>
         </View>

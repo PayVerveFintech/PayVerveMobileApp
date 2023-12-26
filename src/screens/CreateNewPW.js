@@ -1,4 +1,4 @@
-import { TextInput, TouchableOpacity } from "react-native";
+import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import { styles } from "../styles/styles";
 
 const CreateNewPW = ({navigation}) => {

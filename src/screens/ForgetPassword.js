@@ -4,7 +4,7 @@ import { styles } from '../styles/styles';
 import { useState } from 'react';
 
 const ForgetPassword = ({navigation}) => {
-    const [email, setEmail] = useState('');
+    const [email, onChangeEmail] = useState('');
     return(
         <View style={styles.container}>
             <Text style={styles.header_Text_1}>
@@ -15,7 +15,13 @@ const ForgetPassword = ({navigation}) => {
                 Forgetten password! No worries, we've got you covered. Simply follow these easy steps to reset your password.
             </Text>
 
-            <Text style={styles.signupTexts}>
+            <Text style={
+                {
+                    fontSize: 18,
+                    fontWeight: 'bold',
+                    marginTop: 50
+                }
+            }>
                 Email Address
             </Text>
 
@@ -23,12 +29,12 @@ const ForgetPassword = ({navigation}) => {
                 placeholder='Email'
                 value={email}
                 style={styles.textInput}
-                onChangeText={setEmail}
+                onChangeText={onChangeEmail}
             />
 
             <TouchableOpacity
-                style={styles.buttonText}
-                onPress={navigation.navigate('EmailConfirmation')}
+                style={styles.signupButton}
+                onPress={() => navigation.navigate('EmailConfirmation')}
             >
                 <Text style={styles.touchableOpacityText}> 
                     Next

@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import { styles } from '../styles/styles';
 
-const VerificationCode = ({verifyCode}) => {
+const VerificationCode = ({verifyCode, navigation}) => {
     return (
         <View style={styles.container}>
             <Text style={styles.header_Text_1}>
@@ -27,7 +27,7 @@ const VerificationCode = ({verifyCode}) => {
 
             <TouchableOpacity 
                 style={styles.signupButton}
-                onPress={navigation.navigate('CreateNewPW')}
+                onPress={() => navigation.navigate('CreateNewPW')}
             >
                 <Text style={styles.touchableOpacityText}> Next </Text>
             </TouchableOpacity>

@@ -18,11 +18,12 @@ const Login = ({ navigation }) => {
     const handleLogin = () => {
         if (userName === CORRECT_USERNAME && password === CORRECT_PASSWORD) {
             navigation.navigate('KYCVerify')
-        } else if (userName === CORRECT_USERNAME && password === CORRECT_PASSWORD) {
-            alert.alert('Invalid password')
-        } else if (userName === CORRECT_USERNAME && password === CORRECT_PASSWORD) {
-            Alert.alert('Incorrect userName')
-        }{
+        // } else if (userName === CORRECT_USERNAME && password === CORRECT_PASSWORD) {
+        //     alert.alert('Invalid password')
+        // } else if (userName === CORRECT_USERNAME && password === CORRECT_PASSWORD) {
+        //     Alert.alert('Incorrect userName')
+        // }{
+        }else {
             Alert.alert('Invaild credentials')
         }
     };
@@ -52,20 +53,23 @@ const Login = ({ navigation }) => {
                     onChangeText={onChangePassword}
                 />
 
-                <Text style={
-                    { 
-                        alignSelf: 'flex-end', 
-                        marginEnd: 30, 
-                        fontSize: 18
+                <Text style=
+                    {
+                        { 
+                            alignSelf: 'flex-end', 
+                            marginEnd: 30, 
+                            fontSize: 18,
+                            fontWeight: 'bold',
+                            textDecorationLine: 'underline'
+                        }
                     }
-                    }
-                    onPress={navigation.navigate('ForgetPassword')}
+                    onPress={() => navigation.navigate('ForgetPassword')}
                 >
                     Forgetten Password?
                 </Text>
 
                 <TouchableOpacity
-                style={styles.signupButton} 
+                    style={styles.signupButton} 
                     onPress={handleLogin}
                 >
                     <Text style={styles.touchableOpacityText}>
@@ -79,7 +83,7 @@ const Login = ({ navigation }) => {
                     Don't have an account?{' '}
                     <Text 
                         onPress={() => navigation.navigate('SignUp1')} 
-                        style={{ color: 'skyblue', fontWeight: 'bold', fontSize: 16}}
+                        style={{ color: 'blue', fontWeight: 'bold', fontSize: 16, fontWeight: 'bold', textDecorationLine: 'underline'}}
                     > 
                         Sign Up
                     </Text>

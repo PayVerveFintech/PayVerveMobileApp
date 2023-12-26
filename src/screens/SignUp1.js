@@ -109,7 +109,7 @@ const SignUp1 = ({navigation}) => {
 
                         <Text style={{alignSelf: 'center', fontSize: 14}} onPress={() => navigation.navigate('Login') }>
                             {baseText[1]}
-                            <Text style={{color: 'skyblue', fontSize: 16}}>{appendText[1]}</Text>
+                            <Text style={{color: 'blue', fontSize: 16, fontWeight: 'bold', textDecorationLine: 'underline'}}>{appendText[1]}</Text>
                         </Text>
 
                     </View>

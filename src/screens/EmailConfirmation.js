@@ -17,7 +17,7 @@ const EmailConfirmation = ({ email, navigation }) => {
                 {''}
             </Text>
 
-            <Text>Confirmation Code</Text>
+            <Text style={styles.signupTexts}>Confirmation Code</Text>
 
             <TextInput 
                 placeholder="123456"
@@ -28,7 +28,7 @@ const EmailConfirmation = ({ email, navigation }) => {
 
             <TouchableOpacity 
                 style={styles.signupButton}
-                onPress={navigation.navigate('SignUp1')}
+                onPress={() => navigation.navigate('Login')}
             >
                 <Text style={styles.touchableOpacityText}> Sign Up</Text>
             </TouchableOpacity>
