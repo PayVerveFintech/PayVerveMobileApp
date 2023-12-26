@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native";
-
   
 // primaryColor = rgba(33, 150, 243, 1)
 // primaryColor-1 = #2196F3
@@ -143,6 +142,10 @@ export const styles = StyleSheet.create({
     successful_screen_text: {
         fontSize: 18,
         fontWeight: "700"
+    },
+  
+    accounts_wrapper: {
+        gap: 23
     }
 
 })
