@@ -19,7 +19,7 @@ const KYCVerification = ({navigation}) => {
             <Text style={styles.header_Text_1}>
                 KYC Verification
             </Text>
-            <View style={{flexDirection: 'row', alignSelf: 'center'}}>
+            <View style={{flexDirection: 'row', justifyContent: 'space-around', paddingTop: 30}}>
                 <View style={{flexDirection: 'column'}}>
                     <Text>Personal Information</Text>
                     <Text>Personal Information</Text>
