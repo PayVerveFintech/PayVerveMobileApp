@@ -6,22 +6,22 @@ import { styles } from '../styles/styles';
 import SignUp1 from './SignUp1';
 import ForgetPassword from './ForgetPassword';
 
+const CORRECT_USERNAME = 'admin';
+const CORRECT_PASSWORD = 'admin'
+
 const Login = ({ navigation }) => {
     // const { login } = useAuth();
-
-    const CORRECT_EMAIL = 'admin';
-    const CORRECT_PASSWORD = 'admin'
     
-    const [userName, setUserName] = useState('');
-    const [password, setPassword] = useState('');
+    const [userName, onChangeUserName] = useState('');
+    const [password, onChangePassword] = useState('');
 
     const handleLogin = () => {
-        if (CORRECT_EMAIL && CORRECT_PASSWORD === 'admin') {
-            navigation.navigate('')
-        } else if (CORRECT_EMAIL === 'admin' && CORRECT_PASSWORD != 'admin') {
-            Alert.alert('Invalid password')
-        } else if (CORRECT_EMAIL != 'admin' && CORRECT_PASSWORD === 'admin') {
-            Alert.alert('Incorrect email')
+        if (userName === CORRECT_USERNAME && password === CORRECT_PASSWORD) {
+            navigation.navigate('KYCVerify')
+        } else if (userName === CORRECT_USERNAME && password === CORRECT_PASSWORD) {
+            alert.alert('Invalid password')
+        } else if (userName === CORRECT_USERNAME && password === CORRECT_PASSWORD) {
+            Alert.alert('Incorrect userName')
         }{
             Alert.alert('Invaild credentials')
         }
@@ -40,7 +40,7 @@ const Login = ({ navigation }) => {
                     value={userName}
                     placeholder="username"
                     style={styles.textInput}
-                    onChangeText={(text) => setUserName(text)}
+                    onChangeText={onChangeUserName}
                 />
 
                 <Text style={styles.signupTexts}>Password</Text>
@@ -49,7 +49,7 @@ const Login = ({ navigation }) => {
                     value={password}
                     placeholder="password"
                     style={styles.textInput}
-                    onChangeText={(text) => setPassword(text)}
+                    onChangeText={onChangePassword}
                 />
 
                 <Text style={
@@ -59,7 +59,7 @@ const Login = ({ navigation }) => {
                         fontSize: 18
                     }
                     }
-                    onPress={ForgetPassword}
+                    onPress={navigation.navigate('ForgetPassword')}
                 >
                     Forgetten Password?
                 </Text>

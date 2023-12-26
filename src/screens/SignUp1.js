@@ -25,14 +25,13 @@ const SignUp1 = ({navigation}) => {
     const [password, onChangePassword] = useState('');
     const [confirmPassword, onChangeConfirmPassword] = useState('');
 
-    const handlePasswordMatch =() => {
-        if (password !== confirmPassword) {
-            Alert.alert('Password Mismatch')
-        } else {
-            navigation.navigate("EmailConfirmation", { email: email})
-
-        }
-    }
+    // const handlePasswordMatch =() => {
+    //     if (password.value == confirmPassword.value) {
+    //         navigation.navigate('KYCVerify')
+    //     } else {
+    //         Alert.alert('Password Mismatch')
+    //     }
+    // }
     
     return (
         <View style={styles.signupContainer}>
@@ -95,16 +94,13 @@ const SignUp1 = ({navigation}) => {
                             value={confirmPassword}
                             secureTextEntry
                             placeholder="Confirm Password"
-                            onChangeText={(text) => {
-                                onChangeConfirmPassword(text);
-                                handlePasswordMatch();
-                            }}
+                            onChangeText={onChangeConfirmPassword}
                             style={styles.textInput}
                         />
 
                         <TouchableOpacity 
                             style={styles.signupButton} 
-                            onPress={() => navigation.navigate(handlePasswordMatch())}
+                            onPress={() => navigation.navigate('KYCVerify')}
                         >
                             <Text style={styles.touchableOpacityText}>
                                 SignUp

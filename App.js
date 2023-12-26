@@ -11,6 +11,7 @@ import VerificationCode from './src/screens/VerificationCode';
 import ForgetPassword from './src/screens/ForgetPassword';
 import KYCVerification2 from './src/screens/KYCVerification2';
 import KYCVerification from './src/screens/KYCVerification';
+import CreateNewPW from './src/screens/CreateNewPW';
 
 function App() {
 
@@ -91,7 +92,7 @@ function App() {
                     }
                 />
 
-<Stack.Screen 
+                <Stack.Screen 
                     name='KYCVerify'
                     component={KYCVerification}
                     options={
@@ -101,7 +102,7 @@ function App() {
                     }
                 />
 
-<Stack.Screen 
+                <Stack.Screen 
                     name='KYCVerify2'
                     component={KYCVerification2}
                     options={

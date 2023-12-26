@@ -25,12 +25,12 @@ const KYCVerification2 = () => {
                 </View>
             </View>
 
-            <Text style={styles.textInput}>
+            <Text style={styles.signupTexts}>
                 Kindly face the camera and tilt your head left to the right and finally to the center.
             </Text>
 
-            <TouchableOpacity style={styles.buttonText}>
-                <Text> Start</Text>
+            <TouchableOpacity style={styles.signupButton}>
+                <Text style={styles.touchableOpacityText}> Start</Text>
             </TouchableOpacity>
         </View>
     )

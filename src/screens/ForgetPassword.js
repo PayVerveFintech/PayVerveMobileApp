@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { TextInput, TouchableOpacity, View } from 'react-native';
+import { TextInput, TouchableOpacity, View, Text } from 'react-native';
 import { styles } from '../styles/styles';
 import { useState } from 'react';
 
@@ -20,7 +20,7 @@ const ForgetPassword = ({navigation}) => {
             </Text>
 
             <TextInput 
-                placeholder='Text field'
+                placeholder='Email'
                 value={email}
                 style={styles.textInput}
                 onChangeText={setEmail}

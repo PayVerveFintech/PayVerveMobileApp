@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, Text, ScrollView, TextInput, TouchableOpacity } from "react-native"
+import { View, Text, ScrollView, TextInput, TouchableOpacity, KeyboardAvoidingView } from "react-native"
 import { styles } from "../styles/styles";
 import KYCVerification2 from "./KYCVerification2";
 
@@ -36,104 +36,110 @@ const KYCVerification = ({navigation}) => {
                 </View>
             </View>
 
-            <ScrollView>
-                <Text>
-                    Full Name
-                </Text>
-                <TextInput
-                    placeholder="Full name"
-                    value={fullname} 
-                    style={styles.textInput}
-                    onChangeText={setFullname}
-                />
+            <KeyboardAvoidingView
+                behavior={Platform.OS === 'ios' ? 'padding' : null}
+            >
+                <ScrollView contentContainerStyle={{flexGrow: 1}}>
+                    <View style={styles.signUpcontainer1}>
+                        <Text style={styles.signupTexts}>
+                            Full Name
+                        </Text>
+                        <TextInput
+                            placeholder="Full name"
+                            value={fullname} 
+                            style={styles.textInput}
+                            onChangeText={setFullname}
+                        />
 
-                <Text>
-                    Email Address
-                </Text>
-                <TextInput
-                    placeholder="Email"
-                    value={email} 
-                    style={styles.textInput}
-                    onChangeText={setEmail}
-                />
+                        <Text style={styles.signupTexts}>
+                            Email Address
+                        </Text>
+                        <TextInput
+                            placeholder="Email"
+                            value={email} 
+                            style={styles.textInput}
+                            onChangeText={setEmail}
+                        />
 
-                <Text>
-                    Phone Number
-                </Text>
-                <TextInput
-                    placeholder="Text field"
-                    value={phonenumber} 
-                    style={styles.textInput}
-                    onChangeText={setPhonenumber}
-                />
+                        <Text style={styles.signupTexts}>
+                            Phone Number
+                        </Text>
+                        <TextInput
+                            placeholder="Text field"
+                            value={phonenumber} 
+                            style={styles.textInput}
+                            onChangeText={setPhonenumber}
+                        />
 
-                <Text>
-                    BVN
-                </Text>
-                <TextInput
-                    placeholder="Text field"
-                    value={bvn} 
-                    style={styles.textInput}
-                    onChangeText={setBvn}
-                />
+                        <Text style={styles.signupTexts}>
+                            BVN
+                        </Text>
+                        <TextInput
+                            placeholder="Text field"
+                            value={bvn} 
+                            style={styles.textInput}
+                            onChangeText={setBvn}
+                        />
 
-                <Text>
-                    NIN
-                </Text>
-                <TextInput
-                    placeholder="Text field"
-                    value={nin} 
-                    style={styles.textInput}
-                    onChangeText={setNin}
-                />
+                        <Text style={styles.signupTexts}>
+                            NIN
+                        </Text>
+                        <TextInput
+                            placeholder="Text field"
+                            value={nin} 
+                            style={styles.textInput}
+                            onChangeText={setNin}
+                        />
 
-                <Text>
-                    Gender
-                </Text>
-                <TextInput
-                    placeholder="Female"
-                    value={gender} 
-                    style={styles.textInput}
-                    onChangeText={setGender}
-                />
+                        <Text style={styles.signupTexts}>
+                            Gender
+                        </Text>
+                        <TextInput
+                            placeholder="Female"
+                            value={gender} 
+                            style={styles.textInput}
+                            onChangeText={setGender}
+                        />
 
-                <Text>
-                    D.O.B
-                </Text>
-                <TextInput
-                    placeholder="DD/MM/YY"
-                    value={dob} 
-                    style={styles.textInput}
-                    onChangeText={setDOB}
-                />
+                        <Text style={styles.signupTexts}>
+                            D.O.B
+                        </Text>
+                        <TextInput
+                            placeholder="DD/MM/YY"
+                            value={dob} 
+                            style={styles.textInput}
+                            onChangeText={setDOB}
+                        />
 
-                <Text>
-                    Address
-                </Text>
-                <TextInput
-                    placeholder="blah blah blah"
-                    value={address} 
-                    style={styles.textInput}
-                    onChangeText={setAddress}
-                />
+                        <Text style={styles.signupTexts}>
+                            Address
+                        </Text>
+                        <TextInput
+                            placeholder="blah blah blah"
+                            value={address} 
+                            style={styles.textInput}
+                            onChangeText={setAddress}
+                        />
 
-                <Text>
-                    Occuption
-                </Text>
-                <TextInput
-                    placeholder="Unemployed"
-                    value={occupation} 
-                    style={styles.textInput}
-                    onChangeText={setOccupation}
-                />
+                        <Text style={styles.signupTexts}>
+                            Occuption
+                        </Text>
+                        <TextInput
+                            placeholder="Unemployed"
+                            value={occupation} 
+                            style={styles.textInput}
+                            onChangeText={setOccupation}
+                        />
 
-                <TouchableOpacity 
-                    style={styles.buttonText}
-                    onPress={navigation.navigate('KYCVerification')}
-                >
-                    <Text>Next</Text>
-                </TouchableOpacity>
-            </ScrollView>
+                        <TouchableOpacity 
+                            style={styles.signupButton}
+                            onPress={navigation.navigate('KYCVerify2')}
+                        >
+                            <Text style={styles.touchableOpacityText}>Next</Text>
+                        </TouchableOpacity>
+                    </View>
+                </ScrollView>
+            </KeyboardAvoidingView>
         </View>
     )
 }
