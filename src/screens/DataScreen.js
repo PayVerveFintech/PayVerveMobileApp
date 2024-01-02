@@ -10,6 +10,7 @@ const DataScreen = () => {
     const navigation = useNavigation()
 
     const whenPress = () => {
+        //logic to pass information to review screen
         navigation.navigate("Review")
     }
 
@@ -21,6 +22,7 @@ const DataScreen = () => {
                 <MobileNetworks />
 
                 <View style={styles.data_screen}>
+                    {/* replace with dropdown component */}
                     <View style={styles.data_form_input_wrapper}>
                         <Text style={styles.data_form_label}>Select a Package</Text>
                         <Picker style={styles.data_form_input}>
@@ -30,13 +32,19 @@ const DataScreen = () => {
 
                     <View style={styles.data_form_input_wrapper}>
                         <Text style={styles.data_form_label}>Amount</Text>
-                        <TextInput placeholder="Enter Amount"  style={styles.data_form_input} />
-                        <Text style={styles.data_form_text_right}>Balance 20,000</Text>
+                        <TextInput 
+                            placeholder="Enter Amount" 
+                            style={styles.data_form_input} 
+                        />
+                        <Text style={styles.data_form_text_right}>Balance {"20,000"}</Text>
                     </View>
 
                     <View style={styles.data_form_input_wrapper}>
                         <Text style={styles.data_form_label}>Number</Text>
-                        <TextInput placeholder="Enter Number"  style={styles.data_form_input} />
+                        <TextInput 
+                            placeholder="Enter Number" 
+                            style={styles.data_form_input} 
+                        />
                     </View>
                 </View>
 

@@ -107,7 +107,7 @@ export const styles = StyleSheet.create({
         
     },
   
-  data_screen: {
+    data_screen: {
         gap: 23,
     },
 
@@ -146,6 +146,43 @@ export const styles = StyleSheet.create({
   
     accounts_wrapper: {
         gap: 23
+    },
+
+    bill_type: {
+        flex: 1,
+        gap: 12
+    },
+
+    select_meter_wrapper: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        gap: 24,
+    },
+
+    select_meter_btn: {
+        borderRadius: 8,
+        paddingHorizontal: 12,
+        paddingVertical: 8,
+        borderWidth: 1,
+        width: 159,
+        height: 45,
+        alignItems: "center",
+        justifyContent: "center"
+
+    },
+
+    selectedMeter: {
+        backgroundColor: "#2196F3",
+    },
+
+    select_meter_text: {
+        fontSize: 18,
+        fontWeight: "700"
+    },
+
+    headerTitleStyle: {
+        fontSize: 22,
+        fontWeight: "700"
     }
 
 })
