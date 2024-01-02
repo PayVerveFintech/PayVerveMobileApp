@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     btn_wrapper: {
         alignItems: "center",
-        marginTop: 10,
+        marginTop: 20,
     },
 
     btn: {

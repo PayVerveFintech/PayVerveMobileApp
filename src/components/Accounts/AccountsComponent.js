@@ -11,12 +11,14 @@ export const AccountsComponent = ({ account, accountNum }) => {
     const [copy, setCopy] = useState(accountNum)
     const [copied, setCopied] = useState(false)
 
+    // Copy to clipboard functionality
     const handleCopy = () => {
         setCopiedValue(copy)
         // Clipboard.setString(copy);
         setCopied(true)
     }
 
+    // Timeout for copied icon
     useEffect(() => {
       if (copied === true) {
         const timer = setTimeout(() => {
