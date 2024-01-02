@@ -47,7 +47,7 @@ const KYCVerification3 = ({navigation}) => {
 
             <TouchableOpacity 
                 style={styles.signupButton}
-                onPress={() => navigation.navigate('Login')}
+                onPress={() => navigation.navigate('VerificationCode')}
             >
                 <Text style={styles.touchableOpacityText}>
                     Login
