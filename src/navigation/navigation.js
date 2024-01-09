@@ -4,7 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { TopNavigation } from "./topTab";
 import { Ionicons } from "@expo/vector-icons";
 
-import Home from "../screens/home";
+import Home from "../screens/home"
 import { TouchableOpacity } from "react-native";
 import Review from '../screens/review';
 import PinScreen from '../screens/pinScreen';
