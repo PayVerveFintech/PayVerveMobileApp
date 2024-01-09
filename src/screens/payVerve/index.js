@@ -4,6 +4,7 @@ import { AntDesign } from "@expo/vector-icons";
 import { styles } from './style'
 import { Color } from '../../color/Color';
 import { Selector } from '../../components/selector';
+import { useNavigation } from '@react-navigation/native';
 
 
 
@@ -11,9 +12,14 @@ import { Selector } from '../../components/selector';
 
 export default function PayVerve() {
 
+  const navigation = useNavigation();
 
     const walletType = ["Naira wallet", "Dollar wallet", "Pound wallet"];
     const [wallet, setWallet] = useState(walletType[0]);
+
+    const [accountNumber, setAccountNumber] = useState("");
+    const [amount, setAmount] = useState("");
+    const [narration, setNarration] = useState("");
 
 
   return (
@@ -34,6 +40,9 @@ export default function PayVerve() {
                     <TextInput 
                         placeholder='0123456789'
                         style={styles.input}
+                        value={accountNumber}
+                        onChangeText={(text) => setAccountNumber(text)}
+                        keyboardType='number-pad'
                     />
                 </View>
             </View>
@@ -43,6 +52,9 @@ export default function PayVerve() {
                     <TextInput 
                         placeholder='2000'
                         style={styles.input}
+                        value={amount}
+                        onChangeText={(text) => setAmount(text)}
+                        keyboardType='number-pad'
                     />
                 </View>
             </View>
@@ -52,12 +64,14 @@ export default function PayVerve() {
                     <TextInput 
                         placeholder='Have fun'
                         style={styles.input}
+                        value={narration}
+                        onChangeText={(text) => setNarration(text)}
                     />
                 </View>
             </View>
         </KeyboardAvoidingView>
       </View>
-      <TouchableOpacity style={styles.btnContainer}>
+      <TouchableOpacity style={styles.btnContainer} onPress={() => navigation.navigate("Review", {accountNumber, amount,narration, wallet})}  >
         <Text style={styles.btnText}>Send</Text>
       </TouchableOpacity>
     </View>

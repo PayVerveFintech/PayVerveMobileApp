@@ -10,7 +10,20 @@ import { styles } from './style';
 
 
 
-export default function TransferInput({ type }) {
+export default function TransferInput({ type,
+      bankName, 
+      setBankName,
+      accountNumber, 
+      setAccountNumber,
+      amount, 
+      setAmount,
+      narration, 
+      setNarration,
+      bankSwift, 
+      setBankSwift,
+      Country, 
+      setCountry
+    }) {
   return (
     <View>
       {
@@ -21,6 +34,8 @@ export default function TransferInput({ type }) {
                     <TextInput 
                         placeholder='Enter your bank name'
                         style={styles.input}
+                        value={bankName}
+                        onChangeText={(text) => setBankName(text)}
                     />
 
                 </View>
@@ -29,6 +44,9 @@ export default function TransferInput({ type }) {
                     <TextInput 
                         placeholder='0123456789'
                         style={styles.input}
+                        value={accountNumber}
+                        onChangeText={(text) => setAccountNumber(text)}
+                        keyboardType='number-pad'
                     />
 
                 </View>
@@ -37,6 +55,9 @@ export default function TransferInput({ type }) {
                     <TextInput 
                         placeholder='2000'
                         style={styles.input}
+                        value={amount}
+                        onChangeText={(text) => setAmount(text)}
+                        keyboardType='number-pad'
                     />
 
                 </View>
@@ -45,6 +66,8 @@ export default function TransferInput({ type }) {
                     <TextInput 
                         placeholder='Have Fun'
                         style={styles.input}
+                        value={narration}
+                        onChangeText={(text) => setNarration(text)}
                     />
 
                 </View>
@@ -56,6 +79,8 @@ export default function TransferInput({ type }) {
                     <TextInput 
                         placeholder='Eg Nigeria'
                         style={styles.input}
+                        value={Country}
+                        onChangeText={(text) => setCountry(text)}
                     />
 
                 </View>
@@ -64,6 +89,8 @@ export default function TransferInput({ type }) {
                     <TextInput 
                         placeholder='Enter bank name'
                         style={styles.input}
+                        value={bankName}
+                        onChangeText={(text) => setBankName(text)}
                     />
 
                 </View>
@@ -72,6 +99,8 @@ export default function TransferInput({ type }) {
                     <TextInput 
                         placeholder='Enter the bank swift code'
                         style={styles.input}
+                        value={bankSwift}
+                        onChangeText={(text) => setBankSwift(text)}
                     />
 
                 </View>
@@ -80,6 +109,8 @@ export default function TransferInput({ type }) {
                     <TextInput 
                         placeholder='0123456789'
                         style={styles.input}
+                        value={accountNumber}
+                        onChangeText={(text) => setAccountNumber(text)}
                     />
 
                 </View>
@@ -88,6 +119,8 @@ export default function TransferInput({ type }) {
                     <TextInput 
                         placeholder='Enter amount'
                         style={styles.input}
+                        value={amount}
+                        onChangeText={(text) => setAmount(text)}
                     />
 
                 </View>
@@ -96,6 +129,8 @@ export default function TransferInput({ type }) {
                     <TextInput 
                         placeholder='Have Fun'
                         style={styles.input}
+                        value={narration}
+                        onChangeText={(text) => setNarration(text)}
                     />
 
                 </View>

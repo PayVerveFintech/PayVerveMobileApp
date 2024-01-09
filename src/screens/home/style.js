@@ -38,8 +38,13 @@ export const styles = StyleSheet.create({
         borderRadius: 8,
         justifyContent: "space-between",
         alignItems: "center",
-        paddingHorizontal: wp(5),
-        marginTop: hp(3)
+        marginTop: hp(3),
+    },
+    accountDetails: {
+        width: wp(90),
+        flexDirection: "row",
+        justifyContent: "space-around",
+        alignItems: "center"
     },
     accountType: {
         fontSize: hp(3.2),

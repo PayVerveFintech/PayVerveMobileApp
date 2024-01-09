@@ -1,6 +1,7 @@
 import { View, Text, TextInput, TouchableOpacity, ScrollView, } from 'react-native'
 import React, {useState} from 'react';
 import { AntDesign } from "@expo/vector-icons";
+import { useNavigation } from '@react-navigation/native';
 
 
 import { styles } from './style';
@@ -14,11 +15,21 @@ import TransferInput from '../../components/transferInput';
 
 export default function OtherBanks() {
 
+  const navigation = useNavigation();
+
   const walletType = ["Naira wallet", "Dollar wallet", "Pound wallet"];
   const transferType = ["Local", "Foreign"];
 
   const [transfer, setTransfer] = useState(null);
   const [wallet, setWallet] = useState(walletType[0]);
+
+
+  const [bankName, setBankName] = useState("");
+  const [accountNumber, setAccountNumber] = useState("");
+  const [amount, setAmount] = useState("");
+  const [narration, setNarration] = useState("");
+  const [bankSwift, setBankSwift] = useState("");
+  const [Country, setCountry] = useState("");
 
   return (
     <View style={styles.root}>
@@ -41,9 +52,32 @@ export default function OtherBanks() {
             </View>
         </View>
         <View>
-          <TransferInput type={transfer} />
+          <TransferInput type={transfer} 
+            bankName={bankName}
+            setBankName={setBankName}
+            accountNumber={accountNumber}
+            setAccountNumber={setAccountNumber}
+            amount={amount}
+            setAmount={setAmount}
+            narration={narration}
+            setNarration={setNarration}
+            Country={Country}
+            setCountry={setCountry}
+            bankSwift={bankSwift}
+            setBankSwift={setBankSwift}
+          />
         </View>
-        <TouchableOpacity style={styles.btnContainer}>
+        <TouchableOpacity 
+          style={styles.btnContainer} 
+          onPress={ () => navigation.navigate(
+            "Review", 
+            {bankName, 
+            accountNumber,
+            amount,
+            narration,
+            Country,
+            bankSwift
+            })} >
           <Text style={styles.btnText}>Send</Text>
         </TouchableOpacity>
       </ScrollView>

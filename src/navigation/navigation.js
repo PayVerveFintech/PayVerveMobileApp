@@ -6,6 +6,10 @@ import { Ionicons } from "@expo/vector-icons";
 
 import Home from "../screens/home";
 import { TouchableOpacity } from "react-native";
+import Review from '../screens/review';
+import PinScreen from '../screens/pinScreen';
+import ConfirmScreen from '../screens/confirmScreen';
+import TransferSucess from '../screens/transferSucess';
 
 
 
@@ -34,6 +38,10 @@ const Navigation = () => {
       >
         <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
         <Stack.Screen name="Transfer" component={TopNavigation} />
+        <Stack.Screen name='Review' component={Review} />
+        <Stack.Screen name='PinScreen' component={PinScreen} options={{ headerShown: false}} />
+        <Stack.Screen name='ConfirmScreen' component={ConfirmScreen} options={{ headerShown: false}} />
+        <Stack.Screen name='TransferSucess' component={TransferSucess} options={{ headerShown:false}} />
       </Stack.Navigator>
     </NavigationContainer>
   );
