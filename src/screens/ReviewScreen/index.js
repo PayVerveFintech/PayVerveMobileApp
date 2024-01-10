@@ -1,7 +1,7 @@
 import { View, Text } from "react-native"
-import { styles } from "../styles/styles"
-import { Review } from "../components/ReviewContainer/Review"
-import { Button } from "../components/ButtonComponent/Button"
+import { styles } from "../../styles/styles"
+import { Review } from "../../components/ReviewContainer/Review"
+import { Button } from "../../components/ButtonComponent/Button"
 import { useNavigation } from "@react-navigation/native"
 
 export const ReviewScreen = () => {

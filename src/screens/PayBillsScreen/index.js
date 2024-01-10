@@ -1,8 +1,8 @@
 import { View, TouchableOpacity, FlatList } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
-import { BillsType } from "../components/BillsTypeComponent/BillsType"
-import { styles } from "../styles/styles"
-import { bills } from "../service/bills"
+import { BillsType } from "../../components/BillsTypeComponent/BillsType"
+import { styles } from "../../styles/styles"
+import { bills } from "../../service/bills"
 import { useNavigation } from "@react-navigation/native"
 
 const PayBillsScreen = () => {

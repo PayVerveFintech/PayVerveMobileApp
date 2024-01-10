@@ -1,9 +1,9 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 import { View, Text, TextInput } from "react-native";
-import { styles } from "../styles/styles";
-import { MobileNetworks } from "../components/MobileNetworks/MobileNetworks";
+import { styles } from "../../styles/styles";
+import { MobileNetworks } from "../../components/MobileNetworks/MobileNetworks";
 import { Picker } from "@react-native-picker/picker";
-import { Button } from "../components/ButtonComponent/Button";
+import { Button } from "../../components/ButtonComponent/Button";
 import { useNavigation } from "@react-navigation/native";
 
 const DataScreen = () => {

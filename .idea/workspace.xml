@@ -5,16 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a86759bc-5623-444e-b870-a822ca735f93" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Accounts/AccountsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Accounts/AccountsComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ButtonComponent/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonComponent/Button.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ButtonComponent/Styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonComponent/Styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/navigation/HomeNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/HomeNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigation/StackNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/StackNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/DataScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/DataScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/AddMoneyScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/AirtimeScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/BettingScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/CableTvScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/DataScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ElectricityScreen.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/FinanceScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/FinanceScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/NotificationScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/PayBillsScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ReviewScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/SuccessfulScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/TransportationScreen.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +36,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2ZfjA2DfYnfduViydhuGC1OCJhR" />
   <component name="ProjectViewState">

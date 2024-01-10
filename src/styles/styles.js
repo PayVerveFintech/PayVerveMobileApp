@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
     container: {
         padding: 20,
         flex: 1,
+        backgroundColor: "#FFF"
     },
 
     logo: {
@@ -112,7 +113,7 @@ export const styles = StyleSheet.create({
     },
 
     data_form_input_wrapper: {
-        gap: 8
+        gap: 8,
     },
 
     data_form_label: {
@@ -183,6 +184,19 @@ export const styles = StyleSheet.create({
     headerTitleStyle: {
         fontSize: 22,
         fontWeight: "700"
-    }
+    },
+
+    addWalletButton: {
+        width: 50,
+        height: 50,
+        backgroundColor: "#2196F3",
+        borderRadius: 50 / 2,
+        justifyContent: "center",
+        alignItems: "center",
+        alignSelf: "flex-end"
+    },
+
+
+
 
 })
