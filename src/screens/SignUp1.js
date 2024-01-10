@@ -107,6 +107,16 @@ const SignUp1 = ({navigation}) => {
                             </Text>
                         </TouchableOpacity>
 
+                        {/* This is temporary */}
+                        <TouchableOpacity 
+                            style={styles.signupButton} 
+                            onPress={() => navigation.navigate('Finance')}
+                        >
+                            <Text style={styles.touchableOpacityText}>
+                                Finance
+                            </Text>
+                        </TouchableOpacity>
+
                         <Text style={{alignSelf: 'center', fontSize: 14}} onPress={() => navigation.navigate('Login') }>
                             {baseText[1]}
                             <Text style={{color: 'blue', fontSize: 16, fontWeight: 'bold', textDecorationLine: 'underline'}}>{appendText[1]}</Text>

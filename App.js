@@ -13,6 +13,12 @@ import KYCVerification2 from './src/screens/KYCVerification2';
 import KYCVerification from './src/screens/KYCVerification';
 import CreateNewPW from './src/screens/CreateNewPW';
 import KYCVerification3 from './src/screens/KYCVerification3';
+import Finance from './src/screens/Finance';
+import TransactionDetail from './src/screens/TransactionDetails';
+import SavingInsight from './src/screens/SavingInsight';
+import AirtimeInsight from './src/screens/AirtimeInsight';
+import DataInsight from './src/screens/DataInsight';
+import BillsInsight from './src/screens/BillsInsight';
 
 function App() {
 
@@ -116,6 +122,66 @@ function App() {
                 <Stack.Screen 
                     name='KYCVerify3'
                     component={KYCVerification3}
+                    options={
+                        {
+                            headerShown: false
+                        }
+                    }
+                />
+
+                <Stack.Screen 
+                    name='Finance'
+                    component={Finance}
+                    options={
+                            {
+                            headerShown: false
+                        }
+                    }
+                />
+
+                <Stack.Screen 
+                    name='TransactDetails'
+                    component={TransactionDetail}
+                    options={
+                        {
+                            headerShown: false
+                        }
+                    }
+                />
+
+                <Stack.Screen 
+                    name='SavingInsight'
+                    component={SavingInsight}
+                    options={
+                        {
+                            headerShown: false
+                        }
+                    }
+                />
+
+                <Stack.Screen 
+                    name='AirtimeInsight'
+                    component={AirtimeInsight}
+                    options={
+                        {
+                            headerShown: false
+                        }
+                    }
+                />
+
+                <Stack.Screen 
+                    name='DataInsight'
+                    component={DataInsight}
+                    options={
+                        {
+                            headerShown: false
+                        }
+                    }
+                />
+
+                <Stack.Screen 
+                    name='BillsInsight'
+                    component={BillsInsight}
                     options={
                         {
                             headerShown: false

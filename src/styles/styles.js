@@ -65,8 +65,24 @@ export const styles = StyleSheet.create({
     header_Text_2: {
         fontSize: 20,
         paddingTop: 20,
-        paddingLeft: 50,
-        paddingRight: 50,
+        // paddingLeft: 50,
+        // paddingRight: 50,
+        alignSelf: 'center',
+        textAlign: 'center',
+    },
+
+    finance_header_text_1: {
+        fontSize: 35,
+        paddingTop: 50,
+        paddingLeft: 100,
+        alignSelf: 'center',
+        fontWeight: 'bold'
+    },
+
+    finance_header_text_2: {
+        fontSize: 15,
+        paddingTop: 20,
+        alignSelf: 'center',
         textAlign: 'center',
     },
 
