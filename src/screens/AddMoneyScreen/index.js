@@ -1,7 +1,7 @@
 import { SafeAreaView } from "react-native-safe-area-context"
 import { View } from "react-native"
-import { AccountsComponent } from "../components/Accounts/AccountsComponent"
-import { styles } from "../styles/styles"
+import { AccountsComponent } from "../../components/Accounts/AccountsComponent"
+import { styles } from "../../styles/styles"
 import { useState } from "react"
 
 const AddMoneyScreen = () => {

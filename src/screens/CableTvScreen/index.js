@@ -1,8 +1,8 @@
 import { View, Text, TextInput } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
-import { Button } from "../components/ButtonComponent/Button"
+import { Button } from "../../components/ButtonComponent/Button"
 import { useNavigation } from "@react-navigation/native"
-import { styles } from "../styles/styles"
+import { styles } from "../../styles/styles"
 
 const CableTvScreen = () => {
     const navigation = useNavigation()

@@ -1,11 +1,10 @@
 import { View, Text, TextInput } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
-import { styles } from "../styles/styles"
-import { Button } from "../components/ButtonComponent/Button"
+import { Button } from "../../components/ButtonComponent/Button"
+import { styles } from "../../styles/styles"
 import { useNavigation } from "@react-navigation/native"
 
-
-const TransportationScreen = () => {
+const BettingScreen = () => {
     const navigation = useNavigation()
 
     const whenPress = () => {
@@ -19,31 +18,22 @@ const TransportationScreen = () => {
             <View style={styles.data_screen}>
                 {/* replace with dropdown component */}
                 <View style={styles.data_form_input_wrapper}> 
-                    <Text style={styles.data_form_label}>Select Service Provider</Text>
+                    <Text style={styles.data_form_label}>Select Provider</Text>
                     <TextInput 
                         placeholder="Select Service Provider"
                         style={styles.data_form_input}
                     />
                 </View>
-                
-                {/* replace with dropdown component */}
+
                 <View style={styles.data_form_input_wrapper}> 
-                    <Text style={styles.data_form_label}>Package</Text>
+                    <Text style={styles.data_form_label}>Users ID</Text>
                     <TextInput 
                         placeholder="123456789"
                         style={styles.data_form_input}
                     />
                 </View>
 
-                <View style={styles.data_form_input_wrapper}>
-                    <Text style={styles.data_form_label}>Tag Number</Text>
-                    <TextInput 
-                        placeholder="123456789"
-                        style={styles.data_form_input}
-                    />
-                </View>
-
-                <View style={styles.data_form_input_wrapper}>
+                <View style={styles.data_form_input_wrapper}> 
                     <Text style={styles.data_form_label}>Amount</Text>
                     <TextInput 
                         placeholder="123456789"
@@ -57,4 +47,4 @@ const TransportationScreen = () => {
     )
 }
 
-export default TransportationScreen
+export default BettingScreen

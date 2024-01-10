@@ -1,6 +1,6 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 import { View, Text } from "react-native";
-import { styles } from "../styles/styles"
+import { styles } from "../../styles/styles"
 
 const AirtimeScreen = () => {
     return (

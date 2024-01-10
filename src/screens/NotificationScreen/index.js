@@ -1,8 +1,8 @@
 import { Text, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { styles } from "../styles/styles";
-import EmptyNotification from "../components/Notification/EmptyNotification";
-import Notifications from "../components/Notification/Notifications";
+import { styles } from "../../styles/styles";
+import EmptyNotification from "../../components/Notification/EmptyNotification";
+import Notifications from "../../components/Notification/Notifications";
 import { useState } from "react";
 
 const NotificationScreen = () => {

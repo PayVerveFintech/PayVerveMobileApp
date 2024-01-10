@@ -1,7 +1,7 @@
 import { View, Image, Text } from "react-native"
-import { styles } from "../styles/styles"
-import successful from "../../assets/successful.png"
-import { Button } from "../components/ButtonComponent/Button"
+import { styles } from "../../styles/styles"
+import successful from "../../../assets/successful.png"
+import { Button } from "../../components/ButtonComponent/Button"
 import { useNavigation } from "@react-navigation/native"
 
 

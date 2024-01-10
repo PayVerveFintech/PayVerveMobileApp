@@ -10,6 +10,12 @@ import CableTvScreen from "../screens/CableTvScreen"
 import ElectricityScreen from "../screens/ElectricityScreen"
 import TransportationScreen from "../screens/TransportationScreen"
 import BettingScreen from "../screens/BettingScreen"
+import AddNewWallet from "../screens/AddNewWallet"
+import PersonalInformation from "../screens/PersonalInformation"
+import ProofOfAddress from "../screens/ProofOfAddress"
+import WalletConfirmation from "../screens/WalletConfirmation"
+import CameraScreen from "../screens/CameraView"
+import WalletScreen from "../screens/WalletScreen"
 
 
 const Stack = createStackNavigator()
@@ -85,6 +91,46 @@ export const HomePage = () => {
                 component={BettingScreen} 
                 options={headerOptions}
             />
+
+            <Stack.Screen 
+                name="Wallet" 
+                component={WalletScreen} 
+                options={headerOptions}
+            />
+
+            <Stack.Screen 
+                name="Add a New Wallet" 
+                component={AddNewWallet} 
+                options={headerOptions}
+            />
+
+            <Stack.Screen 
+                name="Personal Information" 
+                component={PersonalInformation} 
+                options={headerOptions}
+            />
+
+            <Stack.Screen 
+                name="Proof of Address" 
+                component={ProofOfAddress} 
+                options={headerOptions}
+            />
+
+            <Stack.Screen 
+                name="Confirmation" 
+                component={WalletConfirmation} 
+                options={headerOptions}
+            />
+
+            <Stack.Screen 
+                name="Camera" 
+                component={CameraScreen} 
+                options={{
+                    headerShown: false,
+                }}
+            />
+
+
         </Stack.Navigator>
     )
 
