@@ -23,7 +23,7 @@ export const ReviewScreen = () => {
 
     }, [route.params.details])
 
-    console.log("screen: ", route.params.details)
+    // console.log("screen: ", route.params.details)
 
     const whenPress = () => {
         let details = "";
