@@ -16,6 +16,8 @@ import ProofOfAddress from "../screens/ProofOfAddress"
 import WalletConfirmation from "../screens/WalletConfirmation"
 import CameraScreen from "../screens/CameraView"
 import WalletScreen from "../screens/WalletScreen"
+import SwapCurrencyScreen from "../screens/SwapCurrencyScreen"
+import ExchangeChartScreen from "../screens/ExchangeChartScreen"
 
 
 const Stack = createStackNavigator()
@@ -128,6 +130,18 @@ export const HomePage = () => {
                 options={{
                     headerShown: false,
                 }}
+            />
+
+            <Stack.Screen 
+                name="Swap Currency" 
+                component={SwapCurrencyScreen} 
+                options={headerOptions}
+            />
+
+            <Stack.Screen 
+                name="Exchange Chart" 
+                component={ExchangeChartScreen} 
+                options={headerOptions}
             />
 
 

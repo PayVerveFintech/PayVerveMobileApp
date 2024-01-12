@@ -2,14 +2,15 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     container: {
-        height: 300
+        height: 300,
+        gap: 12
     },
 
     review_container_flex: {
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        gap: 12
+        // gap: 12
     },
 
     review_description_left: {
@@ -39,6 +40,10 @@ export const styles = StyleSheet.create({
     review_text_number: {
         color: "#AFAFAF",
         fontSize: 12
-    }
+    },
+
+    reviewDetails: {
+        fontSize: 12
+    },
 
 })

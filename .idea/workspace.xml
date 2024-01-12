@@ -6,25 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="a86759bc-5623-444e-b870-a822ca735f93" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ButtonComponent/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonComponent/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ButtonComponent/Styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonComponent/Styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/InputBox/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InputBox/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/InputBox/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InputBox/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ReviewContainer/Review.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ReviewContainer/Review.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ReviewContainer/Styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ReviewContainer/Styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/navigation/HomeNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/HomeNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/AddMoneyScreen.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/AirtimeScreen.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/BettingScreen.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/CableTvScreen.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/DataScreen.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/ElectricityScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/DataScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/DataScreen/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/FinanceScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/FinanceScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/NotificationScreen.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/PayBillsScreen.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/ReviewScreen.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/SuccessfulScreen.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/TransportationScreen.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ReviewScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ReviewScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/SuccessfulScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/SuccessfulScreen/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

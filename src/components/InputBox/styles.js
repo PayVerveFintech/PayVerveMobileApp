@@ -16,4 +16,14 @@ export const styles = StyleSheet.create({
         borderRadius: 4,
         height: 46,
     },
+
+    labelWrapper: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+    },
+
+    extraIcon: {
+        width: 16,
+        height: 16
+    }
 })
