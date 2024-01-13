@@ -1,4 +1,4 @@
-import { SafeAreaView } from "react-native-safe-area-context";
+ import { SafeAreaView } from "react-native-safe-area-context";
 import { View, Text, TextInput } from "react-native";
 import { styles } from "../styles/styles";
 import { MobileNetworks } from "../components/MobileNetworks/MobileNetworks";

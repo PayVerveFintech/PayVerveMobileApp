@@ -4,13 +4,23 @@ import { Color } from "../../color/Color";
 
 
 
+
+
 export const styles = StyleSheet.create({
-    input:{
-        borderWidth:1,
-        width: wp(94),
+    inputContainer: {
+       marginVertical: hp(2)
+    },
+    input: {
+        borderWidth: 1,
+        height: hp(7),
         borderRadius: 4,
-        backgroundColor: Color.white,
         borderColor: Color.gray,
-        height: hp(7)
-    }
+        paddingLeft: wp(5)
+    },
+    title: {
+        fontSize: hp(2.5),
+        fontWeight: "500",
+        marginBottom: hp(1.2)
+    },
+
 })

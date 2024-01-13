@@ -1,4 +1,4 @@
-import { View, Text, TextInput, KeyboardAvoidingView, TouchableOpacity } from 'react-native'
+import { View, Text, TextInput, KeyboardAvoidingView, TouchableOpacity, ScrollView } from 'react-native'
 import React, {useState} from 'react';
 import { AntDesign } from "@expo/vector-icons";
 import { styles } from './style'
@@ -12,7 +12,7 @@ import { useNavigation } from '@react-navigation/native';
 
 export default function PayVerve() {
 
-  const navigation = useNavigation();
+    const navigation = useNavigation();
 
     const walletType = ["Naira wallet", "Dollar wallet", "Pound wallet"];
     const [wallet, setWallet] = useState(walletType[0]);
@@ -21,15 +21,18 @@ export default function PayVerve() {
     const [amount, setAmount] = useState("");
     const [narration, setNarration] = useState("");
 
-
   return (
     <View style={styles.root}>
       <View style={styles.textContainer}>
         <Text style={styles.text}>Kindly note that user’s can only send Naira to Naira, Dollars to</Text>
         <Text style={styles.text}>Dollars, Pounds to Pounds</Text>
       </View>
-      <View>
-        <KeyboardAvoidingView behavior='padding'>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+      >
+        <KeyboardAvoidingView 
+          behavior='padding'
+        >
             <View style={styles.textInputMainContainer}>
                 <Text style={styles.label}>Wallet</Text>
                <Selector data={walletType} setFunc={setWallet} placeholder={"Select your PayVerve wallet"}/>
@@ -69,11 +72,20 @@ export default function PayVerve() {
                     />
                 </View>
             </View>
+            <TouchableOpacity 
+              style={styles.btnContainer} 
+              onPress={() => navigation.navigate("TransferReview", 
+              { 
+                accountNumber, 
+                amount,
+                narration, 
+                wallet})
+              }
+            >
+              <Text style={styles.btnText}>Send</Text>
+            </TouchableOpacity>
         </KeyboardAvoidingView>
-      </View>
-      <TouchableOpacity style={styles.btnContainer} onPress={() => navigation.navigate("Review", {accountNumber, amount,narration, wallet})}  >
-        <Text style={styles.btnText}>Send</Text>
-      </TouchableOpacity>
+      </ScrollView>
     </View>
   )
 }

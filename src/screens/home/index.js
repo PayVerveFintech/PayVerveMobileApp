@@ -1,5 +1,5 @@
 import { View, Text, SafeAreaView, TouchableOpacity, FlatList, Pressable } from 'react-native'
-import React, { useState } from 'react';
+import React, { useContext, useState, useRef } from 'react';
 import { MaterialCommunityIcons, Feather, Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
@@ -7,7 +7,8 @@ import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
 import { styles } from './style';
 import { service } from '../../service/service';
 import TransactionHistory from '../../components/transactionHistory';
-
+import { ScrollView } from 'react-native-gesture-handler';
+import { NewUser } from '../../context/userContext';
 
 
 
@@ -18,8 +19,12 @@ export default function Home() {
 
     const navigation = useNavigation();
 
-    const [history, setHistory] = useState(false);
+    const newUser = useContext(NewUser);
+
     const [isVisible, setIsVisible] = useState(true);
+
+
+    // List of availabe walllet
 
     const wallet = [
         {
@@ -40,12 +45,21 @@ export default function Home() {
     ]
 
 
+    // func to toggle wallet balance
 
     const toggleVisibility = () => {
         setIsVisible(!isVisible);
       };
 
       const [activeWallet, setActiveWallet] = useState(wallet[0])
+
+      const flatListRef = useRef(null);
+
+      const handleScroll = (event) => {
+          const offsetX = event.nativeEvent.contentOffset.x;
+          const index = Math.round(offsetX / absoluteWidth);
+          setActiveWallet(wallet[index]);
+      };
 
     const renderItem = ({ item }) => {
         return(
@@ -64,6 +78,21 @@ export default function Home() {
     // Convert wp(90) to an absolute width
     const absoluteWidth = (wp(94) * screenWidth) / 100;
 
+    // get currency symbol
+
+    const getCurrencySymbol = (walletType) => {
+        switch (walletType) {
+          case 'NGR Balance':
+            return '₦'; // Nigerian Naira
+          case 'Dollar Balance':
+            return '$'; // US Dollar
+          case 'Pound Balance':
+            return '£'; // British Pound
+          default:
+            return '';
+        }
+      };
+
 
   return (
     <SafeAreaView style={styles.root}>
@@ -80,25 +109,26 @@ export default function Home() {
             <View style={styles.accountDetailsContainer}>
                 <FlatList 
                     data={wallet}
+                    ref={flatListRef}
                     horizontal
                     showsHorizontalScrollIndicator={false}
                     pagingEnabled 
                     snapToAlignment='center'
+                    onScroll={handleScroll}
                     snapToInterval={absoluteWidth}
                     renderItem={({ item, index }) => {
-                        let isActiveWallet = item == activeWallet;
                         return(
                             <View style={styles.accountDetails}>
-                                <Pressable style={styles.accountTypeInnerContainer} onPress={ () => setActiveWallet(index)}>
-                                    <Text style={styles.accountType}> {item.name} </Text>
+                                <View style={styles.accountTypeInnerContainer} >
+                                    <Text style={styles.accountType}>{item.name} </Text>
                                     {
                                         isVisible? (
-                                            <Text style={styles.balance}> {item.balance} </Text>
+                                            <Text style={styles.balance}>{getCurrencySymbol(activeWallet.name)} {activeWallet.balance} </Text>
                                         ) : (
-                                            <Text style={styles.hidden}>****</Text>
+                                            <Text style={styles.hidden}> ****</Text>
                                         )
                                     }
-                                </Pressable>
+                                </View>
                                 <TouchableOpacity onPress={ () => toggleVisibility()}>
                                     <Feather name={isVisible? 'eye-off' : "eye"} size={25} />
                                 </TouchableOpacity>
@@ -106,6 +136,16 @@ export default function Home() {
                         )
                     }}
                 />
+            </View>
+            <View style={styles.dotContainer}>
+                {
+                    wallet.map( (item,index) => {
+                        return(
+                         <View key={index} style={[styles.dot, index === activeWallet.id - 1 ? styles.activeDot : null]}>
+                         </View>  
+                        )
+                    })
+                }
             </View>
             <View style={styles.serviceRoot}>
                 <Text style={styles.label}>Quick Access</Text>
@@ -120,9 +160,9 @@ export default function Home() {
                     />
                 </View>
             </View>
-            <View style={styles.history}>
-                <TransactionHistory history={history} />
-            </View>
+            <ScrollView style={styles.history}>
+                <TransactionHistory history={newUser} />
+            </ScrollView>
         </View>
     </SafeAreaView>
   )

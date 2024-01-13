@@ -3,4 +3,4 @@ import { createContext } from "react";
 
 
 
- export const NewUser = createContext();
+ export const NewUser = createContext(false);

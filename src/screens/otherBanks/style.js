@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
     },
     text: {
         fontSize: hp(1.9),
-        fontWeight: "800",
+        fontWeight: "500",
         
     },
     textInputContainer: {

@@ -10,31 +10,31 @@ export const  service = [
     },
     {
         name: "Add money",
-        screen: "Transfer",
+        screen: "AddMoneyScreen",
         icon: "add-circle-outline",
         iconFamily: "Ionicons"
     },
     {
         name: "Data",
-        screen: "Transfer",
+        screen: "DataScreen",
         icon: "globe-outline",
         iconFamily: "Ionicons"
     },
     {
         name: "Airtime",
-        screen: "Airtime",
+        screen: "AirtimeScreen",
         icon: "ios-phone-portrait-outline",
         iconFamily: "Ionicons"
     },
     {
-        name: "Data",
-        screen: "Transfer",
+        name: "Betting",
+        screen: "BettingScreen",
         icon: "globe-outline",
         iconFamily: "Ionicons"
     },
     {
         name: "Pay Bills",
-        screen: "Transfer",
+        screen: "PayBillsScreen",
         icon: "document-text-outline",
         iconFamily: "Ionicons"
     },
