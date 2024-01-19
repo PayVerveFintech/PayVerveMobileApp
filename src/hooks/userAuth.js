@@ -1,4 +1,5 @@
 import React, { createContext, useState, useContext } from "react";
+import { signIn, signUp } from "./apiRequest";
 
 const AuthContext = createContext();
 
@@ -6,6 +7,9 @@ export const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
 
     const login = (userName, password) => {
+
+        response = signIn(userName, password);
+        
         if (userName === "admin" && password === "admin") {
             setUser({Welcome});
         } else {
