@@ -2,7 +2,7 @@ import { View, Text, TextInput, TouchableOpacity } from "react-native"
 import { styles } from "./styles"
 
 
-const InputBox = ({ label, placeholder, onPress, Icon}) => {
+const InputBox = ({ label, placeholder, labelRight, onPress, Icon, name, value, onChangeText, keyboardType }) => {
 
     return(
         <View style={styles.boxWrapper}>
@@ -19,7 +19,12 @@ const InputBox = ({ label, placeholder, onPress, Icon}) => {
             <TextInput 
                 placeholder={placeholder}
                 style={styles.inputBox}
+                name={name}
+                value={value}
+                onChangeText={onChangeText}
+                keyboardType={keyboardType}
             />
+            {labelRight && <Text style={styles.labelRight}>{labelRight}</Text>}
         </View>
     )
 }

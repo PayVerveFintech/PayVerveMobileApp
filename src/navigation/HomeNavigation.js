@@ -18,6 +18,17 @@ import CameraScreen from "../screens/CameraView"
 import WalletScreen from "../screens/WalletScreen"
 import SwapCurrencyScreen from "../screens/SwapCurrencyScreen"
 import ExchangeChartScreen from "../screens/ExchangeChartScreen"
+import ChangePassword from "../screens/ChangePassword"
+import ChangeTransactionPin from "../screens/ChangeTransactionPin"
+import ManageBeneficiaries from "../screens/ManageBeneficiaries"
+import AddBeneficiaries from "../screens/AddBeneficiaries"
+import ReferFriends from "../screens/ReferFriends"
+import ReferralHistory from "../screens/ReferralHistory"
+import RequestPOS from "../screens/RequestPOS"
+import TermsAndConditions from "../screens/TermsAndConditions"
+import SupportScreen from "../screens/SupportScreen"
+import FeedbackScreen from "../screens/FeedbackScreen"
+import LiveChat from "../screens/LiveChat"
 
 
 const Stack = createStackNavigator()
@@ -141,6 +152,72 @@ export const HomePage = () => {
             <Stack.Screen 
                 name="Exchange Chart" 
                 component={ExchangeChartScreen} 
+                options={headerOptions}
+            />
+
+            <Stack.Screen 
+                name="Change Password" 
+                component={ChangePassword} 
+                options={headerOptions}
+            />
+
+            <Stack.Screen 
+                name="Change Transaction Pin" 
+                component={ChangeTransactionPin} 
+                options={headerOptions}
+            />
+
+            <Stack.Screen 
+                name="Manage Beneficiaries" 
+                component={ManageBeneficiaries} 
+                options={headerOptions}
+            />
+
+            <Stack.Screen 
+                name="Add Beneficiaries" 
+                component={AddBeneficiaries} 
+                options={headerOptions}
+            />
+
+            <Stack.Screen 
+                name="Refer Friends" 
+                component={ReferFriends} 
+                options={headerOptions}
+            />
+
+            <Stack.Screen 
+                name="Referral History" 
+                component={ReferralHistory} 
+                options={headerOptions}
+            />
+
+            <Stack.Screen 
+                name="Request POS" 
+                component={RequestPOS} 
+                options={headerOptions}
+            />
+
+            <Stack.Screen 
+                name="Terms and Conditions" 
+                component={TermsAndConditions} 
+                options={headerOptions}
+            />
+
+            <Stack.Screen 
+                name="Support" 
+                component={SupportScreen} 
+                options={headerOptions}
+            />
+
+            <Stack.Screen 
+                name="Feedback" 
+                component={FeedbackScreen} 
+                options={headerOptions}
+            />
+
+            <Stack.Screen 
+                name="Live Chat" 
+                component={LiveChat} 
                 options={headerOptions}
             />
 

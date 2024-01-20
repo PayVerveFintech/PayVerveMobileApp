@@ -1,14 +1,23 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-    modalView: {
+    tandcModalView: {
         flex: 1,
-        width: 390,
+        width: 370,
         alignSelf: "center",
         padding: 24,
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
         backgroundColor: "#FFF",
+        marginTop: 80,
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: 1,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
+        elevation: 2,
     },
 
     modalWrapper: {
@@ -67,12 +76,10 @@ export const styles = StyleSheet.create({
         textAlign: "center"
     }, 
 
-    cameraModalView: {
+    modalView: {
         margin: 20,
-        height: 287,
         backgroundColor: "white",
         borderRadius: 8,
-        paddingVertical: 12,
         alignItems: "center",
         shadowColor: "#000",
         shadowOffset: {
@@ -82,6 +89,11 @@ export const styles = StyleSheet.create({
         shadowOpacity: 0.25,
         shadowRadius: 4,
         elevation: 5,
+    },
+
+    cameraModalView: {
+        height: 287,
+        paddingVertical: 12,
         gap: 12
     },
 
@@ -97,6 +109,88 @@ export const styles = StyleSheet.create({
         gap: 12,
         color: "#101820",
         paddingHorizontal: 8
+    },
+
+    successfulModalView: {
+        height: 219,
+        width: 340,
+        paddingVertical: 32,
+        paddingHorizontal: 12
+    },
+
+    successfulScreenWrapper: {
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 23,
+    },
+
+    successfulScreenText: {
+        fontSize: 18,
+        fontWeight: "700",
+        textAlign: "center",
+    },
+
+    referralPointModal: {
+        width: 254,
+        height: 151,
+        paddingVertical: 23,
+        paddingHorizontal: 12
+    },
+
+    referralModalHeader: {
+        fontSize: 18,
+        fontWeight: "700",
+        textAlign: "center",
+    },
+
+    referralButtonFlex: {
+        flexDirection: "row",
+        gap: 15
+    },
+
+    referralButton: {
+        paddingVertical: 12,
+        paddingHorizontal: 10,
+        color: "#101820",
+        borderRadius: 8,
+        width: 107,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+
+
+    dataButton: {
+        borderWidth: 1,
+        borderColor: "#2196F3",
+        color: "#101820"
+    },
+
+    airtimeButton: {
+        backgroundColor: "#2196F3",
+        color: "#101820"
+    },
+
+    feedbackModal: {
+        height: 250,
+        paddingVertical: 32,
+        paddingHorizontal: 12,
+        
+    },
+
+    feedbackModalWrapper: {
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 23
+    },
+    
+    feedbackModalTextWrapper: {
+        alignItems: "center"
+    },
+
+    feedbackModalText: {
+        fontSize: 18,
+        fontWeight: "700", 
+        textAlign: "center"
     },
 
 })

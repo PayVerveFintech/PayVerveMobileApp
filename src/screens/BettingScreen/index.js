@@ -3,6 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context"
 import { Button } from "../../components/ButtonComponent/Button"
 import { styles } from "../../styles/styles"
 import { useNavigation } from "@react-navigation/native"
+import InputBox from "../../components/InputBox"
 
 const BettingScreen = () => {
     const navigation = useNavigation()
@@ -25,21 +26,15 @@ const BettingScreen = () => {
                     />
                 </View>
 
-                <View style={styles.data_form_input_wrapper}> 
-                    <Text style={styles.data_form_label}>Users ID</Text>
-                    <TextInput 
-                        placeholder="123456789"
-                        style={styles.data_form_input}
-                    />
-                </View>
+                <InputBox 
+                    label="Users ID"
+                    placeholder="123456789"
+                />
 
-                <View style={styles.data_form_input_wrapper}> 
-                    <Text style={styles.data_form_label}>Amount</Text>
-                    <TextInput 
-                        placeholder="123456789"
-                        style={styles.data_form_input}
-                    />
-                </View>
+                <InputBox 
+                    label="Amount"
+                    placeholder="123456789"
+                />
 
                 <Button btn_text="Proceed" onPress={whenPress}/>
             </View>
