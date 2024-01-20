@@ -25,5 +25,10 @@ export const styles = StyleSheet.create({
     extraIcon: {
         width: 16,
         height: 16
-    }
+    }, 
+
+    labelRight: {
+        textAlign: "right",
+        fontSize: 12
+    },
 })

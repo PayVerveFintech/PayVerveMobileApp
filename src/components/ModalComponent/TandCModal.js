@@ -21,7 +21,7 @@ const TandCModal = ({ visible, onClose, onPress, account }) => {
         visible={visible}
         onRequestClose={onClose}
     >
-        <View style={styles.modalView}>
+        <View style={styles.tandcModalView}>
             <View style={styles.modalWrapper}>
 
                 <View style={styles.modalHeader}>

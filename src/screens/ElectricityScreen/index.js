@@ -1,6 +1,7 @@
 import { View, Text, TextInput, Pressable } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { Button } from "../../components/ButtonComponent/Button"
+import InputBox from "../../components/InputBox";
 import { useNavigation } from "@react-navigation/native"
 import { styles } from "../../styles/styles"
 import { useState } from "react"
@@ -55,21 +56,15 @@ const ElectricityScreen = () => {
                     </View>
                 </View>
 
-                <View style={styles.data_form_input_wrapper}>
-                    <Text style={styles.data_form_label}>Meter Number</Text>
-                    <TextInput 
-                        placeholder="123456789"
-                        style={styles.data_form_input}
-                    />
-                </View>
+                <InputBox 
+                    label="Meter Number"
+                    placeholder="123456789"
+                />
 
-                <View style={styles.data_form_input_wrapper}>
-                    <Text style={styles.data_form_label}>Amount</Text>
-                    <TextInput 
-                        placeholder="123456789"
-                        style={styles.data_form_input}
-                    />
-                </View>
+                <InputBox 
+                    label="Amount"
+                    placeholder="123456789"
+                />
 
                 <Button btn_text="Proceed" onPress={whenPress} />
             </View>

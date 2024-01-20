@@ -11,9 +11,10 @@ const CameraPermission = ({ visible, onClose, allowAccess, denyAccess }) => {
         onRequestClose={onClose}
     >
         <View style={styles.centeredView}>
-            <View style={styles.cameraModalView}>
+            <View style={[styles.modalView, styles.cameraModalView]}>
                 <View style={styles.cameraPermissionWrapper}>
                     <EvilIcons name="camera" size={50} color="#134563" />
+
                     <View style={styles.cameraPermissionText}>
                         <Text style={styles.modalHeaderText}>Enable Camera</Text>
                         <Text style={[styles.TandC, {textAlign: "center"}]}>Kindly provide us access to your camera to take picture.</Text>
@@ -27,6 +28,7 @@ const CameraPermission = ({ visible, onClose, allowAccess, denyAccess }) => {
                     >
                         <Text style={[styles.permissionText, {color: "#101820"}]}>Maybe Later</Text>
                     </Pressable>
+
                     <Pressable 
                         style={[styles.permissionBtn, {backgroundColor: "#2196F3"}]}
                         onPress={allowAccess}
