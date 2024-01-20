@@ -33,7 +33,7 @@ const DataScreen = () => {
 
     const whenPress = () => {
         //logic to pass information to review screen
-        navigation.navigate("Support", {details: "dataReview"})
+        navigation.navigate("Review", {details: "dataReview"})
     }
     
 
