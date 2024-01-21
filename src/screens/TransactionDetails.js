@@ -15,7 +15,15 @@ const TransactionDetail = ({navigation}) => {
                 >
                     <Image source={require('../../assets/backVector.png')} />
                 </TouchableOpacity>
-                <Text style={styles.header_Text_1}>
+                <Text style={
+                    {
+                        fontSize: 35,
+                        paddingTop: 50,
+                        paddingLeft: 35,
+                        alignSelf: 'center',
+                        fontWeight: 'bold'
+                    }
+                }>
                     Transaction Details
                 </Text>
             </View>

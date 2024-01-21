@@ -15,7 +15,15 @@ const SavingInsight = ({navigation}) => {
                         source={require('../../assets/backVector.png')}
                     />
                 </TouchableOpacity>
-                <Text style={styles.header_Text_1}>
+                <Text style={
+                    {
+                        fontSize: 35,
+                        paddingTop: 50,
+                        paddingLeft: 35,
+                        alignSelf: 'center',
+                        fontWeight: 'bold'
+                    }
+                }>
                     Savings
                 </Text>
             </View>
@@ -23,14 +31,14 @@ const SavingInsight = ({navigation}) => {
                You saved a total of 1,500,000 NGN which is 50.31% of your total funds.
             </Text>
             
-            <View style={{backgroundColor: "#F9F9F9", borderRadius: 8, alignSelf: "center"}}>
-                <View style={{flexDirection: 'row'}}>
+            <View style={{backgroundColor: "#F9F9F9", justifyContent: 'space-between', borderRadius: 8, alignSelf: "center"}}>
+                <View style={{flexDirection: 'column'}}>
                     <Text> Total Amount Saved</Text>
-                    <Text> Total Interest Earned</Text>
+                    <Text style={{fontWeight: 'bold', fontSize: 18}}> #1,500,00</Text>
                 </View>
-                <View style={{flexDirection: 'row'}}>
-                    <Text> #1,500,00</Text>
-                    <Text> #150,000</Text>
+                <View style={{flexDirection: 'column'}}>
+                    <Text> Total Interest Earned</Text>
+                    <Text style={{fontWeight: 'bold', fontSize: 18}}> #150,000</Text>
                 </View>
             </View>
         </View>

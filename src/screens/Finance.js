@@ -48,11 +48,11 @@ const Finance = ({navigation}) => {
                                     style={{fontWeight: 'bold', fontSize: 20}}
                                     onPress={() => navigation.navigate('TransactDetails')}
                                 > Transfers</Text>
-                                <Text style={{paddingLeft: '55%'}}> #....</Text>
+                                <Text style={{justifyContent: 'flex-end', paddingLeft: '55%'}}> #....</Text>
                             </View>
                             <View style={{flexDirection: 'row', paddingLeft: 10}}>
                                 <Text> 70 Transfers</Text>
-                                <Text style={{paddingLeft: '55%'}}> 33.00%</Text>
+                                <Text style={{justifyContent: 'flex-end', paddingLeft: '55%'}}> 33.00%</Text>
                             </View>
                         </View>
                     </View>
@@ -72,11 +72,11 @@ const Finance = ({navigation}) => {
                                     style={{fontWeight: 'bold', fontSize: 20}}
                                     onPress={() => navigation.navigate('BillsInsight')}
                                 > Bils Payment</Text>
-                                <Text style={{paddingLeft: '45%'}}> #....</Text>
+                                <Text style={{justifyContent: 'flex-end', paddingLeft: '45%'}}> #....</Text>
                             </View>
                             <View style={{flexDirection: 'row', paddingLeft: 10}}>
                                 <Text> 25 Bill Payments</Text>
-                                <Text style={{paddingLeft: '47%'}}> 25.7%</Text>
+                                <Text style={{justifyContent: 'flex-end', paddingLeft: '47%'}}> 25.7%</Text>
                             </View>
                         </View>
                     </View>
@@ -96,11 +96,11 @@ const Finance = ({navigation}) => {
                                     style={{fontWeight: 'bold', fontSize: 20}}
                                     onPress={() => navigation.navigate('SavingInsight')}
                                 > Savings</Text>
-                                <Text style={{paddingLeft: '55%'}}> #....</Text>
+                                <Text style={{justifyContent: 'flex-end', paddingLeft: '55%'}}> #....</Text>
                             </View>
                             <View style={{flexDirection: 'row', paddingLeft: 10}}>
                                 <Text> Airtimes</Text>
-                                <Text style={{paddingLeft: '58%'}}> 50.31%</Text>
+                                <Text style={{justifyContent: 'flex-end', paddingLeft: '58%'}}> 50.31%</Text>
                             </View>
                         </View>
                     </View>
@@ -120,11 +120,11 @@ const Finance = ({navigation}) => {
                                     style={{fontWeight: 'bold', fontSize: 20}}
                                     onPress={() => navigation.navigate('AirtimeInsight')}
                                 > Airtime</Text>
-                                <Text style={{paddingLeft: '52%'}}> #....</Text>
+                                <Text style={{justifyContent: 'flex-end', paddingLeft: '52%'}}> #....</Text>
                             </View>
                             <View style={{flexDirection: 'row', paddingLeft: 10}}>
                                 <Text> 50 Airtime Purchase</Text>
-                                <Text style={{paddingLeft: '38%'}}> 70.31%</Text>
+                                <Text style={{justifyContent: 'flex-end', paddingLeft: '38%'}}> 70.31%</Text>
                             </View>
                         </View>
                     </View>
@@ -144,11 +144,11 @@ const Finance = ({navigation}) => {
                                     style={{fontWeight: 'bold', fontSize: 20}}
                                     onPress={() => navigation.navigate('DataInsight')}
                                 > Data</Text>
-                                <Text style={{paddingLeft: '60%'}}> #....</Text>
+                                <Text style={{justifyContent: 'flex-end', paddingLeft: '60%'}}> #....</Text>
                             </View>
                             <View style={{flexDirection: 'row', paddingLeft: 10}}>
                                 <Text> 70 Data Subscription</Text>
-                                <Text style={{paddingLeft: '40%'}}> 70.31%</Text>
+                                <Text style={{justifyContent: 'flex-end', paddingLeft: '40%'}}> 70.31%</Text>
                             </View>
                         </View>
                     </View>
