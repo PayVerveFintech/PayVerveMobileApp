@@ -1,16 +1,16 @@
 import { Image, View } from "react-native"
-import { styles } from "../styles/styles"
+import { styles } from "../../styles/styles";
+import Styles from "./styles";
 import { ScrollView } from "react-native";
 
 const CreatedTargetSaving = () => {
     return(
-        <View style={styles.container}>
+        <View style={Styles.container}>
             <View style={{flexDirection: 'row'}}>
+
+                {/* header back navigation button */}
                 <TouchableOpacity
-                    style={{                        
-                        paddingTop: 60,
-                        paddingLeft: 5
-                    }}
+                    style={Styles.headerTouchableOpacity}
                     onPress={() => navigation.goBack()}
                 >
                     <Image 
@@ -24,20 +24,20 @@ const CreatedTargetSaving = () => {
                 </Text>
             </View>
 
-            {/* The body */}
+            {/* The scrollView body */}
             <ScrollView>
-                <View style={{elevation: 20}}>
+                <View style={Styles.scrollViewStyles}>
                     <Text>Rent</Text>
                     <Text># 10,000</Text>
                     <Text>Interest Rate</Text>
                     <Text>10% p.a</Text>
 
-                    <View style={{flexDirection: 'row'}}>
-                        <View style={{flexDirection: 'column'}}>
+                    <View style={Styles.scrollViewStyles_row}>
+                        <View style={Styles.scrollViewStyles_col}>
                             <Text>Duration</Text>
                             <Text>10 Months</Text>
                         </View>
-                        <View style={{flexDirection: 'column'}}>
+                        <View style={Styles.scrollViewStyles_col}>
                             <Text>Maturity Date</Text>
                             <Text>18/06/24</Text>
                         </View>
@@ -46,7 +46,7 @@ const CreatedTargetSaving = () => {
 
                 <Image 
                     source={require('../../assets/add_icon.png')}
-                    style={{justifyContent: 'flex-end', marginBottom: 15}}
+                    style={Styles.scrollViewStyles_img}
                 />
             </ScrollView>
         </View>

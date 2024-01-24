@@ -1,16 +1,16 @@
 import { Text, View } from "react-native"
 import { styles } from "../styles/styles"
 import { TouchableOpacity } from "react-native";
+import Styles from "./styles";
 
 const ReviewTargetSaving= () => {
     return(
         <View style={styles.container}>
-            <View style={{flexDirection: 'row'}}>
+
+            {/* header with navigation back button and header text */}
+            <View style={Styles.header_view_style}>
                 <TouchableOpacity
-                    style={{
-                        paddingTop: 60,
-                        paddingLeft: 5
-                    }}
+                    style={Styles.header_touch}
                     onPress={() => navigation.goBack()}
                 >
                     <Image 
@@ -22,35 +22,37 @@ const ReviewTargetSaving= () => {
                 </Text>
             </View>
 
-            <View style={{flexDirection: 'row'}}>
+            {/* review body statement */}
+
+            <View style={Styles.body_row}>
                 <Text>Savings Name</Text>
                 {/* <Text>Rent</Text> */}
             </View>
-            <View style={{flexDirection: 'row'}}>
+            <View style={Styles.body_row}>
                 <Text>Amount</Text>
                 {/* <Text>Rent</Text> */}
             </View>
-            <View style={{flexDirection: 'row'}}>
+            <View style={Styles.body_row}>
                 <Text>Interest Yield</Text>
                 {/* <Text>Rent</Text> */}
             </View>
-            <View style={{flexDirection: 'row'}}>
+            <View style={Styles.body_row}>
                 <Text>Total Amount</Text>
                 {/* <Text>Rent</Text> */}
             </View>
-            <View style={{flexDirection: 'row'}}>
+            <View style={Styles.body_row}>
                 <Text>Frequency</Text>
                 {/* <Text>Rent</Text> */}
             </View>
-            <View style={{flexDirection: 'row'}}>
+            <View style={Styles.body_row}>
                 <Text>Start Date</Text>
                 {/* <Text>Rent</Text> */}
             </View>
-            <View style={{flexDirection: 'row'}}>
+            <View style={Styles.body_row}>
                 <Text>Savings Name</Text>
                 {/* <Text>Rent</Text> */}
             </View>
-            <View style={{flexDirection: 'row'}}>
+            <View style={Styles.body_row}>
                 <Text>End Date</Text>
                 {/* <Text>{}</Text> */}
             </View>
@@ -61,8 +63,9 @@ const ReviewTargetSaving= () => {
                 An Attraction fee of 5% will be deducted if you choose to withdraw your savings before maturity date.
             </Text>
 
+            {/* Create button */}
             <TouchableOpacity
-                style={styles.signupButton}
+                style={Styles.signupButton}
             >
                 <Text style={styles.header_Text_1}>Create</Text>
             </TouchableOpacity>

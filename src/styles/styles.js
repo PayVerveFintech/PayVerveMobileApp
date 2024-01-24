@@ -65,8 +65,6 @@ export const styles = StyleSheet.create({
     header_Text_2: {
         fontSize: 20,
         paddingTop: 20,
-        // paddingLeft: 50,
-        // paddingRight: 50,
         alignSelf: 'center',
         textAlign: 'center',
     },
