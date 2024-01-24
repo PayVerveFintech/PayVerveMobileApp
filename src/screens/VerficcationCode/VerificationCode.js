@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
-import { styles } from '../styles/styles';
+import { styles } from '../../styles/styles';
 
 const VerificationCode = ({verifyCode, navigation}) => {
     return (
