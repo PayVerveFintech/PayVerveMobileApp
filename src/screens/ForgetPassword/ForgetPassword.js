@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { TextInput, TouchableOpacity, View, Text } from 'react-native';
-import { styles } from '../styles/styles';
+import { styles } from '../../styles/styles';
 import { useState } from 'react';
 
 const ForgetPassword = ({navigation}) => {

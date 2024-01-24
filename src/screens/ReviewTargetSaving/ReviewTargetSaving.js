@@ -1,7 +1,7 @@
 import { Text, View } from "react-native"
 import { styles } from "../styles/styles"
 import { TouchableOpacity } from "react-native";
-import Styles from "./styles";
+import Styles from "../ReviewTargetSaving/styles";
 
 const ReviewTargetSaving= () => {
     return(
@@ -14,7 +14,7 @@ const ReviewTargetSaving= () => {
                     onPress={() => navigation.goBack()}
                 >
                     <Image 
-                        source={require('../../assets/backVector.png')}
+                        source={require('../../../assets/backVector.png')}
                     />
                 </TouchableOpacity>
                 <Text style={styles.header_Text_1}>

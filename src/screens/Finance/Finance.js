@@ -1,5 +1,5 @@
 import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native"
-import { styles } from "../styles/styles";
+import { styles } from "../../styles/styles";
 
 const Finance = ({navigation}) => {
     return (
@@ -13,7 +13,7 @@ const Finance = ({navigation}) => {
                     onPress={() => navigation.goBack()}
                 >
                     <Image 
-                        source={require('../../assets/backVector.png')}
+                        source={require('../../../assets/backVector.png')}
                     />
                 </TouchableOpacity>
                 <Text style={styles.finance_header_text_1}> Finance</Text>
@@ -25,7 +25,7 @@ const Finance = ({navigation}) => {
 
             <Image 
                 style={{alignSelf: 'center', marginTop: 20}}
-                source={require('../../assets/financeRate.png')} 
+                source={require('../../../assets/financeRate.png')} 
             />
             
             <View style={{alignSelf: 'center', marginTop: 10}}>
@@ -38,7 +38,7 @@ const Finance = ({navigation}) => {
                     <View  style={{flexDirection: 'row'}}>
                         <Image 
                             style={{alignSelf: 'center'}}
-                            source={require('../../assets/cil_transfer_icon.png')}
+                            source={require('../../../assets/cil_transfer_icon.png')}
                         />
                         <View 
                             style={{flexDirection: 'column'}}
@@ -62,7 +62,7 @@ const Finance = ({navigation}) => {
                     <View  style={{flexDirection: 'row'}}>
                         <Image 
                             style={{alignSelf: 'center'}}
-                            source={require('../../assets/bill_payment.png')}
+                            source={require('../../../assets/bill_payment.png')}
                         />
                         <View 
                             style={{flexDirection: 'column'}}
@@ -86,7 +86,7 @@ const Finance = ({navigation}) => {
                     <View  style={{flexDirection: 'row'}}>
                         <Image 
                             style={{alignSelf: 'center'}}
-                            source={require('../../assets/material_symbols_light_savings_outline_rounded.png')}
+                            source={require('../../../assets/material_symbols_light_savings_outline_rounded.png')}
                         />
                         <View 
                             style={{flexDirection: 'column'}}
@@ -112,7 +112,7 @@ const Finance = ({navigation}) => {
                     <View  style={{flexDirection: 'row'}}>
                         <Image 
                             style={{alignSelf: 'center'}}
-                            source={require('../../assets/airtime_icon.png')}
+                            source={require('../../../assets/airtime_icon.png')}
                         />
                         <View style={{flexDirection: 'column'}}>
                             <View style={{flexDirection: 'row', paddingLeft: 10}}>
@@ -136,7 +136,7 @@ const Finance = ({navigation}) => {
                     <View  style={{flexDirection: 'row'}}>
                         <Image 
                             style={{alignSelf: 'center'}}
-                            source={require('../../assets/internet_icon.png')}
+                            source={require('../../../assets/internet_icon.png')}
                         />
                         <View style={{flexDirection: 'column'}}>
                             <View style={{flexDirection: 'row', paddingLeft: 10}}>

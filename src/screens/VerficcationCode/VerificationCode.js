@@ -14,7 +14,7 @@ const VerificationCode = ({verifyCode, navigation}) => {
                     onPress={() => navigation.goBack()}
                 >
                     <Image 
-                        source={require('../../assets/backVector.png')}
+                        source={require('../../../assets/backVector.png')}
                     />
                 </TouchableOpacity>
                 <Text style={

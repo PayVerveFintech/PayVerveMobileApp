@@ -1,7 +1,5 @@
 import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
-import { styles } from "../styles/styles";
-import SignUp1 from './SignUp1'
-
+import { styles } from "../../styles/styles";
 const EmailConfirmation = ({ email, navigation }) => {
     return (
         <View style={styles.container}>
@@ -14,7 +12,7 @@ const EmailConfirmation = ({ email, navigation }) => {
                     onPress={() => navigation.goBack()}
                 >
                     <Image 
-                        source={require('../../assets/backVector.png')}
+                        source={require('../../../assets/backVector.png')}
                     />
                 </TouchableOpacity>
                 <Text style={

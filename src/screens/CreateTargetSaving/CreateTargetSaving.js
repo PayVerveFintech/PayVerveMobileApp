@@ -1,6 +1,6 @@
 import { Image, Text, TouchableOpacity } from "react-native";
 import { View } from "react-native";
-import { styles } from "../styles/styles";
+import { styles } from "../../styles/styles";
 import { ScrollView } from "react-native";
 import { useState } from "react";
 
@@ -21,7 +21,7 @@ const CreateTargetSaving = ({navigation}) => {
                     onPress={() => navigation.goBack()}
                 >
                     <Image 
-                        source={require('../../assets/backVector.png')}
+                        source={require('../../../assets/backVector.png')}
                     />
                 </TouchableOpacity>
                 <Text style={styles.header_Text_1}>

@@ -1,5 +1,5 @@
 import { Image, Text, TouchableOpacity, View } from "react-native"
-import { styles } from "../styles/styles"
+import { styles } from "../../styles/styles"
 
 const BillsInsight = ({navigation}) => {
     return(
@@ -13,7 +13,7 @@ const BillsInsight = ({navigation}) => {
                     onPress={() => navigation.goBack()}
                 >
                     <Image 
-                        source={require('../../assets/backVector.png')}
+                        source={require('../../../assets/backVector.png')}
                     />
                 </TouchableOpacity>
                 <Text style={
@@ -32,7 +32,7 @@ const BillsInsight = ({navigation}) => {
             {/* This will be edited after once the backend server is ready */}
             <View>
                 <View style={{flexDirection: 'row'}}>
-                    <Image source={require('../../assets/airtel.png')} />
+                    <Image source={require('../../../assets/airtel.png')} />
                     <View style={{flexDirection: 'column', paddingLeft: 10}}>
                         <Text style={{fontWeight: 'bold'}}>Betting</Text>
                         <Text>Bet ID - 814562586</Text>
@@ -46,7 +46,7 @@ const BillsInsight = ({navigation}) => {
 
             <View>
                 <View style={{flexDirection: 'row'}}>
-                    <Image source={require('../../assets/electricity_icon.png')} />
+                    <Image source={require('../../../assets/electricity_icon.png')} />
                     <View style={{flexDirection: 'row'}}>
                         <Text style={{flexDirection: 'column', paddingLeft: 10}}>Electricity - Prepaid</Text>
                         <Text>METER - 4562586</Text>
@@ -60,7 +60,7 @@ const BillsInsight = ({navigation}) => {
 
             <View>
                 <View style={{flexDirection: 'row'}}>
-                    <Image source={require('../../assets/dstv_icon.png')} />
+                    <Image source={require('../../../assets/dstv_icon.png')} />
                     <View style={{flexDirection: 'column', paddingLeft: 10}}>
                         <Text style={{fontWeight: 'bold'}}>Cable</Text>
                         <Text>Lite - 33362586</Text>

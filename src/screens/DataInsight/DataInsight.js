@@ -13,7 +13,7 @@ const DataInsight = ({navigation}) => {
                     onPress={() => navigation.goBack()}
                 >
                     <Image 
-                        source={require('../../assets/backVector.png')}
+                        source={require('../../../assets/backVector.png')}
                     />
                 </TouchableOpacity>
                 <Text style={
@@ -32,7 +32,7 @@ const DataInsight = ({navigation}) => {
             {/* This will be edited after once the backend server is ready */}
             <View>
                 <View style={{flexDirection: 'row'}}>
-                    <Image source={require('../../assets/airtel.png')} />
+                    <Image source={require('../../../assets/airtel.png')} />
                     <View style={{flexDirection: 'column', paddingLeft: 10}}>
                         <Text style={{fontWeight: 'bold'}}>Data Subscription</Text>
                         <Text>Airtime - 814562586</Text>
@@ -46,7 +46,7 @@ const DataInsight = ({navigation}) => {
 
             <View>
                 <View style={{flexDirection: 'row'}}>
-                    <Image source={require('../../assets/airtel.png')} />
+                    <Image source={require('../../../assets/airtel.png')} />
                     <View style={{flexDirection: 'column', paddingLeft: 10}}>
                         <Text style={{fontWeight: 'bold'}}>Data Subscription</Text>
                         <Text>Airtime - 4562586</Text>
@@ -60,7 +60,7 @@ const DataInsight = ({navigation}) => {
 
             <View>
                 <View style={{flexDirection: 'row'}}>
-                    <Image source={require('../../assets/airtel.png')} />
+                    <Image source={require('../../../assets/airtel.png')} />
                     <View style={{flexDirection: 'column', paddingLeft: 10}}>
                         <Text style={{fontWeight: 'bold'}}>Data Subscription</Text>
                         <Text>Airtime - 33362586</Text>

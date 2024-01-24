@@ -14,7 +14,7 @@ const CreatedTargetSaving = () => {
                     onPress={() => navigation.goBack()}
                 >
                     <Image 
-                        source={require('../../assets/backVector.png')}
+                        source={require('../../../assets/backVector.png')}
                     />
                 </TouchableOpacity>
                 <Text 
@@ -45,7 +45,7 @@ const CreatedTargetSaving = () => {
                 </View>
 
                 <Image 
-                    source={require('../../assets/add_icon.png')}
+                    source={require('../../../assets/add_icon.png')}
                     style={Styles.scrollViewStyles_img}
                 />
             </ScrollView>

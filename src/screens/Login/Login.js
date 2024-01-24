@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 // import { useAuth } from '../hooks/userAuth';
-import { styles } from '../styles/styles';
+import { styles } from '../../styles/styles';
 // import { AuthProvider } from '../hooks/userAuth';
-import SignUp1 from './SignUp1';
-import ForgetPassword from './ForgetPassword';
+import Styles from './styles';
 
 const CORRECT_USERNAME = 'admin';
 const CORRECT_PASSWORD = 'admin'
@@ -15,14 +14,10 @@ const Login = ({ navigation }) => {
     const [userName, onChangeUserName] = useState('');
     const [password, onChangePassword] = useState('');
 
+    // handling functions
     const handleLogin = () => {
         if (userName === CORRECT_USERNAME && password === CORRECT_PASSWORD) {
             navigation.navigate('KYCVerify')
-        // } else if (userName === CORRECT_USERNAME && password === CORRECT_PASSWORD) {
-        //     alert.alert('Invalid password')
-        // } else if (userName === CORRECT_USERNAME && password === CORRECT_PASSWORD) {
-        //     Alert.alert('Incorrect userName')
-        // }{
         }else {
             Alert.alert('Invaild credentials')
         }
@@ -52,22 +47,15 @@ const Login = ({ navigation }) => {
                     style={styles.textInput}
                     onChangeText={onChangePassword}
                 />
-
-                <Text style=
-                    {
-                        { 
-                            alignSelf: 'flex-end', 
-                            marginEnd: 30, 
-                            fontSize: 18,
-                            fontWeight: 'bold',
-                            textDecorationLine: 'underline'
-                        }
-                    }
+                
+                {/* forget password button */}
+                <Text style={Styles.loginForgetPSW_txt}
                     onPress={() => navigation.navigate('ForgetPassword')}
                 >
                     Forgetten Password?
                 </Text>
 
+                {/* login function */}
                 <TouchableOpacity
                     style={styles.signupButton} 
                     onPress={handleLogin}
@@ -76,14 +64,15 @@ const Login = ({ navigation }) => {
                         Login
                     </Text>
                 </TouchableOpacity>
-
+                
+                {/* sign up function */}
                 <Text
-                    style={{alignSelf: 'center', fontSize: 14}}
+                    style={Styles.loginSignUp_outer_txt}
                 >
                     Don't have an account?{' '}
                     <Text 
                         onPress={() => navigation.navigate('SignUp1')} 
-                        style={{ color: 'blue', fontWeight: 'bold', fontSize: 16, fontWeight: 'bold', textDecorationLine: 'underline'}}
+                        style={Styles.loginSignUp_inner_txt}
                     > 
                         Sign Up
                     </Text>

@@ -1,5 +1,5 @@
 import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
-import { styles } from "../styles/styles";
+import { styles } from "../../styles/styles";
 import { useState } from "react";
 
 const CreateNewPW = ({navigation}) => {
@@ -18,7 +18,7 @@ const CreateNewPW = ({navigation}) => {
                     onPress={() => navigation.goBack()}
                 >
                     <Image 
-                        source={require('../../assets/backVector.png')}
+                        source={require('../../../assets/backVector.png')}
                     />
                 </TouchableOpacity>
                 <Text style={

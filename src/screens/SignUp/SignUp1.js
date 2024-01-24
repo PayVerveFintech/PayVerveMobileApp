@@ -9,10 +9,7 @@ import {
     View,
     Alert
 } from 'react-native';
-import { styles } from '../styles/styles';
-import EmailConfirmation from './EmailConfirmation';
-import Login from './Login';
-
+import { styles } from '../../styles/styles';
 const SignUp1 = ({navigation}) => {
     const baseText = [
         "Creating an account with PayVerve is completely ",

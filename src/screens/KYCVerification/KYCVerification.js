@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { View, Text, ScrollView, TextInput, TouchableOpacity, KeyboardAvoidingView } from "react-native"
-import { styles } from "../styles/styles";
+import { styles } from "../../styles/styles";
 
 const KYCVerification = ({navigation}) => {
 

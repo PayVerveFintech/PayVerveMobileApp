@@ -1,5 +1,5 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
-import { styles } from "../styles/styles";
+import { styles } from "../../styles/styles";
 
 const SavingInsight = ({navigation}) => {
     return (
@@ -12,7 +12,7 @@ const SavingInsight = ({navigation}) => {
                     }}
                 >
                     <Image 
-                        source={require('../../assets/backVector.png')}
+                        source={require('../../../assets/backVector.png')}
                     />
                 </TouchableOpacity>
                 <Text style={

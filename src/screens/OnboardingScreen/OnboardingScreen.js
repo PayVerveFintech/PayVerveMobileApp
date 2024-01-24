@@ -1,17 +1,17 @@
 import { View, Image, Text, TouchableOpacity, ImageBackground } from 'react-native';
-import { styles } from '../styles/styles';
-import SignUp1 from './SignUp1';
-import Login from './Login';
+import { styles } from '../../styles/styles';
+// import SignUp1 from '../SignUp/SignUp1';
+// import Login from '../Login/Login';
 // import { useNavigation } from '@react-navigation/native';
 
 const OnboardingScreen = ({navigation}) => {
 
-    // const navigation = useNavigation();
-
+    // handling sign up navigation
     const handleSignUp = () => {
         navigation.navigate('SignUp1'); 
     };
 
+    // handling sing in navigation
     const handleLogin = () => {
         navigation.navigate('Login'); 
     };
@@ -21,14 +21,14 @@ const OnboardingScreen = ({navigation}) => {
 
             {/* Logo */}
             <Image 
-                source={require('../../assets/logo.jpg')}
+                source={require('../../../assets/logo.jpg')}
                 style={styles.logo}
             />
 
             <View style={styles.bg_circle}>
                 {/* Background Image */}
                 <ImageBackground 
-                    source={require('../../assets/onboarding_image.png')} 
+                    source={require('../../../assets/onboarding_image.png')} 
                     style={styles.onboarding_bg_img} 
                 />
             </View>

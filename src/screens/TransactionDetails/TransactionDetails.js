@@ -1,5 +1,5 @@
 import { View, Text, Image, TouchableOpacity } from "react-native"
-import { styles } from "../styles/styles" 
+import { styles } from "../../styles/styles" 
 
 
 const TransactionDetail = ({navigation}) => {
@@ -13,7 +13,7 @@ const TransactionDetail = ({navigation}) => {
                     }}
                     onPress={() => navigation.goBack()}
                 >
-                    <Image source={require('../../assets/backVector.png')} />
+                    <Image source={require('../../../assets/backVector.png')} />
                 </TouchableOpacity>
                 <Text style={
                     {
@@ -81,13 +81,13 @@ const TransactionDetail = ({navigation}) => {
             
             <View style={{flexDirection: 'row', marginTop: 30, paddingLeft: 20}}>
                 <Image
-                    source={require('../../assets/customer_service.png')}
+                    source={require('../../../assets/customer_service.png')}
                 />
                 <Text>Get Help</Text>
             </View>
             <View style={{flexDirection: 'row', paddingTop: 15, paddingLeft: 20}}>
                 <Image
-                    source={require('../../assets/share_icon.png')}
+                    source={require('../../../assets/share_icon.png')}
                 />
                 <Text>Share Receipt</Text>
             </View>
