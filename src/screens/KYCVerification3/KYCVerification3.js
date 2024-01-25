@@ -1,5 +1,5 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native';
-import { styles } from '../styles/styles';
+import { styles } from '../../styles/styles';
 
 const KYCVerification3 = ({navigation}) => {
     return (

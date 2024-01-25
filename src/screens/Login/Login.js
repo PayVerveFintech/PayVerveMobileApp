@@ -19,7 +19,7 @@ const Login = ({ navigation }) => {
         if (userName === CORRECT_USERNAME && password === CORRECT_PASSWORD) {
             navigation.navigate('KYCVerify')
         }else {
-            Alert.alert('Invaild credentials')
+            Alert.alert('Incorrect email/password')
         }
     };
 

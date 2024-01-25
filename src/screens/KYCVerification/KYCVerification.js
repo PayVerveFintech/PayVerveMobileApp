@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { View, Text, ScrollView, TextInput, TouchableOpacity, KeyboardAvoidingView } from "react-native"
+import { View, Text, ScrollView, TextInput, TouchableOpacity, KeyboardAvoidingView, StyleSheet } from "react-native"
 import { styles } from "../../styles/styles";
+import { useEffect } from "react";
 
 const KYCVerification = ({navigation}) => {
 
@@ -13,6 +14,74 @@ const KYCVerification = ({navigation}) => {
     const [dob, setDOB] = useState('');
     const [address, setAddress] = useState('');
     const [ occupation, setOccupation] = useState('');
+    const [errors, setErrors] = useState({});
+    const [isFormValid, setIsFormValid] = useState(false);
+
+    useEffect(() => {
+        validateForm();
+    }, [fullname, email, phonenumber, bvn, nin, gender, dob, occupation]);
+
+    const validateForm = () => {
+        let errors = {};
+        // gender setup
+        let M = "male";
+        let G = "female"
+
+        // validating the fullname text field
+        if(!fullname) {
+            errors.fullname = ('full name is required');
+        }
+
+        // validating the email text field
+        if(!email) {
+            errors.email = ('email is required');
+        }
+
+        // validating the phone number text field
+        if(!phonenumber) {
+            errors.phonenumber = ('phone number is required');
+        }
+
+        // validating the bvn text field
+        if(!bvn) {
+            errors.bvn = ('bvn is required')
+        }
+
+        // validating the nin text field
+        if (!nin) {
+            errors.nin = ('NIN is required');
+        }
+
+        // validating the gender text field
+        if (!gender) {
+            errors.gender = ('gender is required');
+        } else if (M != 'male' && G != "female") {
+            errors.gender = ('gender input incorrect')
+        }
+
+        // validating the dob text field
+        if (!dob) {
+            errors.bvn = ('dob is required');
+        }
+
+        // validating the occupation text field
+        if (!occupation) {
+            errors.occupation = ('occupation is required');
+        }
+
+        // setting the errors and update from validity
+        setErrors(errors);
+        setIsFormValid(Object.keys(errors).length === 0);
+    };
+
+    // handling submit button
+    const handleSubmit = () => {
+        if (isFormValid) {
+            navigation.navigate('KYCVerify2');
+        } else {
+            console.log ('Errors in form. Please review the form again.')
+        }
+    }
 
     return (
         <View style={styles.container}>
@@ -132,11 +201,20 @@ const KYCVerification = ({navigation}) => {
                         />
 
                         <TouchableOpacity 
-                            style={styles.signupButton}
-                            onPress={() => navigation.navigate('KYCVerify2')}
+                            style={[styles.signupButton, { opacity: isFormValid ? 1 : 0.5}]}
+                            disabled = {isFormValid}
+                            onPress={handleSubmit}
                         >
                             <Text style={styles.touchableOpacityText}>Next</Text>
                         </TouchableOpacity>
+
+                        {/* Displaying the error messages */}
+                        {Object.values(errors).map((error, index) => (
+                            <Text key = {index} style={STYLE.error}>
+                                {error}
+                            </Text>
+                        ))}
+                        
                     </View>
                 </ScrollView>
             </KeyboardAvoidingView>
@@ -145,3 +223,11 @@ const KYCVerification = ({navigation}) => {
 }
 
 export default KYCVerification;
+
+const STYLE = StyleSheet.create({
+    error: {
+        color: 'red',
+        fontSize: 20,
+        alignSelf: 'center'
+    }
+})
