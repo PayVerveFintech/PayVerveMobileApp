@@ -27,9 +27,9 @@ export const  service = [
         iconFamily: "Ionicons"
     },
     {
-        name: "Betting",
-        screen: "BettingScreen",
-        icon: "globe-outline",
+        name: "Refer \n Friends",
+        screen: "ReferFriend",
+        icon: "gift-outline",
         iconFamily: "Ionicons"
     },
     {

@@ -132,7 +132,7 @@ export default function OtherBanks() {
             )
           }
         
-          <View>
+          <View style={styles.buttonContainer}>
             <Button
               btn_text={"Send"}
               onPress={ () => navigation.navigate(

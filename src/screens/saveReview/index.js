@@ -27,7 +27,6 @@ export default function SaveReview() {
         interest,
         interestYield,
         totalAmount,
-        matureDate
     } = route.params;
 
   return (
@@ -110,10 +109,10 @@ export default function SaveReview() {
             }
 
             {
-                matureDate &&
+                date &&
                 <View style={styles.content}>
                     <Text  style={styles.contentTitle}>Maturity Date</Text>
-                    <Text style={styles.contentText}>{"23-13-2025"} </Text>
+                    <Text style={styles.contentText}>{date.toDateString()} </Text>
                 </View>
             }
 
@@ -121,14 +120,14 @@ export default function SaveReview() {
                 startDate &&
                 <View style={styles.content}>
                     <Text  style={styles.contentTitle}>Start Date</Text>
-                    <Text style={styles.contentText}>{startDate} </Text>
+                    <Text style={styles.contentText}>{startDate.toDateString()} </Text>
                 </View>
             }
             {
                 startDate &&
                 <View style={styles.content}>
                     <Text  style={styles.contentTitle}>End Date</Text>
-                    <Text style={styles.contentText}>{endDate} </Text>
+                    <Text style={styles.contentText}>{endDate.toDateString()} </Text>
                 </View>
             }
         </View>

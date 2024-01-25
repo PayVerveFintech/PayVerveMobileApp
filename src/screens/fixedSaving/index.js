@@ -6,6 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import { styles } from './style'
 import CustomTextInput from '../../components/customTextInput';
 import { Button } from '../../components/ButtonComponent/Button';
+import DatePicker from '../../components/datePicker.js/datePicker';
 
 
 
@@ -20,6 +21,10 @@ export default function FixedSaving() {
     const [amount, setAmount] = useState("");
     const [duration, setDuration] = useState("");
     const [date, setDate] = useState("");
+    
+    const handleDate = (date) => {
+        setDate(date)
+    }
 
   return (
     <SafeAreaView style={styles.root}>
@@ -54,16 +59,22 @@ export default function FixedSaving() {
                     title={"Duration"}
                     placeHolder={"Enter the duration"}
                 />
-                <CustomTextInput 
-                    value={date} 
-                    setValue={setDate}
+               <View>
+                <DatePicker
                     title={"Duration Date"}
-                    placeHolder={"Pick a date"}
+                    onChange={handleDate}
                 />
+               </View>
             <View style={styles.buttonContainer}>
                 <Button 
                     btn_text="Next"
-                    onPress={ () => navigation.navigate("SaveReview", {amount, duration, date,savingName})}
+                    onPress={ () => navigation.navigate("SaveReview", 
+                    {
+                        amount, 
+                        duration, 
+                        date,
+                        savingName
+                    })}
                 />
             </View>
             </KeyboardAvoidingView>

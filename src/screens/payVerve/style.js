@@ -50,7 +50,8 @@ export const styles = StyleSheet.create({
         justifyContent: "center",
         marginHorizontal: wp(20),
         borderRadius: 8,
-        marginTop: hp(10)
+        marginTop: hp(10),
+        marginBottom: hp(3)
     },
     btnText: {
         color: Color.white,

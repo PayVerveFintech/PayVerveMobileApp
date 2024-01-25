@@ -6,6 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import { styles } from './style';
 import CustomTextInput from "../../components/customTextInput";
 import { Button } from '../../components/ButtonComponent/Button';
+import DatePicker from '../../components/datePicker.js/datePicker';
 
 
 
@@ -24,6 +25,15 @@ export default function TargetSaving() {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   
+  const handleStartDateChange = (date) => {
+    setStartDate(date);
+  };
+
+  const handleEndDateChange = (date) => {
+    setEndDate(date);
+  };
+
+
   return (
    <SafeAreaView style={styles.root}>
       <View style={styles.header}>
@@ -57,19 +67,15 @@ export default function TargetSaving() {
               value={frequency}
               setValue={setFrequency}
             />
-            <CustomTextInput
-              title={"Start Date"}
-              placeHolder={"Satrt date"}
-              value={startDate}
-              setValue={setStartDate}
-            />
-            <CustomTextInput
-              title={"End Date"}
-              placeHolder={"Start date"}
-              value={endDate}
-              setValue={setEndDate}
-            />
-          </View>
+            </View>
+            <View style={styles.dateContainer}>
+              <View>
+                <DatePicker title={"Start Date"} onChange={handleStartDateChange} />
+              </View>
+              <View>
+                <DatePicker title={"End Date"} onChange={handleEndDateChange} />
+              </View>
+            </View>
           <View style={styles.buttonContainer}>
             <Button 
               btn_text={"create"}
@@ -78,7 +84,7 @@ export default function TargetSaving() {
                 targetAmount,
                 frequency,
                 startDate,
-                endDate
+                endDate,
               })}
             />
           </View>

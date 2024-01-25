@@ -14,10 +14,9 @@ import { Button } from '../../components/ButtonComponent/Button';
 
 
 
-export default function SavingScreen(props) {
+export default function SavingScreen() {
 
-    const item = props.route.params;
-
+  
     const navigation = useNavigation();
 
   return (

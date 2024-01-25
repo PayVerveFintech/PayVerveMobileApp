@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     root: {
         flex: 1,
         backgroundColor: Color.white,
-        paddingHorizontal: wp(3)
+        // paddingHorizontal: wp(3)
     },
     header:{
         flexDirection: "row",
@@ -29,7 +29,6 @@ export const styles = StyleSheet.create({
         height: hp(18),
         backgroundColor: "#f5f5f5",
         marginVertical: hp(1),
-        width: wp(94),
         borderRadius: 15,
         alignItems: "center",
         justifyContent: "center"

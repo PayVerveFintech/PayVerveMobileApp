@@ -44,13 +44,7 @@ export const styles = StyleSheet.create({
     textInputMainContainer: {
         marginVertical: hp(1)
     },
-    btnContainer: {
-        backgroundColor: Color.gray,
-        height: hp(6.5),
-        alignItems: "center",
-        justifyContent: "center",
-        marginHorizontal: wp(20),
-        borderRadius: 8,
-        marginTop: hp(2)
-    },
+   buttonContainer: {
+    marginBottom: hp(3)
+   }
 })

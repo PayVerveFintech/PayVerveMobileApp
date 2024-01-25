@@ -39,5 +39,8 @@ export const styles = StyleSheet.create({
     },
     buttonContainer: {
         marginBottom: hp(2)
+    },
+    dateContainer: {
+        marginHorizontal: wp(3)
     }
 })

@@ -18,7 +18,7 @@ import TransferSucess from '../screens/transferSucess';
 import { TopNavigation } from "./topTab"
 import { NavigationContainer } from "@react-navigation/native"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
-import AirtimeScreen from "../screens/AirtimeScreen"
+import AirtimeScreen from "../screens/airtimeScreen"
 import PayBillsScreen from "../screens/PayBillsScreen"
 import DataScreen from "../screens/DataScreen"
 import SavingScreen from "../screens/savingScreen"
@@ -27,6 +27,8 @@ import FixedSaving from "../screens/fixedSaving"
 import SpendAndSave from "../screens/spendAndSave"
 import SaveReview from "../screens/saveReview"
 import TransferReview from "../screens/transferReview"
+import TargetSavingPlan from "../screens/targetSavingPlan"
+import FixedSavingPlan from "../screens/fixedSavingPlan"
 
 
 const Stack = createStackNavigator();
@@ -38,7 +40,7 @@ export const HomePage = ({ nav }) => {
 
     const headerOptions = {
         headerStyle: {
-            height: 80
+            height: 90
         },
         headerTitleStyle: styles.headerTitleStyle,
         headerTitleAlign: "center",
@@ -214,6 +216,22 @@ export const HomePage = ({ nav }) => {
                 <Stack.Screen
                     name="SaveReview"
                     component={SaveReview}
+                    options={{
+                        headerShown: false
+                    }}
+                />
+
+                <Stack.Screen
+                    name="TargetSavingPlan"
+                    component={TargetSavingPlan}
+                    options={{
+                        headerShown: false
+                    }}
+                />
+
+                <Stack.Screen
+                    name="FixedSavingPlan"
+                    component={FixedSavingPlan}
                     options={{
                         headerShown: false
                     }}

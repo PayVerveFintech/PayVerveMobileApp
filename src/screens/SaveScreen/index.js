@@ -22,7 +22,7 @@ export default function SaveScreen() {
         return(
             <TouchableOpacity 
                 style={styles.saveContainer}
-                onPress={ () => navigation.navigate("SavingScreen", {...item})}
+                onPress={ () => navigation.navigate(item.screen)}
                 >
                <View style={styles.saveIcon}>
                 <Image 
