@@ -32,16 +32,13 @@ export const styles = StyleSheet.create({
         color: Color.gray
     },
     accountDetailsContainer: {
-        flexDirection: "row",
         backgroundColor: Color.primary,
         height: hp(20),
         borderRadius: 8,
-        justifyContent: "space-between",
-        alignItems: "center",
         marginTop: hp(3),
     },
     accountDetails: {
-        width: wp(90),
+        width: wp(94),
         flexDirection: "row",
         justifyContent: "space-around",
         alignItems: "center"
@@ -63,16 +60,13 @@ export const styles = StyleSheet.create({
         fontSize: hp(2.7),
         marginBottom: hp(2)
     },
-    serviceMainContainer: {
-    //   backgroundColor: Color.lightGray
-    },
     serviceText: {
         fontSize: hp(2.2),
         fontWeight: "400",
         marginTop: hp(0.5)
     },
     serviceContainer: {
-        justifyContent: "center",
+        justifyContent: "center", 
         alignItems: "center",
         width: wp(23.5),
         paddingVertical: hp(2.1)
@@ -87,5 +81,22 @@ export const styles = StyleSheet.create({
     hidden: {
         fontSize: hp(4),
         marginTop: hp(2)
+    },
+    dot: {
+        width: 8,
+        height: 8,
+       backgroundColor: "#949191",
+       borderRadius: 5,
+       marginHorizontal: wp(1)
+    },
+    dotContainer: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+        marginTop: hp(-2.5)
+    },
+    activeDot: {
+        backgroundColor: "#2196F3",
+        width: wp(4)
     }
 })

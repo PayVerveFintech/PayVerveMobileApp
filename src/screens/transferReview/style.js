@@ -50,5 +50,17 @@ export const styles = StyleSheet.create({
     btnText: {
         color: Color.white,
         fontWeight: "700"
+    },
+    header: {
+        flexDirection: "row",
+        marginTop: hp(3),
+        alignItems: "center"
+    },
+    title: {
+        fontSize: hp(3),
+        fontWeight: "700"
+    },
+    icon: {
+        marginRight: wp(30)
     }
 })

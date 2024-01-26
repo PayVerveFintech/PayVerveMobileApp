@@ -1,4 +1,4 @@
-import { View, Text, TextInput, TouchableOpacity, ScrollView, } from 'react-native'
+import { View, Text, TextInput, TouchableOpacity, ScrollView, KeyboardAvoidingView, } from 'react-native'
 import React, {useState} from 'react';
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from '@react-navigation/native';
@@ -8,6 +8,8 @@ import { styles } from './style';
 import { Color } from '../../color/Color';
 import { Selector } from '../../components/selector';
 import TransferInput from '../../components/transferInput';
+import { Button } from '../../components/ButtonComponent/Button';
+import CustomTextInput from '../../components/customTextInput';
 
 
 
@@ -31,6 +33,7 @@ export default function OtherBanks() {
   const [bankSwift, setBankSwift] = useState("");
   const [Country, setCountry] = useState("");
 
+
   return (
     <View style={styles.root}>
       <View style={styles.textContainer}>
@@ -41,45 +44,111 @@ export default function OtherBanks() {
       <ScrollView
         showsVerticalScrollIndicator={false}
       >
-        <View>
-          <View style={styles.textInputMainContainer}>
-            <Text style={styles.label}>Wallet</Text>
-              <Selector wallet={wallet} setFunc={setWallet} data={walletType} placeholder={"Select your PayVerv wallet"} />
-            </View>
-          <View style={styles.textInputMainContainer}>
-            <Text style={styles.label}>Select transfer type</Text>
-              <Selector wallet={wallet} setFunc={setTransfer} data={transferType} placeholder={"Select transfer type"} />
-            </View>
-        </View>
-        <View>
-          <TransferInput type={transfer} 
-            bankName={bankName}
-            setBankName={setBankName}
-            accountNumber={accountNumber}
-            setAccountNumber={setAccountNumber}
-            amount={amount}
-            setAmount={setAmount}
-            narration={narration}
-            setNarration={setNarration}
-            Country={Country}
-            setCountry={setCountry}
-            bankSwift={bankSwift}
-            setBankSwift={setBankSwift}
-          />
-        </View>
-        <TouchableOpacity 
-          style={styles.btnContainer} 
-          onPress={ () => navigation.navigate(
-            "Review", 
-            {bankName, 
-            accountNumber,
-            amount,
-            narration,
-            Country,
-            bankSwift
-            })} >
-          <Text style={styles.btnText}>Send</Text>
-        </TouchableOpacity>
+        <KeyboardAvoidingView behavior='padding'>
+          <View>
+            <View style={styles.textInputMainContainer}>
+              <Text style={styles.label}>Wallet</Text>
+                <Selector wallet={wallet} setFunc={setWallet} data={walletType} placeholder={"Select your PayVerv wallet"} />
+              </View>
+            <View style={styles.textInputMainContainer}>
+              <Text style={styles.label}>Select transfer type</Text>
+                <Selector setFunc={setTransfer} data={transferType} placeholder={"Select transfer type"} />
+              </View>
+          </View>
+          
+                  {
+            transfer === "Local" ? (
+              <View>
+                <CustomTextInput
+                  title={"Bank Name"}
+                  placeHolder={"Enter bank name"}
+                  value={bankName}
+                  setValue={setBankName}
+                />
+                <CustomTextInput
+                  title={"Account Number"}
+                  placeHolder={"Enter the account number"}
+                  value={accountNumber}
+                  setValue={setAccountNumber}
+                  isNumber={true}
+                />
+                <CustomTextInput
+                  title={"Amount"}
+                  placeHolder={"Enter the amount"}
+                  value={amount}
+                  setValue={setAmount}
+                  isNumber={true}
+                />
+                <CustomTextInput
+                  title={"Narration"}
+                  placeHolder={"Enter the narration"}
+                  value={narration}
+                  setValue={setNarration}
+                />
+              </View>
+            ) : transfer === "Foreign" ? (
+              <View>
+                <CustomTextInput
+                  title={"Country"}
+                  placeHolder={"Enter the country"}
+                  value={Country}
+                  setValue={setCountry}
+                />
+                <CustomTextInput
+                  title={"Bank Name"}
+                  placeHolder={"Enter bank name"}
+                  value={bankName}
+                  setValue={setBankName}
+                />
+                <CustomTextInput
+                  title={"Bank Swift"}
+                  placeHolder={"Enter the swift code"}
+                  value={bankSwift}
+                  setValue={setBankSwift}
+                />
+                <CustomTextInput
+                  title={"Account Number"}
+                  placeHolder={"Enter the account number"}
+                  value={accountNumber}
+                  setValue={setAccountNumber}
+                  isNumber={true}
+                />
+                <CustomTextInput
+                  title={"Amount"}
+                  placeHolder={"Enter the amount"}
+                  value={amount}
+                  setValue={setAmount}
+                  isNumber={true}
+                />
+                <CustomTextInput
+                  title={"Narration"}
+                  placeHolder={"Enter the narration"}
+                  value={narration}
+                  setValue={setNarration}
+                />
+              </View>
+            ) : (
+              <View />
+            )
+          }
+        
+          <View style={styles.buttonContainer}>
+            <Button
+              btn_text={"Send"}
+              onPress={ () => navigation.navigate(
+                "TransferReview",
+                { bankName, 
+                  accountNumber,
+                  amount,
+                  narration,
+                  Country,
+                  bankSwift,
+                  wallet,
+                }
+              )}
+            />
+          </View>
+        </KeyboardAvoidingView>
       </ScrollView>
     </View>
   ) 
