@@ -5,9 +5,13 @@ import { Button } from "../../components/ButtonComponent/Button"
 import { styles } from "./styles"
 import { useEffect, useState } from "react"
 import SuccessfulModal from "../../components/ModalComponent/SuccessfulModal"
+import Header from "../../components/HeaderComponent"
 
 const ChangePassword = () => {
     const [modalVisible, setModalVisible] = useState(false)
+    const [oldPassword, setOldPassword] = useState("")
+    const [newPassword, setNewPassword] = useState("")
+    const [confirmPassword, setConfirmPassword] = useState("")
 
     useEffect(()=>{
         let modalTimer;
@@ -23,6 +27,20 @@ const ChangePassword = () => {
         };
     }, [modalVisible])
 
+    //capture old password value
+    const handleOldPassword = (text) => {
+        setOldPassword(text)
+    };
+
+    //capture new password value
+    const handleNewPassword = (text) => {
+        setNewPassword(text)
+    };
+
+    //capture confirm password value
+    const handleConfirmPassword = (text) => {
+        setConfirmPassword(text)
+    };
 
     //function to open modal on success
     const openModal = () => {
@@ -30,14 +48,34 @@ const ChangePassword = () => {
         setModalVisible(true)
     }
 
+
+
+
   return (
     <SafeAreaView style={styles.container}>
+        <Header title="Change Password" />
+        
         <View style={styles.formContainer}>
-            <InputBox label="Old Password" placeholder="Old Password" />
+            <InputBox 
+                label="Old Password" 
+                placeholder="Old Password"
+                onChangeText={handleOldPassword}
+                value={oldPassword} 
+            />
             
-            <InputBox label="New Password" placeholder="New Password" />
+            <InputBox 
+                label="New Password" 
+                placeholder="New Password" 
+                onChangeText={handleNewPassword}
+                value={newPassword}
+            />
             
-            <InputBox label="Confirm Password" placeholder="Confirm Password" />
+            <InputBox 
+                label="Confirm Password" 
+                placeholder="Confirm Password" 
+                onChangeText={handleConfirmPassword}
+                value={confirmPassword}
+            />
         </View>
 
         <Button btn_text="Change" onPress={openModal} />

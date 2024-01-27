@@ -1,11 +1,13 @@
 import { View, Text } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { styles } from "./styles"
+import Header from "../../components/HeaderComponent"
 
 
 const TermsAndConditions = () => {
     return (
         <SafeAreaView style={styles.container}>
+            <Header title="Terms and Conditions" />
             <View style={styles.tandcView}>
                 <Text style={styles.tandc}>
                     Ultrices eget viverra eu eu diam vitae habitant pellentesque. 

@@ -1,10 +1,11 @@
 import { View, Text } from "react-native"
-import { styles } from "../../styles/styles"
+import { styles } from "./styles"
 import { Review } from "../../components/ReviewContainer/Review"
 import { Button } from "../../components/ButtonComponent/Button"
 import { useNavigation, useRoute } from "@react-navigation/native"
 import SwapReview from "../../components/ReviewContainer/SwapReview"
 import { useEffect, useState } from "react"
+import Header from "../../components/HeaderComponent"
 
 export const ReviewScreen = () => {
 
@@ -15,13 +16,13 @@ export const ReviewScreen = () => {
     const [isDataReview, setDataReview] = useState(false)
 
     useEffect(()=>{
-        if (route.params.details === "swapCurrency") {
+        if (route.params?.details === "swapCurrency") {
             setSwapReview(true)
-        } else if (route.params.details === "dataReview") {
+        } else if (route.params?.details === "dataReview") {
             setDataReview(true)
         }
 
-    }, [route.params.details])
+    }, [route.params?.details])
 
     // console.log("screen: ", route.params.details)
 
@@ -31,17 +32,20 @@ export const ReviewScreen = () => {
             details = "swapCurrency";
         } else if (isDataReview) {
             details = "dataReview";
+        } else {
+            details = ""
         }
         navigation.navigate("Success", { details });
     }
 
     return (
         <View style={styles.container}>
-            {isSwapReview && <SwapReview />}
-            {isDataReview && <Review />}
+            <Header title="Review" />
+
+            {isSwapReview ? <SwapReview /> : <Review />}
 
             <Button 
-                btn_text={(isDataReview && "Pay") || (isSwapReview && "Proceed")} 
+                btn_text={isSwapReview ? "Proceed" : "Pay"} 
                 onPress={whenPress} 
             />
         </View>

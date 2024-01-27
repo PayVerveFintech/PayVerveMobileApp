@@ -3,6 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context"
 import { Ionicons } from '@expo/vector-icons';
 import { styles } from "./styles";
 import { useState } from "react";
+import Header from "../../components/HeaderComponent";
 
 const LiveChat = () => {
     
@@ -21,6 +22,8 @@ const LiveChat = () => {
 
     return (
         <SafeAreaView style={styles.container}>
+            <Header title="Live Chat" />
+            
             <View style={styles.chatInterface}>
                 <View>
                     <View style={styles.botMessageContainer}>

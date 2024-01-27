@@ -8,6 +8,7 @@ import CameraPermission from "../../components/ModalComponent/CameraPermission";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { PersonalInfoProgress } from "../../components/PersonalInfoProgress";
 import { Camera } from "expo-camera";
+import Header from "../../components/HeaderComponent";
 
 
 const ProofOfAddress = () => {
@@ -75,6 +76,7 @@ const ProofOfAddress = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+        <Header title="Proof of Address" />
         <View style={{gap: 32}}>
             <PersonalInfoProgress screen="proof" />
 

@@ -2,6 +2,7 @@ import { useState } from "react"
 import { View, FlatList, Text,  } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { styles } from "./styles"
+import Header from "../../components/HeaderComponent"
 
 
 
@@ -19,6 +20,8 @@ const ReferralHistory = () => {
 
     return (
         <SafeAreaView style={styles.container}>
+            <Header title="Referral History" />
+            
             {referralHistory 
                     ?   <FlatList 
                             data={referral}

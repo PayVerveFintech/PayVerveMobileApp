@@ -1,6 +1,6 @@
 import { SafeAreaView } from "react-native-safe-area-context";
-import { View, Text, TextInput } from "react-native";
-import { styles } from "../../styles/styles";
+import { View, Text } from "react-native";
+import { styles } from "./styles";
 import { MobileNetworks } from "../../components/MobileNetworks/MobileNetworks";
 import { Picker } from "@react-native-picker/picker";
 import { Button } from "../../components/ButtonComponent/Button";
@@ -8,6 +8,7 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import { useInfo } from "../../context/userInfo";
 import InputBox from "../../components/InputBox";
+import Header from "../../components/HeaderComponent";
 
 const DataScreen = () => {
     const navigation = useNavigation()
@@ -39,6 +40,7 @@ const DataScreen = () => {
 
     return (
         <SafeAreaView style={styles.container}>
+            <Header title="Data" />
             <View style={styles.data_screen}>
                 <Text style={{fontSize: 18}}>Select Network Provider</Text>
 

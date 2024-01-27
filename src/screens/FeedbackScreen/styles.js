@@ -6,11 +6,11 @@ export const styles = StyleSheet.create({
         flex: 1,
         padding: 20,
         backgroundColor: "#FFF",
-        gap: 36
     },
 
     formView: {
-        gap: 12
+        gap: 12,
+        marginBottom: 32
     },
 
     rateStar: {

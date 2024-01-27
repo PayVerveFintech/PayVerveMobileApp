@@ -1,9 +1,10 @@
-import { View, Text, TextInput } from "react-native"
+import { View } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { Button } from "../../components/ButtonComponent/Button"
 import { useNavigation } from "@react-navigation/native"
-import { styles } from "../../styles/styles"
+import { styles } from "./styles"
 import InputBox from "../../components/InputBox";
+import Header from "../../components/HeaderComponent"
 
 const CableTvScreen = () => {
     const navigation = useNavigation()
@@ -16,15 +17,13 @@ const CableTvScreen = () => {
 
     return (
         <SafeAreaView style={styles.container}>
-            <View style={styles.data_screen}>
+            <Header title="Cable TV" />
+            <View style={styles.cableScreen}>
                  {/* replace with dropdown component */}
-                <View style={styles.data_form_input_wrapper}>
-                    <Text style={styles.data_form_label}>Select Service Provider</Text>
-                    <TextInput 
-                        placeholder="Select Service Provider"
-                        style={styles.data_form_input}
-                    />
-                </View>
+                <InputBox 
+                    label="Select Service Provider"
+                    placeholder="Select Service Provider"
+                />
 
                 <InputBox 
                     label="Smartcard Number"
@@ -32,13 +31,11 @@ const CableTvScreen = () => {
                 />
 
                 {/* replace with dropdown component */}
-                <View style={styles.data_form_input_wrapper}> 
-                    <Text style={styles.data_form_label}>Select Package</Text>
-                    <TextInput 
-                        placeholder="Select Package"
-                        style={styles.data_form_input}
-                    />
-                </View>
+                <InputBox 
+                    label="Select Package"
+                    placeholder="Select Package"
+                />
+                
 
                 <InputBox 
                     label="Amount"

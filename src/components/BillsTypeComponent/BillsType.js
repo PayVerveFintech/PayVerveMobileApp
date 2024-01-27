@@ -1,5 +1,5 @@
 import { View, Image, Text } from "react-native"
-import { styles } from "./Styles"
+import { styles } from "./styles"
 
 
 export const BillsType = ({ billImage, billName }) => {

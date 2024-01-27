@@ -1,9 +1,10 @@
 import { View, TouchableOpacity } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
-import { styles } from "../../styles/styles"
+import { styles } from "./styles"
 import { WalletBox } from "../../components/WalletType/WalletBox"
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from "@react-navigation/native";
+import Header from "../../components/HeaderComponent";
 
 const WalletScreen = () => {
     const navigation = useNavigation()
@@ -14,8 +15,10 @@ const WalletScreen = () => {
 
     return (
         <SafeAreaView style={styles.container}>
-            <View style={{flex: 1}}>
-                <View style={{flex: 2}}>
+            <Header title="Wallet" />
+            
+            <View style={styles.walletWrapper}>
+                <View style={styles.walletBoxWrapper}>
                     <WalletBox />
                 </View>
 

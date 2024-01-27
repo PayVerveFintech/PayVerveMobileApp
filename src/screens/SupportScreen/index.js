@@ -4,6 +4,7 @@ import { styles } from "./styles"
 import SupportType from "../../components/SupportType"
 import { Support } from "../../service/support"
 import { useNavigation } from "@react-navigation/native"
+import Header from "../../components/HeaderComponent"
 
 
 const SupportScreen = () => {
@@ -21,6 +22,8 @@ const SupportScreen = () => {
 
     return (
         <SafeAreaView style={styles.container}>
+            <Header title="Support" />
+            
             <View style={styles.supportWrapper}>
                 <FlatList 
                     data={support}

@@ -31,8 +31,10 @@ export const SuccessfulScreen = () => {
         <View style={styles.container}>
             <View style={styles.successful_screen_wrapper}>
                 <Image source={successful} />
-                {isSwapReview && <Text style={styles.successful_screen_text}>Congratulations you've successfully exchanged your money.</Text>}
-                {isDataReview && <Text style={styles.successful_screen_text}>Your transaction is successful</Text>}
+                {isSwapReview 
+                    ?   <Text style={styles.successful_screen_text}>Congratulations you've successfully exchanged your money.</Text>
+                    :   <Text style={styles.successful_screen_text}>Your transaction is successful</Text>
+                }
             </View>
 
             <Button btn_text="Back Home" onPress={whenPress} />

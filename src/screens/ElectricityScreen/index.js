@@ -1,10 +1,11 @@
-import { View, Text, TextInput, Pressable } from "react-native"
+import { View, Text, Pressable } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { Button } from "../../components/ButtonComponent/Button"
 import InputBox from "../../components/InputBox";
 import { useNavigation } from "@react-navigation/native"
-import { styles } from "../../styles/styles"
+import { styles } from "./styles"
 import { useState } from "react"
+import Header from "../../components/HeaderComponent";
 
 
 const ElectricityScreen = () => {
@@ -27,18 +28,17 @@ const ElectricityScreen = () => {
 
     return (
         <SafeAreaView style={styles.container}>
-            <View style={styles.data_screen}>
-                {/* replace with dropdown component */}
-                <View style={styles.data_form_input_wrapper}> 
-                    <Text style={styles.data_form_label}>Select Service Provider</Text>
-                    <TextInput 
-                        placeholder="Select Service Provider"
-                        style={styles.data_form_input}
-                    />
-                </View>
+            <Header title="Electricity" />
+            
+            <View style={styles.meterScreen}>
+                {/* replace with dropdown component */} 
+                <InputBox 
+                    label="Select Service Provider"
+                    placeholder="Select Service Provider"
+                />
 
-                <View style={styles.data_form_input_wrapper}>
-                    <Text style={styles.data_form_label}>Select Meter</Text>
+                <View style={styles.meterTypeWrapper}>
+                    <Text style={styles.meterTypeLabel}>Select Meter</Text>
                     <View style={styles.select_meter_wrapper}>
                         <Pressable 
                             onPress={() => switchSelectMeter("prepaid")} 

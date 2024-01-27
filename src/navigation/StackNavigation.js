@@ -9,15 +9,15 @@ import { styles } from "../styles/styles";
 
 const Stack = createStackNavigator()
 
-const headerOptions = {
-    headerStyle: {
-        height: 100
-    },
-    headerTitleStyle: styles.headerTitleStyle,
-    headerTitleAlign: "center",
-    headerLeft: () => (<BackButton />),
-    headerBackTitleVisible: true,
-}
+// const headerOptions = {
+//     headerStyle: {
+//         height: 100
+//     },
+//     headerTitleStyle: styles.headerTitleStyle,
+//     headerTitleAlign: "center",
+//     headerLeft: () => (<BackButton />),
+//     headerBackTitleVisible: true,
+// }
 
 //Stack navigation for the home screen
 export const HomeNav = () => {
@@ -27,13 +27,17 @@ export const HomeNav = () => {
             <Stack.Screen 
                 name="Data" 
                 component={DataScreen} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Airtime" 
                 component={DataScreen} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
         </Stack.Navigator>
@@ -48,25 +52,33 @@ export const HomeNav = () => {
 //             <Stack.Screen 
 //                 name="Pay Bills" 
 //                 component={PayBillsScreen} 
-//                 options={headerOptions}
+//                 options={{
+                    headerShown: false
+                // }}
 //             />
 
 //             <Stack.Screen 
 //                 name="Cable TV" 
 //                 component={CableTv} 
-//                 options={headerOptions}
+//                 options={{
+                    headerShown: false
+                // }}
 //             />
 
 //             <Stack.Screen 
 //                 name="Electricity" 
 //                 component={ElectricityScreen} 
-//                 options={headerOptions}
+//                 options={{
+                    headerShown: false
+                // }}
 //             />
 
 //             <Stack.Screen 
 //                 name="Transportation" 
 //                 component={TransportationScreen} 
-//                 options={headerOptions}
+//                 options={{
+                    headerShown: false
+                // }}
 //             />
 //         </Stack.Navigator>
 //     )

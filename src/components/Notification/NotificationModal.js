@@ -1,5 +1,5 @@
-import { View, Image, Text, Pressable } from 'react-native'
-import { styles } from './Styles'
+import { View, Image, Text, Pressable } from "react-native"
+import { styles } from "./styles"
 
 const NotificationModal = ({ closeModal }) => {
 

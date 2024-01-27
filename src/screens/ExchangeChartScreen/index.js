@@ -3,11 +3,14 @@ import { SafeAreaView } from "react-native-safe-area-context"
 import InputBox from "../../components/InputBox"
 import chart from "../../../assets/chartFrame.png"
 import { styles } from "./styles"
+import Header from "../../components/HeaderComponent"
 
 
 const ExchangeChartScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
+        <Header title="Exchange Chart" />
+        
         <View style={styles.inputWrapper}>
             {/* replace with dropdown component */}
             <InputBox label="Select Currency" placeholder="" />

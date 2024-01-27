@@ -30,6 +30,8 @@ export const styles = StyleSheet.create({
     },
 
     back_btn: {
-        padding: 20,
+        position: "absolute",
+        left: -5,
+
     },
 })

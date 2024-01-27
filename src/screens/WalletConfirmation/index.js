@@ -5,6 +5,7 @@ import like from "../../../assets/like.png"
 import { Button } from "../../components/ButtonComponent/Button"
 import { useNavigation } from "@react-navigation/native"
 import { PersonalInfoProgress } from "../../components/PersonalInfoProgress"
+import Header from "../../components/HeaderComponent"
 
 
 const Confirmation = () => {
@@ -12,6 +13,7 @@ const Confirmation = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+        <Header title="Confirmation" />
         <View>
             <PersonalInfoProgress screen="confirm" />
 

@@ -5,10 +5,10 @@ export const styles = StyleSheet.create({
         flex: 1,
         padding: 20,
         backgroundColor: "#FFF",
-        gap: 32
     },
 
     formContainer: {
         gap: 12,
+        marginBottom: 32
     }
 })

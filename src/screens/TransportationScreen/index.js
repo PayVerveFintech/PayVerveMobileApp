@@ -1,8 +1,10 @@
-import { View, Text, TextInput } from "react-native"
+import { View } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
-import { styles } from "../../styles/styles"
+import { styles } from "./styles"
 import { Button } from "../../components/ButtonComponent/Button"
 import { useNavigation } from "@react-navigation/native"
+import Header from "../../components/HeaderComponent"
+import InputBox from "../../components/InputBox"
 
 
 const TransportationScreen = () => {
@@ -16,40 +18,30 @@ const TransportationScreen = () => {
 
     return (
         <SafeAreaView style={styles.container}>
-            <View style={styles.data_screen}>
-                {/* replace with dropdown component */}
-                <View style={styles.data_form_input_wrapper}> 
-                    <Text style={styles.data_form_label}>Select Service Provider</Text>
-                    <TextInput 
-                        placeholder="Select Service Provider"
-                        style={styles.data_form_input}
-                    />
-                </View>
-                
-                {/* replace with dropdown component */}
-                <View style={styles.data_form_input_wrapper}> 
-                    <Text style={styles.data_form_label}>Package</Text>
-                    <TextInput 
-                        placeholder="123456789"
-                        style={styles.data_form_input}
-                    />
-                </View>
+            <Header title="Transportation" />
 
-                <View style={styles.data_form_input_wrapper}>
-                    <Text style={styles.data_form_label}>Tag Number</Text>
-                    <TextInput 
-                        placeholder="123456789"
-                        style={styles.data_form_input}
-                    />
-                </View>
+            <View style={styles.transportScreen}>
+                {/* replace with dropdown component */}
+                <InputBox 
+                    label="Select Service Provider"
+                    placeholder="Select Service Provider"
+                />
 
-                <View style={styles.data_form_input_wrapper}>
-                    <Text style={styles.data_form_label}>Amount</Text>
-                    <TextInput 
-                        placeholder="123456789"
-                        style={styles.data_form_input}
-                    />
-                </View>
+                {/* replace with dropdown component */}
+                <InputBox 
+                    label="Package"
+                    placeholder="123456789"
+                />
+
+                <InputBox 
+                    label="Tag Number"
+                    placeholder="123456789"
+                />
+
+                <InputBox 
+                    label="Amount"
+                    placeholder="123456789"
+                />
 
                 <Button btn_text="Proceed" onPress={whenPress}/>
             </View>

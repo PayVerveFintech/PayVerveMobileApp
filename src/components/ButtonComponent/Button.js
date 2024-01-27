@@ -1,5 +1,5 @@
 import { Pressable, View, Text } from "react-native"
-import { styles } from "./Styles"
+import { styles } from "./styles"
 
 
 export const Button = ({ btn_text, onPress, disabled }) => {

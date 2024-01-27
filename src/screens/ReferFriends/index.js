@@ -7,6 +7,7 @@ import { styles } from "./styles"
 import { MaterialIcons } from '@expo/vector-icons'
 import { useNavigation } from "@react-navigation/native"
 import { useInfo } from "../../context/userInfo"
+import Header from "../../components/HeaderComponent"
 
 
 
@@ -44,6 +45,8 @@ const ReferFriends = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+        <Header title="Refer Friends" />
+        
         {point ? 
             <View style={styles.pointWrapper}>
                 <View style={styles.pointFlex}>

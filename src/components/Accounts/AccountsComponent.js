@@ -1,7 +1,7 @@
 import { View, Text, Pressable, Image } from "react-native"
 // import Clipboard from "@react-native-clipboard/clipboard";
 import { Ionicons } from '@expo/vector-icons';
-import { styles } from "./Styles";
+import { styles } from "./styles";
 import { useState, useEffect } from "react";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import copyImg from '../../../assets/copyImage.png'

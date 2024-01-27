@@ -29,21 +29,23 @@ import TermsAndConditions from "../screens/TermsAndConditions"
 import SupportScreen from "../screens/SupportScreen"
 import FeedbackScreen from "../screens/FeedbackScreen"
 import LiveChat from "../screens/LiveChat"
+import PayBillsScreen from "../screens/PayBillsScreen"
+import NotificationScreen from "../screens/NotificationScreen"
 
 
 const Stack = createStackNavigator()
 
 export const HomePage = () => {
 
-    const headerOptions = {
-        headerStyle: {
-            height: 100
-        },
-        headerTitleStyle: styles.headerTitleStyle,
-        headerTitleAlign: "center",
-        headerLeft: () => (<BackButton />),
-        headerBackTitleVisible: true,
-    }
+    // const headerOptions = {
+    //     headerStyle: {
+    //         height: 100
+    //     },
+    //     headerTitleStyle: styles.headerTitleStyle,
+    //     headerTitleAlign: "center",
+    //     headerLeft: () => (<BackButton />),
+    //     headerBackTitleVisible: true,
+    // }
 
     return (
         <Stack.Navigator>
@@ -51,174 +53,232 @@ export const HomePage = () => {
                 name="Home" 
                 component={BottomNav} 
                 options={{
-                    headerShown: false,
+                    headerShown: false
                 }} 
+            />
+
+            <Stack.Screen 
+                name="Notification" 
+                component={NotificationScreen} 
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Success"
                 component={SuccessfulScreen}
                 options={{
-                    headerShown: false,
+                    headerShown: false
                 }}
             />
 
             <Stack.Screen 
                 name="Review" 
                 component={ReviewScreen} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Add Money" 
                 component={AddMoneyScreen} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
-            {/* <Stack.Screen 
+            <Stack.Screen 
                 name="Pay Bills" 
-                component={BillsNav} 
-                options={headerOptions}
-            /> */}
+                component={PayBillsScreen} 
+                options={{
+                    headerShown: false
+                }}
+            />
 
             <Stack.Screen 
                 name="Cable TV" 
                 component={CableTvScreen} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Electricity" 
                 component={ElectricityScreen} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Transportation" 
                 component={TransportationScreen} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Betting" 
                 component={BettingScreen} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Wallet" 
                 component={WalletScreen} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Add a New Wallet" 
                 component={AddNewWallet} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Personal Information" 
                 component={PersonalInformation} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Proof of Address" 
                 component={ProofOfAddress} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Confirmation" 
                 component={WalletConfirmation} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Camera" 
                 component={CameraScreen} 
                 options={{
-                    headerShown: false,
+                    headerShown: false
                 }}
             />
 
             <Stack.Screen 
                 name="Swap Currency" 
                 component={SwapCurrencyScreen} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Exchange Chart" 
                 component={ExchangeChartScreen} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Change Password" 
                 component={ChangePassword} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Change Transaction Pin" 
                 component={ChangeTransactionPin} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Manage Beneficiaries" 
                 component={ManageBeneficiaries} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Add Beneficiaries" 
                 component={AddBeneficiaries} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Refer Friends" 
                 component={ReferFriends} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Referral History" 
                 component={ReferralHistory} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Request POS" 
                 component={RequestPOS} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Terms and Conditions" 
                 component={TermsAndConditions} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Support" 
                 component={SupportScreen} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Feedback" 
                 component={FeedbackScreen} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
             <Stack.Screen 
                 name="Live Chat" 
                 component={LiveChat} 
-                options={headerOptions}
+                options={{
+                    headerShown: false
+                }}
             />
 
 

@@ -6,7 +6,6 @@ export const styles = StyleSheet.create({
         flex: 1,
         padding: 20,
         backgroundColor: "#FFF",
-        gap: 32
     },
 
     pointWrapper: {
@@ -15,6 +14,7 @@ export const styles = StyleSheet.create({
         gap: 12,
         borderRadius: 8,
         paddingHorizontal: 24,
+        marginBottom: 32
 
     },
 
@@ -53,7 +53,6 @@ export const styles = StyleSheet.create({
     },
 
     referralInfoWrapper: {
-        width: 340,
         height: 148,
         padding: 12,
         borderRadius: 8,
@@ -69,6 +68,7 @@ export const styles = StyleSheet.create({
         shadowOpacity: 0.25,
         shadowRadius: 4,
         elevation: 5,
+        marginBottom: 32
     },
 
     referralInfoBody: {
@@ -99,7 +99,8 @@ export const styles = StyleSheet.create({
 
     referralCta: {
         gap: 8,
-        justifyContent: "center"
+        justifyContent: "center",
+        marginBottom: 32
     },
 
     referralHistory: {

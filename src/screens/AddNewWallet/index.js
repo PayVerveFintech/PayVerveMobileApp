@@ -7,7 +7,8 @@ import uk from "../../../assets/UK.png"
 import { Button } from "../../components/ButtonComponent/Button";
 import TandCModal from "../../components/ModalComponent/TandCModal";
 import { useNavigation } from "@react-navigation/native";
-import { styles } from "../../styles/styles";
+import { styles } from "./styles";
+import Header from "../../components/HeaderComponent";
 
 
 
@@ -48,18 +49,20 @@ const AddNewWallet = () => {
 
     return (
         <SafeAreaView style={styles.container}>
-            <View style={{flex: 1}}>
-                <View style={{flex: 3, gap: 12}}>
+            <Header title="Add a New Wallet" />
+
+            <View style={styles.walletScreen}>
+                <View style={styles.walletTypeWrapper}>
                     <Wallet account= "Dollar" image={usa}  onPress={onDollarChecked} checked={dollarChecked}/>
                     <Wallet account= "Pounds" image={uk} onPress={onPoundsChecked} checked={poundsChecked}/>
                 </View>
 
                 {dollarChecked || poundsChecked 
-                    ?   <View style={{alignItems: "center", flex: 2}}>
-                            <Text style={{fontSize: 16}}>By Tapping "Next", you agree to PayVerve</Text>
+                    ?   <View style={styles.walletAgreement}>
+                            <Text style={styles.walletAgreementText}>By Tapping "Next", you agree to PayVerve</Text>
                             <Pressable 
                             >
-                                <Text style={{fontSize: 16, color: "#2196F3"}}>Terms and Conditions.</Text>
+                                <Text style={styles.walletTAndC}>Terms and Conditions.</Text>
                             </Pressable>
 
                             <Button btn_text="Next" onPress={() => {setModalVisible(true)}}/>

@@ -6,6 +6,7 @@ import { useState } from "react"
 import { useNavigation } from "@react-navigation/native"
 import { styles } from "./styles"
 import { useInfo } from "../../context/userInfo"
+import Header from "../../components/HeaderComponent"
 
 
 
@@ -16,10 +17,8 @@ const AddBeneficiaries = () => {
     const [bankName, setBankName] = useState("")
     const [accountNumber, setAccountNumber] = useState("")
   
-    // const { beneficiaries, setBeneficiaries } = useState([]) //move state to state management e.g redux or contextApi
-
     //beneficiary context
-    const { beneficiaries, setBeneficiaries } = useInfo()
+    const { setBeneficiaries } = useInfo()
     
     //capture account name
     const captureNameInput = (text) => {
@@ -53,31 +52,19 @@ const AddBeneficiaries = () => {
       setAccountName("");
       setBankName("");
       setAccountNumber("");
-
-      //data to pass along with navigation
-      // const routeData = {
-      //   beneficiaries: [
-      //     ...beneficiaries,
-      //     {
-      //       accountName,
-      //       bankName,
-      //       accountNumber
-      //     }
-      //   ]
-      // };
   
-      // Pass the state variables to the "Manage Beneficiaries" screen
+      // navigate to the "Manage Beneficiaries" screen
       navigation.navigate("Manage Beneficiaries");
     };
 
 
     return (
       <SafeAreaView style={styles.container}>
+          <Header title="Add Beneficiaries" />
           <View style={styles.formView}>
               <InputBox 
                   label="Bank Name" 
                   placeholder="Bank Name" 
-                  name="bankName"
                   value={bankName}
                   onChangeText={captureBankInput}
               />
@@ -85,7 +72,6 @@ const AddBeneficiaries = () => {
               <InputBox 
                   label="Account Name" 
                   placeholder="Account Name" 
-                  name="accountName"
                   value={accountName} 
                   onChangeText={captureNameInput}
               />
@@ -93,7 +79,6 @@ const AddBeneficiaries = () => {
               <InputBox 
                   label="Account Number" 
                   placeholder="Account Number" 
-                  name="accountNumber" 
                   value={accountNumber}
                   onChangeText={captureAccountNumberInput}
                   keyboardType="number-pad"

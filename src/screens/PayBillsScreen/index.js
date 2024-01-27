@@ -1,9 +1,10 @@
 import { View, TouchableOpacity, FlatList } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { BillsType } from "../../components/BillsTypeComponent/BillsType"
-import { styles } from "../../styles/styles"
+import { styles } from "./styles"
 import { bills } from "../../service/bills"
 import { useNavigation } from "@react-navigation/native"
+import Header from "../../components/HeaderComponent"
 
 const PayBillsScreen = () => {
     const navigation = useNavigation()
@@ -21,6 +22,8 @@ const PayBillsScreen = () => {
 
     return (
         <SafeAreaView style={styles.container}>
+            <Header title="Pay Bills" />
+
             <View>
                 <FlatList
                     data= {bills}

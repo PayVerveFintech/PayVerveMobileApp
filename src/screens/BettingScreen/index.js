@@ -1,9 +1,10 @@
-import { View, Text, TextInput } from "react-native"
+import { View } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { Button } from "../../components/ButtonComponent/Button"
-import { styles } from "../../styles/styles"
+import { styles } from "./styles"
 import { useNavigation } from "@react-navigation/native"
 import InputBox from "../../components/InputBox"
+import Header from "../../components/HeaderComponent"
 
 const BettingScreen = () => {
     const navigation = useNavigation()
@@ -16,15 +17,14 @@ const BettingScreen = () => {
 
     return (
         <SafeAreaView style={styles.container}>
-            <View style={styles.data_screen}>
+            <Header title="Betting" />
+
+            <View style={styles.bettingScreen}>
                 {/* replace with dropdown component */}
-                <View style={styles.data_form_input_wrapper}> 
-                    <Text style={styles.data_form_label}>Select Provider</Text>
-                    <TextInput 
-                        placeholder="Select Service Provider"
-                        style={styles.data_form_input}
-                    />
-                </View>
+                <InputBox 
+                    label="Select Service Provider"
+                    placeholder="Select Service Provider"
+                />
 
                 <InputBox 
                     label="Users ID"

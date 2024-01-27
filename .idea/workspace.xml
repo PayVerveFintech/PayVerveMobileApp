@@ -6,17 +6,56 @@
   <component name="ChangeListManager">
     <list default="true" id="a86759bc-5623-444e-b870-a822ca735f93" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expo-constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/expo-constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Accounts/AccountsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Accounts/AccountsComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/BillsTypeComponent/BillsType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BillsTypeComponent/BillsType.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/InputBox/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InputBox/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ModalComponent/CameraPermission.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalComponent/CameraPermission.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ModalComponent/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalComponent/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/userAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/userAuth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ButtonComponent/BackButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonComponent/BackButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ButtonComponent/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonComponent/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ButtonComponent/Styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonComponent/Styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MobileNetworks/MobileNetworks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MobileNetworks/MobileNetworks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Notification/EmptyNotification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Notification/EmptyNotification.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Notification/NotificationModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Notification/NotificationModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Notification/Notifications.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Notification/Notifications.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/navigation/HomeNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/HomeNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigation/StackNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/StackNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/AddBeneficiaries/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AddBeneficiaries/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/AddBeneficiaries/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AddBeneficiaries/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/AddMoneyScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AddMoneyScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/AddNewWallet/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AddNewWallet/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/BettingScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/BettingScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/CableTvScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/CableTvScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ChangePassword/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ChangePassword/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ChangePassword/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ChangePassword/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ChangeTransactionPin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ChangeTransactionPin/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ChangeTransactionPin/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ChangeTransactionPin/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/DataScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/DataScreen/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/MoreScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MoreScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ElectricityScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ElectricityScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ExchangeChartScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ExchangeChartScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/FeedbackScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/FeedbackScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/FeedbackScreen/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/FeedbackScreen/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/FinanceScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/FinanceScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/LiveChat/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/LiveChat/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ManageBeneficiaries/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ManageBeneficiaries/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ManageBeneficiaries/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ManageBeneficiaries/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/NotificationScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/NotificationScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/PayBillsScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/PayBillsScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/PersonalInformation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/PersonalInformation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ProofOfAddress/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ProofOfAddress/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ReferFriends/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ReferFriends/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ReferFriends/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ReferFriends/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ReferralHistory/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ReferralHistory/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/RequestPOS/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/RequestPOS/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/RequestPOS/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/RequestPOS/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/ReviewScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ReviewScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/SuccessfulScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/SuccessfulScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/SupportScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/SupportScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/SwapCurrencyScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/SwapCurrencyScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/TermsAndConditions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/TermsAndConditions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/TransportationScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/TransportationScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/WalletConfirmation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/WalletConfirmation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/WalletScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/WalletScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/CombineContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/CombineContext.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

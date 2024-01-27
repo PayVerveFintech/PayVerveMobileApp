@@ -5,6 +5,7 @@ import Beneficiaries from "../../components/Beneficiaries";
 import { useNavigation } from "@react-navigation/native";
 import { styles } from "./styles";
 import { useInfo } from "../../context/userInfo";
+import Header from "../../components/HeaderComponent";
 
 
 
@@ -45,6 +46,7 @@ const ManageBeneficiaries = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+        <Header title="Manage Beneficiaries" />
         <View style={styles.benficiariesList}>
             {beneficiaries?.length > 0 
                 ?

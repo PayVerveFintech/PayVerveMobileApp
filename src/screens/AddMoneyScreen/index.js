@@ -1,8 +1,9 @@
 import { SafeAreaView } from "react-native-safe-area-context"
 import { View } from "react-native"
 import { AccountsComponent } from "../../components/Accounts/AccountsComponent"
-import { styles } from "../../styles/styles"
+import { styles } from "./styles"
 import { useState } from "react"
+import Header from "../../components/HeaderComponent"
 
 const AddMoneyScreen = () => {
     const [isNaira, setIsNaira] = useState(true)
@@ -26,6 +27,7 @@ const AddMoneyScreen = () => {
 
     return (
         <SafeAreaView style={styles.container}>
+            <Header title="Add Money" />
             <View style={styles.accounts_wrapper}>
                 {accounts.map((account, id) => (
                     <AccountsComponent key={id} account={account[0]} accountNum={account[1]}/>
