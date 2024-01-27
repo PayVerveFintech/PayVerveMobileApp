@@ -5,7 +5,7 @@ export const FinanceScreen = () => {
 
     return (
         <View style={styles.container}>
-            <Text>Finance Screen</Text>
+            {/* <Text>Finance Screen</Text> */}
         </View>
     )
 }

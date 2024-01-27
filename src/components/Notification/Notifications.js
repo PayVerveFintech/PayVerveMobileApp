@@ -1,7 +1,7 @@
-import { TouchableOpacity, Image, View, Text, Modal } from 'react-native'
-import { styles } from './Styles'
-import NotificationModal from './NotificationModal'
-import { useState } from 'react'
+import { TouchableOpacity, Image, View, Text, Modal } from "react-native"
+import { styles } from "./styles"
+import NotificationModal from "./NotificationModal"
+import { useState } from "react"
 
 const Notifications = () => {
     const [showModal, setShowModal] = useState(false)

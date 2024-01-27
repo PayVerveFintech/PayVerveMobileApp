@@ -13,8 +13,15 @@ export const styles = StyleSheet.create({
         paddingVertical: 10,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#2196F3",
         borderRadius: 8
+    },
+
+    active: {
+        backgroundColor: "#2196F3"
+    },
+
+    inactive: {
+        backgroundColor: "#949191"
     },
 
     btn_text: {
@@ -23,6 +30,8 @@ export const styles = StyleSheet.create({
     },
 
     back_btn: {
-        padding: 20,
+        position: "absolute",
+        left: -5,
+
     },
 })

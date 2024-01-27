@@ -1,7 +1,7 @@
 import { BackHandler } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 import { useEffect } from "react";
-import { styles } from "./Styles";
+import { styles } from "./styles";
 import { useNavigation } from "@react-navigation/native";
 
 export const BackButton = () => {
