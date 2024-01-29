@@ -1,10 +1,18 @@
 import { View, Image, Text, TouchableOpacity, ImageBackground } from 'react-native';
-import { styles } from '../styles/styles';
-import SignUp from './SignUp';
-import { Login } from './Login';
-import EmailConfirmation from './EmailConfirmation';
+import { styles } from '../../styles/styles';
 
-const OnboardingScreen = () => {
+const OnboardingScreen = ({navigation}) => {
+
+    // handling sign up navigation
+    const handleSignUp = () => {
+        navigation.navigate('SignUp1'); 
+    };
+
+    // handling sing in navigation
+    const handleLogin = () => {
+        navigation.navigate('Login'); 
+    };
+
     return (
         <View style={styles.container}>
 
