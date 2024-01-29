@@ -14,9 +14,6 @@ export default function App() {
   const newUser  = useContext(NewUser);
   
   return (
-    
-    <AuthProvider>
-      <OnboardingScreen />
-    </AuthProvider>
+    <HomePage />
   );
 }

@@ -4,7 +4,7 @@ import { Review } from "../components/ReviewContainer/Review"
 import { Button } from "../components/ButtonComponent/Button"
 import { useNavigation } from "@react-navigation/native"
 
-export const ReviewScreen = () => {
+export default function ReviewScreen()  {
 
     const navigation = useNavigation()
 

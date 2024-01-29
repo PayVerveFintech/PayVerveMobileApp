@@ -27,7 +27,7 @@ const KYCVerification3 = ({navigation}) => {
 
             <View style={{marginTop: "40%", marginBottom: "30%"}}>
                 <Image 
-                    source={require('../../../assets/like.png')}
+                    source={require('../../../assets/Like.png')}
                     style={{width: 150, height: 150, alignSelf: 'center', resizeMode: 'contain', }}
                 />
 

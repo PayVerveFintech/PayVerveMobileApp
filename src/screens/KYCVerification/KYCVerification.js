@@ -202,8 +202,9 @@ const KYCVerification = ({navigation}) => {
 
                         <TouchableOpacity 
                             style={[styles.signupButton, { opacity: isFormValid ? 1 : 0.5}]}
-                            disabled = {isFormValid}
-                            onPress={handleSubmit}
+                            // disabled = {isFormValid}
+                            // onPress={handleSubmit}
+                            onPress={() => navigation.navigate("mainApp")}
                         >
                             <Text style={styles.touchableOpacityText}>Next</Text>
                         </TouchableOpacity>

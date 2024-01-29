@@ -1,7 +1,7 @@
 import { View, Text } from "react-native"
 import { styles } from "../styles/styles"
 
-export const MoreScreen = () => {
+export default function MoreScreen() {
 
     return (
         <View style={styles.container}>

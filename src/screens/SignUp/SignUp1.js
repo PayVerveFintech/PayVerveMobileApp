@@ -105,14 +105,14 @@ const SignUp1 = ({navigation}) => {
                         </TouchableOpacity>
 
                         {/* This is temporary */}
-                        <TouchableOpacity 
+                        {/* <TouchableOpacity 
                             style={styles.signupButton} 
                             onPress={() => navigation.navigate('Finance')}
                         >
                             <Text style={styles.touchableOpacityText}>
                                 Finance
                             </Text>
-                        </TouchableOpacity>
+                        </TouchableOpacity> */}
 
                         <Text style={{alignSelf: 'center', fontSize: 14}} onPress={() => navigation.navigate('Login') }>
                             {baseText[1]}

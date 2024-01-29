@@ -11,7 +11,7 @@ import { NavigationContainer } from "@react-navigation/native";
 
 const Tab = createBottomTabNavigator()
 
-export const BottomNav = () => {
+export default function BottomNav () {
 
     return (
             <Tab.Navigator

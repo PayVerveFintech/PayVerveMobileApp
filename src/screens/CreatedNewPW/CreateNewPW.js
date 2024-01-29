@@ -64,6 +64,7 @@ const CreateNewPW = ({navigation}) => {
 
             <TouchableOpacity 
                 style={styles.signupButton}
+                onPress={() => navigation.navigate("Home")}
             >
                 <Text style={styles.touchableOpacityText}> Reset </Text>
             </TouchableOpacity>
