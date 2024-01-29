@@ -1,9 +1,7 @@
 import * as React from 'react'
-// import { AuthProvider } from "./src/hooks/userAuth";
 import OnboardingScreen from './src/screens/OnboardingScreen/OnboardingScreen'
 import SignUp1 from "./src/screens/SignUp/SignUp1";
 import Login from './src/screens/Login/Login';
-// import HomeNav from "./src/navigation/HomeNav";
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import EmailConfirmation from './src/screens/EmailConfirmation/EmailConfirmation';
@@ -190,11 +188,6 @@ function App() {
                 />
             </Stack.Navigator>
         </NavigationContainer>
-    
-    // <OnboardingScreen />
-    // <AuthProvider>
-    //   <OnboardingScreen />
-    // </AuthProvider>
   );
 }
 
