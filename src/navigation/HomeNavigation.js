@@ -71,10 +71,6 @@ export const HomePage = ({ nav }) => {
         return(
             <Stack.Navigator>
 
-                <Stack.Screen
-                    name="BottomNav"
-                    component={BottomNav}
-            />
 
                  <Stack.Screen 
                     name="Home" 
