@@ -5,9 +5,27 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     container: {
-        padding: 20,
+        padding: 10,
         flex: 1,
-        backgroundColor: "#FFF"
+        backgroundColor: 'white',
+        marginTop: 15
+    },
+
+    signupContainer: {
+        backgroundColor: 'white',
+        marginTop: 15
+    },
+
+    signUpcontainer1: {
+        alignContent: 'center',
+        paddingLeft: 20,
+        paddingBottom: '100%',
+        marginTop: 40
+    },
+
+    signupTexts: {
+        fontSize: 18,
+        fontWeight: 'bold'
     },
 
     logo: {
@@ -38,7 +56,7 @@ export const styles = StyleSheet.create({
     },
 
     header_Text_1: {
-        fontSize: 22,
+        fontSize: 40,
         paddingTop: 50,
         alignSelf: 'center',
         fontWeight: 'bold'
@@ -47,9 +65,31 @@ export const styles = StyleSheet.create({
     header_Text_2: {
         fontSize: 20,
         paddingTop: 20,
-        paddingLeft: 50,
-        paddingRight: 50,
+        alignSelf: 'center',
         textAlign: 'center',
+    },
+
+    finance_header_text_1: {
+        fontSize: 35,
+        paddingTop: 50,
+        paddingLeft: 100,
+        alignSelf: 'center',
+        fontWeight: 'bold'
+    },
+
+    finance_header_text_2: {
+        fontSize: 15,
+        paddingTop: 20,
+        alignSelf: 'center',
+        textAlign: 'center',
+    },
+
+    touchableOpacityText: {
+        color: 'white', 
+        fontWeight: 'bold',                 
+        fontSize: 25, 
+        alignSelf: 'center',
+        padding: 10
     },
 
     onboarding_body_txt: {
@@ -59,13 +99,25 @@ export const styles = StyleSheet.create({
         paddingTop: 50
     },
 
-    signUpButton: {
+    onboardingSignUpButton: {
         backgroundColor: '#2196F3',
         width: 161,
         height: 50,
         elevation: 10,
         borderRadius: 8,
         marginRight: 10
+    },
+
+    signupButton: {
+        backgroundColor: '#2196F3',
+        width: 200,
+        height: 50,
+        elevation: 10,
+        borderRadius: 8,
+        justifyContent: "center",
+        alignSelf: "center",
+        marginTop: 40,
+        marginBottom: 10
     },
 
     loginButton: {
@@ -85,7 +137,7 @@ export const styles = StyleSheet.create({
 
     textInput: {
         height: 40,
-        width: 271,
+        width: '92%',
         marginVertical: 10,
         borderWidth: 1,
         // borderColor: '#205922',
@@ -94,14 +146,7 @@ export const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
 
-
-    headerTitleStyle: {
-        fontSize: 22,
-        fontWeight: "700"
+    freeBold: {
+        fontWeight: 'bold'
     },
-
-
-
-
-
 })

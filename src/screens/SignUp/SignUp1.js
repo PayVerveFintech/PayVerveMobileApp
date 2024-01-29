@@ -7,38 +7,45 @@ import {
     TextInput,
     TouchableOpacity,
     View,
+    Alert
 } from 'react-native';
-import { styles } from '../styles/styles';
-import EmailConfirmation from './EmailConfirmation';
-import { Login } from './Login';
-
-export const SignUp = () => {
+import { styles } from '../../styles/styles';
+const SignUp1 = ({navigation}) => {
     const baseText = [
         "Creating an account with PayVerve is completely ",
-        "Already have an account?",
+        "Already have an account? ",
     ];
-    const appendText = ["FREE", "Login"];
+    const appendText = ["FREE", "Log in"];
     const [email, onChangeEmail] = useState('');
     const [fullName, onChangeFullName] = useState('');
     const [userName, onChangeUserName] = useState('');
     const [password, onChangePassword] = useState('');
     const [confirmPassword, onChangeConfirmPassword] = useState('');
 
+    // const handlePasswordMatch =() => {
+    //     if (password.value == confirmPassword.value) {
+    //         navigation.navigate('KYCVerify')
+    //     } else {
+    //         Alert.alert('Password Mismatch')
+    //     }
+    // }
+    
     return (
-        <View>
+        <View style={styles.signupContainer}>
             <Text style={styles.header_Text_1}>SignUp</Text>
 
             <Text style={styles.header_Text_2}>
-                {`${baseText[0]}${appendText[0]}`}
+                {baseText[0]}
+                <Text style={{fontWeight: 'bold'}}>{appendText[0]}</Text>
             </Text>
 
             <KeyboardAvoidingView
                 behavior={Platform.OS === 'ios' ? 'padding' : null}
             >
                 <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-                    <View style={styles.container}>
+                    <View style={styles.signUpcontainer1}>
                         {/* Email */}
-                        <Text>Email</Text>
+                        <Text style={styles.signupTexts}>Email</Text>
                         <TextInput
                             value={email}
                             placeholder="Email"
@@ -47,7 +54,7 @@ export const SignUp = () => {
                         />
 
                         {/* Full name */}
-                        <Text>Full Name</Text>
+                        <Text style={styles.signupTexts}>Full Name</Text>
                         <TextInput
                             value={fullName}
                             placeholder="Full name"
@@ -56,7 +63,7 @@ export const SignUp = () => {
                         />
 
                         {/* User name */}
-                        <Text>Username</Text>
+                        <Text style={styles.signupTexts}>Username</Text>
                         <TextInput
                             value={userName}
                             placeholder="Username"
@@ -65,7 +72,7 @@ export const SignUp = () => {
                         />
 
                         {/* Password */}
-                        <Text>Password</Text>
+                        <Text style={styles.signupTexts}>Password</Text>
                         <TextInput
                             value={password}
                             secureTextEntry
@@ -74,8 +81,12 @@ export const SignUp = () => {
                             style={styles.textInput}
                         />
 
+                        <Text>
+                            Your password should have a upperCase, lowerCase letter, number and a special characters.
+                        </Text>
+
                         {/* Confirm password */}
-                        <Text>Confirm Password</Text>
+                        <Text style={styles.signupTexts}>Confirm Password</Text>
                         <TextInput
                             value={confirmPassword}
                             secureTextEntry
@@ -84,16 +95,35 @@ export const SignUp = () => {
                             style={styles.textInput}
                         />
 
-                        <TouchableOpacity onPress={EmailConfirmation}>
-                            <Text style={styles.buttonText}>SignUp</Text>
+                        <TouchableOpacity 
+                            style={styles.signupButton} 
+                            onPress={() => navigation.navigate('KYCVerify')}
+                        >
+                            <Text style={styles.touchableOpacityText}>
+                                SignUp
+                            </Text>
                         </TouchableOpacity>
 
-                        <Text onPress={Login}>
-                            {`${baseText[1]}${appendText[1]}`}
+                        {/* This is temporary */}
+                        <TouchableOpacity 
+                            style={styles.signupButton} 
+                            onPress={() => navigation.navigate('Finance')}
+                        >
+                            <Text style={styles.touchableOpacityText}>
+                                Finance
+                            </Text>
+                        </TouchableOpacity>
+
+                        <Text style={{alignSelf: 'center', fontSize: 14}} onPress={() => navigation.navigate('Login') }>
+                            {baseText[1]}
+                            <Text style={{color: 'blue', fontSize: 16, fontWeight: 'bold', textDecorationLine: 'underline'}}>{appendText[1]}</Text>
                         </Text>
+
                     </View>
                 </ScrollView>
             </KeyboardAvoidingView>
         </View>
     );
 };
+
+export default SignUp1;

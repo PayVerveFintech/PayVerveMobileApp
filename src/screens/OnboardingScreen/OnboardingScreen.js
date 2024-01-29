@@ -1,5 +1,11 @@
 import { View, Image, Text, TouchableOpacity, ImageBackground } from 'react-native';
 import { styles } from '../../styles/styles';
+<<<<<<< HEAD:src/screens/OnboardingScreen.js
+=======
+// import SignUp1 from '../SignUp/SignUp1';
+// import Login from '../Login/Login';
+// import { useNavigation } from '@react-navigation/native';
+>>>>>>> blessing_development:src/screens/OnboardingScreen/OnboardingScreen.js
 
 const OnboardingScreen = ({navigation}) => {
 
@@ -18,19 +24,19 @@ const OnboardingScreen = ({navigation}) => {
 
             {/* Logo */}
             <Image 
-                source={require('../../assets/logo.jpg')}
+                source={require('../../../assets/logo.jpg')}
                 style={styles.logo}
             />
 
             <View style={styles.bg_circle}>
                 {/* Background Image */}
                 <ImageBackground 
-                    source={require('../../assets/onboarding_image.png')} 
+                    source={require('../../../assets/onboarding_image.png')} 
                     style={styles.onboarding_bg_img} 
                 />
             </View>
 
-            <View style={{backgroundColor: 'white', height: "100%"}}>
+            <View style={{backgroundColor: 'white', height: "100%", width: '100%'}}>
                 {/* Welcome Text */}
                 <Text
                     style={styles.onboarding_body_txt}
@@ -41,8 +47,8 @@ const OnboardingScreen = ({navigation}) => {
                 <View style={{flexDirection: 'row', marginTop: 20, marginHorizontal: 5, alignSelf: 'center'}}>
                         {/* SignUp Button */}
                     <TouchableOpacity 
-                        onPress={SignUp}
-                        style={styles.signUpButton}
+                        onPress={handleSignUp}
+                        style={styles.onboardingSignUpButton}
                     >
                         <Text style={
                             {
@@ -57,7 +63,7 @@ const OnboardingScreen = ({navigation}) => {
 
                     {/* Login Button */}
                     <TouchableOpacity
-                        onPress={EmailConfirmation}
+                        onPress={handleLogin}
                         style={styles.loginButton}
                     >
                         <Text style={
