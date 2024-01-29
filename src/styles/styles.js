@@ -5,8 +5,27 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     container: {
-        padding: 20,
+        padding: 10,
         flex: 1,
+        backgroundColor: 'white',
+        marginTop: 15
+    },
+
+    signupContainer: {
+        backgroundColor: 'white',
+        marginTop: 15
+    },
+
+    signUpcontainer1: {
+        alignContent: 'center',
+        paddingLeft: 20,
+        paddingBottom: '100%',
+        marginTop: 40
+    },
+
+    signupTexts: {
+        fontSize: 18,
+        fontWeight: 'bold'
     },
 
     logo: {
@@ -37,7 +56,7 @@ export const styles = StyleSheet.create({
     },
 
     header_Text_1: {
-        fontSize: 22,
+        fontSize: 40,
         paddingTop: 50,
         alignSelf: 'center',
         fontWeight: 'bold'
@@ -46,9 +65,31 @@ export const styles = StyleSheet.create({
     header_Text_2: {
         fontSize: 20,
         paddingTop: 20,
-        paddingLeft: 50,
-        paddingRight: 50,
+        alignSelf: 'center',
         textAlign: 'center',
+    },
+
+    finance_header_text_1: {
+        fontSize: 35,
+        paddingTop: 50,
+        paddingLeft: 100,
+        alignSelf: 'center',
+        fontWeight: 'bold'
+    },
+
+    finance_header_text_2: {
+        fontSize: 15,
+        paddingTop: 20,
+        alignSelf: 'center',
+        textAlign: 'center',
+    },
+
+    touchableOpacityText: {
+        color: 'white', 
+        fontWeight: 'bold',                 
+        fontSize: 25, 
+        alignSelf: 'center',
+        padding: 10
     },
 
     onboarding_body_txt: {
@@ -58,13 +99,25 @@ export const styles = StyleSheet.create({
         paddingTop: 50
     },
 
-    signUpButton: {
+    onboardingSignUpButton: {
         backgroundColor: '#2196F3',
         width: 161,
         height: 50,
         elevation: 10,
         borderRadius: 8,
         marginRight: 10
+    },
+
+    signupButton: {
+        backgroundColor: '#2196F3',
+        width: 200,
+        height: 50,
+        elevation: 10,
+        borderRadius: 8,
+        justifyContent: "center",
+        alignSelf: "center",
+        marginTop: 40,
+        marginBottom: 10
     },
 
     loginButton: {
@@ -84,7 +137,7 @@ export const styles = StyleSheet.create({
 
     textInput: {
         height: 40,
-        width: 271,
+        width: '92%',
         marginVertical: 10,
         borderWidth: 1,
         // borderColor: '#205922',
@@ -92,97 +145,8 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 10,
         fontWeight: 'bold'
     },
-      
-    notification_headerText: {
-        fontSize: 30,
-        fontWeight: '600',
-        paddingHorizontal: 10,
-        alignItems: 'center'
-    },
 
-    notificationBody: {
-        height: '100%',
-        marginTop: 40,
-        gap: 23
-        
+    freeBold: {
+        fontWeight: 'bold'
     },
-  
-    data_screen: {
-        gap: 23,
-    },
-
-    data_form_input_wrapper: {
-        gap: 8
-    },
-
-    data_form_label: {
-        fontSize: 16,
-    },
-
-    data_form_text_right: {
-        textAlign: "right",
-        fontSize: 12
-    },
-
-    data_form_input: {
-        borderColor: "#101820",
-        borderWidth: 1,
-        padding: 10,
-        borderRadius: 4,
-        height: 46,
-    },
-
-    successful_screen_wrapper: {
-        height: 600,
-        alignItems: "center",
-        justifyContent: "center",
-        gap: 23,
-    },
-
-    successful_screen_text: {
-        fontSize: 18,
-        fontWeight: "700"
-    },
-  
-    accounts_wrapper: {
-        gap: 23
-    },
-
-    bill_type: {
-        flex: 1,
-        gap: 12
-    },
-
-    select_meter_wrapper: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        gap: 24,
-    },
-
-    select_meter_btn: {
-        borderRadius: 8,
-        paddingHorizontal: 12,
-        paddingVertical: 8,
-        borderWidth: 1,
-        width: 159,
-        height: 45,
-        alignItems: "center",
-        justifyContent: "center"
-
-    },
-
-    selectedMeter: {
-        backgroundColor: "#2196F3",
-    },
-
-    select_meter_text: {
-        fontSize: 18,
-        fontWeight: "700"
-    },
-
-    headerTitleStyle: {
-        fontSize: 22,
-        fontWeight: "700"
-    }
-
 })
