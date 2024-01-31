@@ -8,8 +8,14 @@ export const styles = StyleSheet.create({
         backgroundColor: "#FFF"
     },
 
-    supportWrapper: {
-        gap: 12
+    moreWrapper: {
+        gap: 12,
+        height: "90%"
+    },
+
+    moreIcon: {
+        width: 20,
+        height: 20
     },
 
     

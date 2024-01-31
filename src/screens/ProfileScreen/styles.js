@@ -8,9 +8,13 @@ export const styles = StyleSheet.create({
         backgroundColor: "#FFF"
     },
 
-    supportWrapper: {
-        gap: 12
+    profileWrapper: {
+        gap: 12,
+        marginBottom: 23
     },
 
-    
+    profileInfo: {
+        fontSize: 12
+    },
+
 })

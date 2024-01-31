@@ -1,23 +1,11 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import DataScreen from "../screens/DataScreen";
-import { BackButton } from "../components/ButtonComponent/BackButton";
-import { styles } from "../styles/styles";
 // import PayBillsScreen from "../screens/PayBillsScreen";
 // import CableTv from "../screens/CableTvScreen"
 // import ElectricityScreen from "../screens/ElectricityScreen"
 // import TransportationScreen from "../screens/TransportationScreen"
 
 const Stack = createStackNavigator()
-
-// const headerOptions = {
-//     headerStyle: {
-//         height: 100
-//     },
-//     headerTitleStyle: styles.headerTitleStyle,
-//     headerTitleAlign: "center",
-//     headerLeft: () => (<BackButton />),
-//     headerBackTitleVisible: true,
-// }
 
 //Stack navigation for the home screen
 export const HomeNav = () => {
