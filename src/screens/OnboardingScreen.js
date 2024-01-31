@@ -1,43 +1,28 @@
-import { View, Image, Text, TouchableOpacity, ImageBackground, StyleSheet } from 'react-native';
-import { styles } from '../../styles/styles';
-// import SignUp1 from '../SignUp/SignUp1';
-// import Login from '../Login/Login';
-// import { useNavigation } from '@react-navigation/native';
+import { View, Image, Text, TouchableOpacity, ImageBackground } from 'react-native';
+import { styles } from '../styles/styles';
+import SignUp from './SignUp';
+import { Login } from './Login';
+import EmailConfirmation from './EmailConfirmation';
 
-const OnboardingScreen = ({navigation}) => {
-
-    // handling sign up navigation
-    const handleSignUp = () => {
-        navigation.navigate('SignUp1'); 
-    };
-
-    // handling sing in navigation
-    const handleLogin = () => {
-        navigation.navigate('Login'); 
-    };
-
+const OnboardingScreen = () => {
     return (
-        <View style={{
-            flex: 1,
-            justifyContent: "center",
-            alignItems: "center" 
-        }}>
+        <View style={styles.container}>
 
             {/* Logo */}
             <Image 
-                source={require('../../../assets/logo.jpg')}
+                source={require('../../assets/logo.jpg')}
                 style={styles.logo}
             />
 
             <View style={styles.bg_circle}>
                 {/* Background Image */}
                 <ImageBackground 
-                    source={require('../../../assets/onboarding_image.png')} 
+                    source={require('../../assets/onboarding_image.png')} 
                     style={styles.onboarding_bg_img} 
                 />
             </View>
 
-            <View style={{backgroundColor: 'white', height: "100%", width: '100%'}}>
+            <View style={{backgroundColor: 'white', height: "100%"}}>
                 {/* Welcome Text */}
                 <Text
                     style={styles.onboarding_body_txt}
@@ -48,8 +33,8 @@ const OnboardingScreen = ({navigation}) => {
                 <View style={{flexDirection: 'row', marginTop: 20, marginHorizontal: 5, alignSelf: 'center'}}>
                         {/* SignUp Button */}
                     <TouchableOpacity 
-                        onPress={handleSignUp}
-                        style={styles.onboardingSignUpButton}
+                        onPress={SignUp}
+                        style={styles.signUpButton}
                     >
                         <Text style={
                             {
@@ -64,7 +49,7 @@ const OnboardingScreen = ({navigation}) => {
 
                     {/* Login Button */}
                     <TouchableOpacity
-                        onPress={handleLogin}
+                        onPress={EmailConfirmation}
                         style={styles.loginButton}
                     >
                         <Text style={
@@ -83,7 +68,7 @@ const OnboardingScreen = ({navigation}) => {
     )
 }
 
-const styless = StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',

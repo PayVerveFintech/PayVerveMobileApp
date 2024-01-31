@@ -1,7 +1,7 @@
 import { View, Text } from "react-native"
 import { styles } from "../styles/styles"
 
-export default function FinanceScreen()  {
+export const FinanceScreen = () => {
 
     return (
         <View style={styles.container}>

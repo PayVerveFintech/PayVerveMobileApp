@@ -5,7 +5,7 @@ import { Button } from "../components/ButtonComponent/Button"
 import { useNavigation } from "@react-navigation/native"
 
 
-export default function SuccessfulScreen() {
+export const SuccessfulScreen = () => {
 
     const navigation = useNavigation()
 

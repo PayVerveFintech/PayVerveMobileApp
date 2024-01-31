@@ -1,8 +1,8 @@
 import { createStackNavigator } from "@react-navigation/stack"
-import BottomNav from "../navigation/BottomNavigation"
+import { BottomNav } from "./BottomNavigation"
 import { styles } from "../styles/styles"
-import  SuccessfulScreen from "../screens/SuccessfulScreen"
-import  ReviewScreen  from "../screens/ReviewScreen"
+import { SuccessfulScreen } from "../screens/SuccessfulScreen"
+import { ReviewScreen } from "../screens/ReviewScreen"
 import { BackButton } from "../components/ButtonComponent/BackButton"
 import AddMoneyScreen from "../screens/AddMoneyScreen"
 // import { BillsNav } from "./StackNavigation"
@@ -31,24 +31,6 @@ import TargetSavingPlan from "../screens/targetSavingPlan"
 import FixedSavingPlan from "../screens/fixedSavingPlan"
 
 
-
-import OnboardingScreen from '../screens/OnboardingScreen/OnboardingScreen'
-import SignUp1 from "../screens/SignUp/SignUp1";
-import Login from '../screens/Login/Login';
-import EmailConfirmation from '../screens/EmailConfirmation/EmailConfirmation';
-import VerificationCode from '../screens/VerficcationCode/VerificationCode';
-import ForgetPassword from '../screens/ForgetPassword/ForgetPassword';
-import KYCVerification2 from '../screens/KCVerication2/KYCVerification2';
-import KYCVerification from '../screens/KYCVerification/KYCVerification';
-import CreateNewPW from '../screens/CreatedNewPW/CreateNewPW';
-import KYCVerification3 from '../screens/KYCVerification3/KYCVerification3';
-import Finance from '../screens/Finance/Finance';
-import TransactionDetail from '../screens/TransactionDetails/TransactionDetails';
-import SavingInsight from '../screens/SavingInsight/SavingInsight';
-import AirtimeInsight from '../screens/AirtimeInsight/AirtimeInsight';
-import DataInsight from '../screens/DataInsight/DataInsight';
-import BillsInsight from '../screens/BillsInsight/BillsInsight';
-
 const Stack = createStackNavigator();
 
 const  Tab = createBottomTabNavigator();
@@ -66,75 +48,11 @@ export const HomePage = ({ nav }) => {
         headerBackTitleVisible: true,
     }
 
-
-    const mainApp = () => {
-        return(
-            <Stack.Navigator>
-
-
-                 <Stack.Screen 
-                    name="Home" 
-                    component={Home} 
-                    options={{headerShown: false}}
-                />
-
-                <Stack.Screen 
-                    name="Transfer" 
-                    component={TopNavigation} 
-                    options={headerOptions}
-                />
-
-                <Stack.Screen 
-                    name='TransferReview' 
-                    component={TransferReview} 
-                    options={{
-                        headerShown: false
-                    }}
-                />
-
-                <Stack.Screen 
-                    name='PinScreen' 
-                    component={PinScreen} 
-                    options={{ headerShown: false}} 
-                />
-
-                <Stack.Screen 
-                    name='ConfirmScreen' 
-                    component={ConfirmScreen} 
-                    options={{ headerShown: false}} 
-                />
-
-                <Stack.Screen 
-                    name='TransferSucess' 
-                    component={TransferSucess} 
-                    options={{ headerShown:false}} 
-                />
-
-                <Stack.Screen
-                    name="AirtimeScreen"
-                    component={AirtimeScreen}
-                    options={{
-                        headerShown: false
-                    }} 
-                />
-
-                <Stack.Screen
-                    name="BettingScreen"
-                    component={BettingScreen} 
-                    options={{
-                        headerShown: false
-                    }}
-                />
-            </Stack.Navigator>
-        )
-    }
-
-
     return (
-        <NavigationContainer>
-            <Stack.Navigator
-                initialRouteName="OnboardingScreen"
-            >
+        <NavigationContainer
+            independent={true}
+        >
+            <Stack.Navigator>
                  <Tab.Screen 
                     name="BottomNav" 
                     component={BottomNav} 
@@ -193,7 +111,7 @@ export const HomePage = ({ nav }) => {
                     options={headerOptions}
                 />
 
-                {/* <Stack.Screen 
+                <Stack.Screen 
                     name="Home" 
                     component={Home} 
                     options={{headerShown: false}}
@@ -242,14 +160,6 @@ export const HomePage = ({ nav }) => {
                 <Stack.Screen
                     name="BettingScreen"
                     component={BettingScreen} 
-                    options={{
-                        headerShown: false
-                    }}
-                /> */}
-
-                <Stack.Screen
-                    name="mainApp"
-                    component={mainApp}
                     options={{
                         headerShown: false
                     }}
@@ -327,175 +237,6 @@ export const HomePage = ({ nav }) => {
                     options={{
                         headerShown: false
                     }}
-                />
-
-                <Stack.Screen 
-                    name="Onboarding" 
-                    component={OnboardingScreen} 
-                    options={
-                        { 
-                            headerShown: false 
-                        }
-                    } 
-                />
-
-                <Stack.Screen 
-                    name="OnboardingScreen" 
-                    component={OnboardingScreen} 
-                    options={
-                        { 
-                            headerShown: false 
-                        }
-                    } 
-                />
-                
-                <Stack.Screen 
-                    name="SignUp1" 
-                    component={SignUp1} 
-                    options={
-                        {
-                            headerShown: false
-                        }
-                    }
-                />
-                <Stack.Screen 
-                    name="Login" 
-                    component={Login} 
-                    options={
-                        {
-                            headerShown: false
-                        }
-                    }
-                />
-
-                <Stack.Screen
-                    name="EmailConfirmation"
-                    component={EmailConfirmation}
-                    options={
-                        {
-                            headerShown: false
-                        }
-                    }
-                />
-
-                <Stack.Screen
-                    name="VerificationCode"
-                    component={VerificationCode}
-                    options={
-                        {
-                            headerShown: false
-                        }
-                    }
-                />
-
-                <Stack.Screen 
-                    name='CreateNewPW'
-                    component={CreateNewPW}
-                    options={
-                        {
-                            headerShown: false
-                        }
-                    }
-                />
-
-                <Stack.Screen 
-                    name='ForgetPassword'
-                    component={ForgetPassword}
-                    options={
-                        {
-                            headerShown: false
-                        }
-                    }
-                />
-
-                <Stack.Screen 
-                    name='KYCVerify'
-                    component={KYCVerification}
-                    options={
-                        {
-                            headerShown: false
-                        }
-                    }
-                />
-
-                <Stack.Screen 
-                    name='KYCVerify2'
-                    component={KYCVerification2}
-                    options={
-                        {
-                            headerShown: false
-                        }
-                    }
-                />
-
-                <Stack.Screen 
-                    name='KYCVerify3'
-                    component={KYCVerification3}
-                    options={
-                        {
-                            headerShown: false
-                        }
-                    }
-                />
-
-                <Stack.Screen 
-                    name='Finance'
-                    component={Finance}
-                    options={
-                            {
-                            headerShown: false
-                        }
-                    }
-                />
-
-                <Stack.Screen 
-                    name='TransactDetails'
-                    component={TransactionDetail}
-                    options={
-                        {
-                            headerShown: false
-                        }
-                    }
-                />
-
-                <Stack.Screen 
-                    name='SavingInsight'
-                    component={SavingInsight}
-                    options={
-                        {
-                            headerShown: false
-                        }
-                    }
-                />
-
-                <Stack.Screen 
-                    name='AirtimeInsight'
-                    component={AirtimeInsight}
-                    options={
-                        {
-                            headerShown: false
-                        }
-                    }
-                />
-
-                <Stack.Screen 
-                    name='DataInsight'
-                    component={DataInsight}
-                    options={
-                        {
-                            headerShown: false
-                        }
-                    }
-                />
-
-                <Stack.Screen 
-                    name='BillsInsight'
-                    component={BillsInsight}
-                    options={
-                        {
-                            headerShown: false
-                        }
-                    }
                 />
                 
             </Stack.Navigator>
