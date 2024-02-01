@@ -3,9 +3,9 @@ import { HomeNav } from "./StackNavigation";
 import { Octicons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
-import { FinanceScreen } from "../screens/FinanceScreen";
 import { SaveScreen } from "../screens/SaveScreen";
 import { MoreScreen } from "../screens/MoreScreen";
+import Finance from "../screens/Finance/Finance";
 
 const Tab = createBottomTabNavigator()
 
@@ -40,7 +40,7 @@ export const BottomNav = () => {
 
             <Tab.Screen 
                 name="Finance" 
-                component={FinanceScreen}
+                component={Finance}
                 options={{
                     headerShown: false,
                     tabBarLabel: "Finance",
@@ -51,7 +51,7 @@ export const BottomNav = () => {
                     },
                     tabBarIcon: (tabInfo) => (
                         <MaterialCommunityIcons 
-                            name="finance" 
+                            name="Finance" 
                             size={20} 
                             color={tabInfo.focused ? "#2196F3" : "#949191"} 
                         />
