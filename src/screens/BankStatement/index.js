@@ -14,7 +14,7 @@ const BankStatement = ({navigation}) => {
                         source={require('../../../assets/backVector.png')}
                     />
                 </TouchableOpacity>
-                <Text style={styles.headerText}> Bank Statement </Text>
+                <Text style={styles.header_Text_1}> Bank Statement </Text>
             </View>
 
             <View>
@@ -47,7 +47,7 @@ const BankStatement = ({navigation}) => {
             {/* generate function */}
             <TouchableOpacity
                     style={styles.signupButton} 
-                    onPress={}
+                    // onPress={}
                 >
                     <Text style={styles.touchableOpacityText}>
                         Generate

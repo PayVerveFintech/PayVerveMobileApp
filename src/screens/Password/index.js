@@ -32,7 +32,7 @@ const Password = ({navigation}) => {
                 </View>
 
                 <View
-                    onPress={}
+                    // onPress={}
                 >
                     <Image 
                         source={require('../../../assets/fingerprintIcon.png')}

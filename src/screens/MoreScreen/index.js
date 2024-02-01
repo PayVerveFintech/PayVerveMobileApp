@@ -1,38 +1,35 @@
-import { View, FlatList} from "react-native"
+import { View, FlatList, Image } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { styles } from "./styles"
 import SupportType from "../../components/SupportType"
-import { Support } from "../../service/support"
+import { moreTools } from "../../service/moreTools"
 import { useNavigation } from "@react-navigation/native"
 import Header from "../../components/HeaderComponent"
 
-
-const SupportScreen = () => {
+export const MoreScreen = () => {
     const navigation = useNavigation()
-    const support = Support(navigation)
 
     const renderItem = ({ item }) => (
         <SupportType 
-            icon={item.image} 
-            title={item.title}
-            onPress={item.onPress}
+            icon={<Image source={item.image} style={styles.moreIcon} />} 
+            title={item.name}
+            onPress={()=>{navigation.navigate(item.screen)}}
         />
     )
     
 
     return (
         <SafeAreaView style={styles.container}>
-            <Header title="Support" />
+            <Header title="More" />
             
-            <View style={styles.supportWrapper}>
+            <View style={styles.moreWrapper}>
                 <FlatList 
-                    data={support}
+                    data={moreTools}
                     renderItem={renderItem}
+                    showsVerticalScrollIndicator={false}
                 />
                 
             </View>
         </SafeAreaView>
     )
 }
-
-export default SupportScreen

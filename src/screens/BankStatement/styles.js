@@ -8,9 +8,8 @@ export const styles = StyleSheet.create({
         backgroundColor: "#FFF"
     },
 
-    supportWrapper: {
-        gap: 12
-    },
-
-    
+    statementForm: {
+        gap: 12,
+        marginBottom: 32
+    }
 })

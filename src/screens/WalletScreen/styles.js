@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
 
     walletBoxWrapper: {
         flex: 2,
-    }
+    },
 
     addWalletButton: {
         width: 50,

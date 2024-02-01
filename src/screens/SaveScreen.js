@@ -1,10 +1,9 @@
 import { View, Text } from "react-native"
-import { styles } from "../styles/styles"
 
 export const SaveScreen = () => {
 
     return (
-        <View style={styles.container}>
+        <View>
             <Text>Save Screen</Text>
         </View>
     )

@@ -1,6 +1,5 @@
 import { createStackNavigator } from "@react-navigation/stack"
 import { BottomNav } from "./BottomNavigation"
-import { styles } from "../styles/styles"
 import { SuccessfulScreen } from "../screens/SuccessfulScreen"
 import { ReviewScreen } from "../screens/ReviewScreen"
 import { BackButton } from "../components/ButtonComponent/BackButton"
@@ -31,6 +30,9 @@ import FeedbackScreen from "../screens/FeedbackScreen"
 import LiveChat from "../screens/LiveChat"
 import PayBillsScreen from "../screens/PayBillsScreen"
 import NotificationScreen from "../screens/NotificationScreen"
+import BankStatement from "../screens/BankStatement"
+import PasswordScreen from "../screens/PasswordScreen"
+import Profile from "../screens/ProfileScreen"
 
 
 const Stack = createStackNavigator()
@@ -276,6 +278,30 @@ export const HomePage = () => {
             <Stack.Screen 
                 name="Live Chat" 
                 component={LiveChat} 
+                options={{
+                    headerShown: false
+                }}
+            />
+
+            <Stack.Screen 
+                name="Bank Statement"
+                component={BankStatement}
+                options={{
+                    headerShown: false
+                }}
+            />
+
+            <Stack.Screen 
+                name="Password"
+                component={PasswordScreen}
+                options={{
+                    headerShown: false
+                }}
+            />
+
+            <Stack.Screen 
+                name="Profile"
+                component={Profile}
                 options={{
                     headerShown: false
                 }}

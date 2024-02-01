@@ -1,33 +1,33 @@
-import { View, FlatList} from "react-native"
+import { View, FlatList, Image } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { styles } from "./styles"
 import SupportType from "../../components/SupportType"
-import { Support } from "../../service/support"
+import { passwordItem } from "../../service/password"
 import { useNavigation } from "@react-navigation/native"
 import Header from "../../components/HeaderComponent"
 
 
-const SupportScreen = () => {
+const PasswordScreen = () => {
     const navigation = useNavigation()
-    const support = Support(navigation)
 
     const renderItem = ({ item }) => (
         <SupportType 
-            icon={item.image} 
-            title={item.title}
-            onPress={item.onPress}
+            icon={<Image source={item.image} style={styles.passwordIcon} />} 
+            title={item.name}
+            onPress={()=>{navigation.navigate(item.screen)}}
         />
     )
     
 
     return (
         <SafeAreaView style={styles.container}>
-            <Header title="Support" />
+            <Header title="Password" />
             
-            <View style={styles.supportWrapper}>
+            <View style={styles.passwordWrapper}>
                 <FlatList 
-                    data={support}
+                    data={passwordItem}
                     renderItem={renderItem}
+                    // ItemSeparatorComponent={() => <View style={styles.itemSeparator} />}
                 />
                 
             </View>
@@ -35,4 +35,4 @@ const SupportScreen = () => {
     )
 }
 
-export default SupportScreen
+export default PasswordScreen
