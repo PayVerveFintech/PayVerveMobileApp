@@ -110,19 +110,20 @@ export const styles = StyleSheet.create({
 
     signupButton: {
         backgroundColor: '#2196F3',
-        width: 200,
+        width: 160,
         height: 50,
         elevation: 10,
         borderRadius: 8,
         justifyContent: "center",
         alignSelf: "center",
-        marginTop: 40,
-        marginBottom: 10
+        // marginTop: 40,
+        // marginBottom: 10
     },
 
     loginButton: {
         height: 50,
-        width: 161,
+        width: 160,
+        left: 10,
         // elevation: 10,
         borderColor: '#2196F3',
         borderRadius: 8,

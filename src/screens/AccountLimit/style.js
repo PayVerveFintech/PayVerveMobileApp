@@ -1,13 +1,13 @@
 import { StyleSheet } from "react-native";
 
-const styles = StyleSheet.create({
+const styless = StyleSheet.create({
     backVector: {                        
         paddingTop: 60,
         paddingLeft: 5
     },
 
     body: {
-        display: flex,
+        // display: flex,
         padding: 12,
         flexDirection: "column",
         justifyContent: "center",
@@ -30,4 +30,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default styles;
+export default styless;

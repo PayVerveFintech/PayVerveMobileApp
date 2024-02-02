@@ -19,6 +19,10 @@ import SavingInsight from './src/screens/SavingInsight/SavingInsight';
 import AirtimeInsight from './src/screens/AirtimeInsight/AirtimeInsight';
 import DataInsight from './src/screens/DataInsight/DataInsight';
 import BillsInsight from './src/screens/BillsInsight/BillsInsight';
+import Password from './src/screens/Password';
+import EnableFingerprint from './src/screens/EnableFingerprint';
+import BankStatement from './src/screens/BankStatement';
+import AccountLimit from './src/screens/AccountLimit';
 
 function App() {
 
@@ -188,6 +192,46 @@ function App() {
                         }
                     }
                 />
+
+                <Stack.Screen 
+                    name='AccountLimit'
+                    component={AccountLimit}
+                    options={
+                        {
+                            headerShown: false
+                        }
+                    }
+                />
+
+                <Stack.Screen
+                    name='Password'
+                    component={Password}
+                    options={
+                        {
+                            headerShown: false
+                        }
+                    } 
+                />
+
+                <Stack.Screen
+                    name='EnableFingerprint'
+                    component={EnableFingerprint}
+                    options={
+                        {
+                            headerShown: false
+                        }
+                    }
+            />
+
+            <Stack.Screen
+                name='BankStatement'
+                component={BankStatement}
+                options={
+                    {
+                        headerShown: false
+                    }
+                }
+            />
             </Stack.Navigator>
         </NavigationContainer>
     

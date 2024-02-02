@@ -1,4 +1,5 @@
 import api from './interceptor';
+// import axios from 'axios'
 import { apiUrl } from '../../expo-constants';
 
 const fetchData = async () => {

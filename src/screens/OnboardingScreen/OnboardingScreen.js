@@ -1,8 +1,8 @@
 import { View, Image, Text, TouchableOpacity, ImageBackground } from 'react-native';
-import { styles } from '../styles/styles';
-import SignUp from './SignUp';
-import { Login } from './Login';
-import EmailConfirmation from './EmailConfirmation';
+import { styles } from '../../styles/styles';
+import SignUp1 from '../SignUp/SignUp1';
+import Login from '../Login/Login';
+import EmailConfirmation from '../EmailConfirmation/EmailConfirmation';
 
 const OnboardingScreen = () => {
     return (
@@ -10,14 +10,14 @@ const OnboardingScreen = () => {
 
             {/* Logo */}
             <Image 
-                source={require('../../assets/logo.jpg')}
+                source={require('../../../assets/logo.jpg')}
                 style={styles.logo}
             />
 
             <View style={styles.bg_circle}>
                 {/* Background Image */}
                 <ImageBackground 
-                    source={require('../../assets/onboarding_image.png')} 
+                    source={require('../../../assets/onboarding_image.png')} 
                     style={styles.onboarding_bg_img} 
                 />
             </View>
@@ -33,8 +33,8 @@ const OnboardingScreen = () => {
                 <View style={{flexDirection: 'row', marginTop: 20, marginHorizontal: 5, alignSelf: 'center'}}>
                         {/* SignUp Button */}
                     <TouchableOpacity 
-                        onPress={SignUp}
-                        style={styles.signUpButton}
+                        onPress={SignUp1}
+                        style={styles.signupButton}
                     >
                         <Text style={
                             {
@@ -68,12 +68,5 @@ const OnboardingScreen = () => {
     )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        justifyContent: 'center',
-    },
-})
 
 export default OnboardingScreen;

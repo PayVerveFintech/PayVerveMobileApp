@@ -26,7 +26,7 @@ const Password = ({navigation}) => {
 
                 <View>
                     <Image 
-                        source={require('../../../assets/changeTransactionIcon.png')}
+                        source={require('../../../assets/changeTansactionPin.png')}
                     />
                     <Text>Change Transaction Pin</Text>
                 </View>
