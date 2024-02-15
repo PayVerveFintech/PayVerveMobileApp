@@ -1,23 +1,28 @@
-import { View, Image, Text, TouchableOpacity, ImageBackground } from 'react-native';
-import { styles } from '../styles/styles';
-import SignUp from './SignUp';
-import { Login } from './Login';
-import EmailConfirmation from './EmailConfirmation';
+import { View, Image, Text, TouchableOpacity, ImageBackground } from 'react-native'
+// import { Login } from './Login';
+// import EmailConfirmation from './EmailConfirmation';
+import { styles } from '../../styles/styles';
+// import SignUp1 from '../SignUp/SignUp1';
+// import EmailConfirmation from '../EmailConfirmation/EmailConfirmation';
+import { useNavigation } from '@react-navigation/native';
 
 const OnboardingScreen = () => {
+    // initialize navigation from useNavigation hook
+    const navigation = useNavigation();
+
     return (
         <View style={styles.container}>
 
             {/* Logo */}
             <Image 
-                source={require('../../assets/logo.jpg')}
+                source={require('../../../assets/logo.jpg')}
                 style={styles.logo}
             />
 
             <View style={styles.bg_circle}>
                 {/* Background Image */}
                 <ImageBackground 
-                    source={require('../../assets/onboarding_image.png')} 
+                    source={require('../../../assets/onboarding_image.png')} 
                     style={styles.onboarding_bg_img} 
                 />
             </View>
@@ -33,8 +38,10 @@ const OnboardingScreen = () => {
                 <View style={{flexDirection: 'row', marginTop: 20, marginHorizontal: 5, alignSelf: 'center'}}>
                         {/* SignUp Button */}
                     <TouchableOpacity 
-                        onPress={SignUp}
-                        style={styles.signUpButton}
+                        // added navigation function
+                        onPress={() => navigation.navigate("SignUp")}
+                        // changed style from signupButton to onboardingSignUpButton
+                        style={styles.onboardingSignUpButton}
                     >
                         <Text style={
                             {
@@ -49,7 +56,8 @@ const OnboardingScreen = () => {
 
                     {/* Login Button */}
                     <TouchableOpacity
-                        onPress={EmailConfirmation}
+                        // added navigation function
+                        onPress={()=>navigation.navigate("EmailConfirmation")}
                         style={styles.loginButton}
                     >
                         <Text style={
@@ -68,12 +76,12 @@ const OnboardingScreen = () => {
     )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        justifyContent: 'center',
-    },
-})
+// const styles = StyleSheet.create({
+//     container: {
+//         flex: 1,
+//         backgroundColor: '#fff',
+//         justifyContent: 'center',
+//     },
+// })
 
 export default OnboardingScreen;

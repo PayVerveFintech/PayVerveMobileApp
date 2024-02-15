@@ -10,7 +10,13 @@ import {
     Alert
 } from 'react-native';
 import { styles } from '../../styles/styles';
-const SignUp1 = ({navigation}) => {
+import { useNavigation } from '@react-navigation/native';
+
+
+const SignUp1 = () => {
+    // removed navigation from props and implemented navigation from the useNavigation hook
+    const navigation = useNavigation();
+
     const baseText = [
         "Creating an account with PayVerve is completely ",
         "Already have an account? ",
@@ -105,14 +111,15 @@ const SignUp1 = ({navigation}) => {
                         </TouchableOpacity>
 
                         {/* This is temporary */}
-                        <TouchableOpacity 
+                        {/* <TouchableOpacity 
                             style={styles.signupButton} 
                             onPress={() => navigation.navigate('Finance')}
                         >
                             <Text style={styles.touchableOpacityText}>
                                 Finance
                             </Text>
-                        </TouchableOpacity>
+                        </TouchableOpacity> */}
+                        {/* commented the above compponent out */}
 
                         <Text style={{alignSelf: 'center', fontSize: 14}} onPress={() => navigation.navigate('Login') }>
                             {baseText[1]}

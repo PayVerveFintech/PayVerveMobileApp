@@ -2,9 +2,14 @@ import * as React from 'react';
 import { TextInput, TouchableOpacity, View, Text } from 'react-native';
 import { styles } from '../../styles/styles';
 import { useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 
-const ForgetPassword = ({navigation}) => {
+const ForgetPassword = () => {
+    // removed navigation from props and implemented navigation from the useNavigation hook
+    const navigation = useNavigation();
+    
     const [email, onChangeEmail] = useState('');
+
     return(
         <View style={styles.container}>
             <Text style={styles.header_Text_1}>
