@@ -7,6 +7,9 @@ import { styles } from '../../styles/styles';
 import { useNavigation } from '@react-navigation/native';
 
 const OnboardingScreen = () => {
+    // initialize navigation from useNavigation hook
+    const navigation = useNavigation();
+
     return (
         <View style={styles.container}>
 
@@ -35,8 +38,10 @@ const OnboardingScreen = () => {
                 <View style={{flexDirection: 'row', marginTop: 20, marginHorizontal: 5, alignSelf: 'center'}}>
                         {/* SignUp Button */}
                     <TouchableOpacity 
-                        onPress={SignUp}
-                        style={styles.signUpButton}
+                        // added navigation function
+                        onPress={() => navigation.navigate("SignUp")}
+                        // changed style from signupButton to onboardingSignUpButton
+                        style={styles.onboardingSignUpButton}
                     >
                         <Text style={
                             {
@@ -51,7 +56,8 @@ const OnboardingScreen = () => {
 
                     {/* Login Button */}
                     <TouchableOpacity
-                        onPress={EmailConfirmation}
+                        // added navigation function
+                        onPress={()=>navigation.navigate("EmailConfirmation")}
                         style={styles.loginButton}
                     >
                         <Text style={
@@ -70,12 +76,12 @@ const OnboardingScreen = () => {
     )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        justifyContent: 'center',
-    },
-})
+// const styles = StyleSheet.create({
+//     container: {
+//         flex: 1,
+//         backgroundColor: '#fff',
+//         justifyContent: 'center',
+//     },
+// })
 
 export default OnboardingScreen;
