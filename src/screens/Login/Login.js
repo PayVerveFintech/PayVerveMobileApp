@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
-// import { useAuth } from '../hooks/userAuth';
 import { styles } from '../../styles/styles';
-// import { AuthProvider } from '../hooks/userAuth';
 import Styles from './styles';
 
 const CORRECT_USERNAME = 'admin';
 const CORRECT_PASSWORD = 'admin'
 
 const Login = ({ navigation }) => {
-    // const { login } = useAuth();
     
     const [userName, onChangeUserName] = useState('');
     const [password, onChangePassword] = useState('');

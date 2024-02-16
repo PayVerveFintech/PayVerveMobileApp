@@ -1,10 +1,8 @@
+import * as React from 'react';
 import { View, Image, Text, TouchableOpacity, ImageBackground } from 'react-native';
 import { styles } from '../../styles/styles';
-import SignUp1 from '../SignUp/SignUp1';
-import Login from '../Login/Login';
-import EmailConfirmation from '../EmailConfirmation/EmailConfirmation';
 
-const OnboardingScreen = () => {
+const OnboardingScreen = ({navigation}) => {
     return (
         <View style={styles.container}>
 
@@ -33,7 +31,7 @@ const OnboardingScreen = () => {
                 <View style={{flexDirection: 'row', marginTop: 20, marginHorizontal: 5, alignSelf: 'center'}}>
                         {/* SignUp Button */}
                     <TouchableOpacity 
-                        onPress={SignUp1}
+                        onPress={() => navigation.navigate('SignUp1')}
                         style={styles.signupButton}
                     >
                         <Text style={
@@ -49,7 +47,7 @@ const OnboardingScreen = () => {
 
                     {/* Login Button */}
                     <TouchableOpacity
-                        onPress={EmailConfirmation}
+                        onPress={() => navigation.navigate('Login')}
                         style={styles.loginButton}
                     >
                         <Text style={

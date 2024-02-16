@@ -20,7 +20,19 @@ const Styles = StyleSheet.create ({
         fontSize: 16, 
         fontWeight: 'bold', 
         textDecorationLine: 'underline'
-    }
+    },
+
+    signupButton: {
+        backgroundColor: '#2196F3',
+        width: 160,
+        height: 50,
+        elevation: 10,
+        borderRadius: 8,
+        justifyContent: "center",
+        alignSelf: "center",
+        marginTop: 40,
+        marginBottom: 10
+    },
 });
 
 export default Styles;

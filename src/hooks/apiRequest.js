@@ -1,5 +1,5 @@
 import api from './interceptor';
-// import axios from 'axios'
+import axios from 'axios';
 import { apiUrl } from '../../expo-constants';
 
 const fetchData = async () => {
@@ -7,7 +7,7 @@ const fetchData = async () => {
     const response = await api.get('/endpoint');
     console.log('Data:', response.data);
   } catch (error) {
-    console.error('Error:', error);
+      console.error('Error:', error);
   }
 };
 

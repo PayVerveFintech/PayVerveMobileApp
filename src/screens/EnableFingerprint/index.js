@@ -1,6 +1,17 @@
+import { Image, Text, TouchableOpacity, View } from 'react-native';
+
 const { styles } = require('../../styles/styles')
 
+
+
 const EnableFingerprint = ({navigation}) => {
+
+    // const congratulate = {
+    //     if (fingerprint == true){
+    //         successful();
+    //     }
+    // }
+
     return (
         <View style={styles.container}>
             <View>
@@ -16,8 +27,8 @@ const EnableFingerprint = ({navigation}) => {
             </View>
 
             <Image 
-                        source={require('../../../assets/fingerprintVector.png')}
-                    />
+                source={require('../../../assets/fingerprintVector.png')}
+            />
         </View>
     )
 }
