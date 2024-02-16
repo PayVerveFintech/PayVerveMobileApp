@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
         padding: 10,
         flex: 1,
         backgroundColor: 'white',
+        justifyContent: "center",
         marginTop: 15
     },
 
@@ -46,6 +47,7 @@ export const styles = StyleSheet.create({
         borderRadius: 170,
         backgroundColor: 'linear-gradient(180deg, rgba(33, 150, 243, 0.80) -151.46%, rgba(255, 255, 255, 0.40) 77.19%)',
     },
+
     onboarding_bg_img: {
         marginTop: 90,
         paddingTop: 50,

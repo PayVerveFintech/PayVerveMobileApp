@@ -2,11 +2,16 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { styles } from '../../styles/styles';
 import Styles from './styles';
+import { useNavigation } from '@react-navigation/native';
 
 const CORRECT_USERNAME = 'admin';
 const CORRECT_PASSWORD = 'admin'
 
-const Login = ({ navigation }) => {
+const Login = () => {
+    // const { login } = useAuth();
+    
+    // removed navigation from props and implemented navigation from the useNavigation hook
+    const navigation = useNavigation();
     
     const [userName, onChangeUserName] = useState('');
     const [password, onChangePassword] = useState('');

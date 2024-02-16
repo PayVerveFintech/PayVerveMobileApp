@@ -13,6 +13,7 @@ const fetchData = async () => {
 
 fetchData();
 
+//send user details on sign up
 export const signUp = async (email, password, first_name, last_name) => {
 
     let payload = { 
@@ -28,6 +29,7 @@ export const signUp = async (email, password, first_name, last_name) => {
     console.log(data);
 }
 
+//send user details on login
 export const signIn = async (email, password) => {
 
     let payload = { 
@@ -41,6 +43,7 @@ export const signIn = async (email, password) => {
     console.log(data);
 }
 
+//send user details to reset password
 export const resetPassword = async (email, password) => {
 
     let payload = { 
@@ -52,4 +55,36 @@ export const resetPassword = async (email, password) => {
 
     let data = res.data;
     console.log(data);
+}
+
+//retrieve single user details
+export const getSingleUser = async (id) => {
+
+    let res = await axios.get(apiUrl+`/api/v1/users/auth/user/${id}/`)
+
+    let data = res.data;
+    console.log(data);
+}
+
+//update user details
+export const updateUserDetails = async (first_name, last_name) => {
+
+    let payload = {
+        first_name: first_name,
+        last_name: last_name
+    };
+
+    let res = await axios.patch(apiUrl+`/api/v1/users/auth/user/${id}/` + payload);
+
+    let data = res.data;
+    console.log(data)
+}
+
+//delete user details
+export const deleteUserDetails = async () => {
+
+    let res = await axios.delete(apiUrl+`/api/v1/users/auth/user/${id}/`);
+
+    let data = res.data;
+    console.log(data)
 }

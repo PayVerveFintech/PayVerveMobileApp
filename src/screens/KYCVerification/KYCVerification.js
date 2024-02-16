@@ -2,8 +2,11 @@ import { useState } from "react";
 import { View, Text, ScrollView, TextInput, TouchableOpacity, KeyboardAvoidingView, StyleSheet } from "react-native"
 import { styles } from "../../styles/styles";
 import { useEffect } from "react";
+import { useNavigation } from "@react-navigation/native";
 
-const KYCVerification = ({navigation}) => {
+const KYCVerification = () => {
+    // removed navigation from props and implemented navigation from the useNavigation hook
+    const navigation = useNavigation();
 
     const [fullname, setFullname] = useState('');
     const [email, setEmail] = useState('');

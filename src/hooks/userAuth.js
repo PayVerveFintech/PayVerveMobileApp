@@ -1,28 +1,31 @@
-// import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useState, useContext } from "react";
 // import KYCVerification from "../screens/KYCVerification";
+import { useNavigation } from "@react-navigation/native"
 
-// const AuthContext = createContext();
+const AuthContext = createContext();
 
-// export const AuthProvider = ({children}) => {
-//     // const [user, setUser] = useState(null);
+export const AuthProvider = ({children}) => {
+    const navigation = useNavigation();
 
-//     const login = (userName, password) => {
-//         if (userName === "admin" && password === "admin") {
-//             // setUser({KYCVerification});
-//             navigation.navigate('KYCVerification')
-//         } else {
-//             setUser(null);
-//             throw new Error('Invaild credentials');
-//         }
-//     }
+    const [user, setUser] = useState(null);
 
-//     return (
-//         <AuthContext.Provider value={{user, login}}>
-//             {children}
-//         </AuthContext.Provider>
-//     )
-// };
+    const login = (userName, password) => {
+        if (userName === "admin" && password === "admin") {
+            // setUser({KYCVerification});
+            navigation.navigate('KYCVerification')
+        } else {
+            setUser(null);
+            throw new Error('Invaild credentials');
+        }
+    }
 
-// export const useAuth = () => {
-//     return useContext(AuthContext);
-// };
+    return (
+        <AuthContext.Provider value={{user, login}}>
+            {children}
+        </AuthContext.Provider>
+    )
+};
+
+export const useAuth = () => {
+    return useContext(AuthContext);
+};

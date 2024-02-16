@@ -33,6 +33,22 @@ import NotificationScreen from "../screens/NotificationScreen"
 import BankStatement from "../screens/BankStatement"
 import PasswordScreen from "../screens/PasswordScreen"
 import Profile from "../screens/ProfileScreen"
+import OnboardingScreen from "../screens/OnboardingScreen/OnboardingScreen"
+import SignUp1 from "../screens/SignUp/SignUp1";
+import Login from "../screens/Login/Login";
+import EmailConfirmation from "../screens/EmailConfirmation/EmailConfirmation";
+import VerificationCode from "../screens/VerficcationCode/VerificationCode";
+import ForgetPassword from "../screens/ForgetPassword/ForgetPassword";
+import KYCVerification2 from "../screens/KCVerication2/KYCVerification2";
+import KYCVerification from "../screens/KYCVerification/KYCVerification";
+import CreateNewPW from "../screens/CreatedNewPW/CreateNewPW";
+import KYCVerification3 from "../screens/KYCVerification3/KYCVerification3";
+import Finance from "../screens/Finance/Finance";
+import TransactionDetail from "../screens/TransactionDetails/TransactionDetails";
+import SavingInsight from "../screens/SavingInsight/SavingInsight";
+import AirtimeInsight from "../screens/AirtimeInsight/AirtimeInsight";
+import DataInsight from "../screens/DataInsight/DataInsight";
+import BillsInsight from "../screens/BillsInsight/BillsInsight";
 
 
 const Stack = createStackNavigator()
@@ -50,9 +66,176 @@ export const HomePage = () => {
     // }
 
     return (
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName="Onboarding">
+            <Stack.Screen 
+                name="Onboarding" 
+                component={OnboardingScreen} 
+                options={
+                    { 
+                        headerShown: false 
+                    }
+                } 
+            />
+
             <Stack.Screen 
                 name="Home" 
+                component={OnboardingScreen} 
+                options={{ 
+                    headerShown: false 
+                    }} 
+            />
+            
+            <Stack.Screen 
+                name="SignUp" 
+                component={SignUp1} 
+                options={
+                    {
+                        headerShown: false
+                    }
+                }
+            />
+            <Stack.Screen 
+                name="Login" 
+                component={Login} 
+                options={
+                    {
+                        headerShown: false
+                    }
+                }
+            />
+
+            <Stack.Screen
+                name="EmailConfirmation"
+                component={EmailConfirmation}
+                options={
+                    {
+                        headerShown: false
+                    }
+                }
+            />
+
+            <Stack.Screen
+                name="VerificationCode"
+                component={VerificationCode}
+                options={
+                    {
+                        headerShown: false
+                    }
+                }
+            />
+
+            <Stack.Screen 
+                name='CreateNewPW'
+                component={CreateNewPW}
+                options={
+                    {
+                        headerShown: false
+                    }
+                }
+            />
+
+            <Stack.Screen 
+                name='ForgetPassword'
+                component={ForgetPassword}
+                options={
+                    {
+                        headerShown: false
+                    }
+                }
+            />
+
+            <Stack.Screen 
+                name='KYCVerify'
+                component={KYCVerification}
+                options={
+                    {
+                        headerShown: false
+                    }
+                }
+            />
+
+            <Stack.Screen 
+                name='KYCVerify2'
+                component={KYCVerification2}
+                options={
+                    {
+                        headerShown: false
+                    }
+                }
+            />
+
+            <Stack.Screen 
+                name='KYCVerify3'
+                component={KYCVerification3}
+                options={
+                    {
+                        headerShown: false
+                    }
+                }
+            />
+
+            <Stack.Screen 
+                name='Finance'
+                component={Finance}
+                options={
+                        {
+                        headerShown: false
+                    }
+                }
+            />
+
+            <Stack.Screen 
+                name='TransactDetails'
+                component={TransactionDetail}
+                options={
+                    {
+                        headerShown: false
+                    }
+                }
+            />
+
+            <Stack.Screen 
+                name='SavingInsight'
+                component={SavingInsight}
+                options={
+                    {
+                        headerShown: false
+                    }
+                }
+            />
+
+            <Stack.Screen 
+                name='AirtimeInsight'
+                component={AirtimeInsight}
+                options={
+                    {
+                        headerShown: false
+                    }
+                }
+            />
+
+            <Stack.Screen 
+                name='DataInsight'
+                component={DataInsight}
+                options={
+                    {
+                        headerShown: false
+                    }
+                }
+            />
+
+            <Stack.Screen 
+                name='BillsInsight'
+                component={BillsInsight}
+                options={
+                    {
+                        headerShown: false
+                    }
+                }
+            />
+            
+            <Stack.Screen 
+                name="HomePage" 
                 component={BottomNav} 
                 options={{
                     headerShown: false
