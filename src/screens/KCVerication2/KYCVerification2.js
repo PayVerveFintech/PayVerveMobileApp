@@ -11,17 +11,25 @@ const KYCVerification2 = ({navigation}) => {
             </Text>
             <View style={{flexDirection: 'row',  justifyContent: 'space-around', paddingTop: 30}}>
                 <View style={{flexDirection: 'column'}}>
-                    <Text>Personal Information</Text>
-                    <Text>Personal Information</Text>
+                    <Image 
+                        source={require('../../../assets/checked_radio.png')}
+                        style={styles.img_checking}
+                    />                    <Text>Personal Information</Text>
                 </View>
 
                 <View style={{flexDirection: 'column', alignSelf: 'center'}}>
-                    <Text>Selfie</Text>
+                    <Image 
+                        source={require('../../../assets/checked_radio.png')}
+                        style={styles.img_checking}
+                    />
                     <Text>Selfie</Text>
                 </View>
 
                 <View style={{flexDirection: 'column', alignSelf: 'center'}}>
-                    <Text>Confirmation</Text>
+                    <Image 
+                        source={require('../../../assets/unchecked_radio.png')}
+                        style={styles.img_checking}
+                    />
                     <Text>Confirmation</Text>
                 </View>
             </View>

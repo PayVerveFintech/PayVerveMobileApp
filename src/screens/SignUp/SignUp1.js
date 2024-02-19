@@ -9,7 +9,7 @@ import {
     View,
     Alert
 } from 'react-native';
-import { styles } from '../../styles/styles';
+import { styles } from './style';
 import { useNavigation } from '@react-navigation/native';
 
 

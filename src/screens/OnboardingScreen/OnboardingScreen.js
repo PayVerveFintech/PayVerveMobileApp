@@ -1,9 +1,7 @@
 import { View, Image, Text, TouchableOpacity, ImageBackground } from 'react-native'
-// import { Login } from './Login';
-// import EmailConfirmation from './EmailConfirmation';
-import { styles } from '../../styles/styles';
-// import SignUp1 from '../SignUp/SignUp1';
-// import EmailConfirmation from '../EmailConfirmation/EmailConfirmation';
+import { styles } from './style';
+// import { styles } from '../../styles/styles';
+
 import { useNavigation } from '@react-navigation/native';
 
 const OnboardingScreen = () => {
@@ -75,13 +73,5 @@ const OnboardingScreen = () => {
         </View>
     )
 }
-
-// const styles = StyleSheet.create({
-//     container: {
-//         flex: 1,
-//         backgroundColor: '#fff',
-//         justifyContent: 'center',
-//     },
-// })
 
 export default OnboardingScreen;
