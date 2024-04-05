@@ -4,7 +4,6 @@ import { SuccessfulScreen } from "../screens/SuccessfulScreen"
 import { ReviewScreen } from "../screens/ReviewScreen"
 import { BackButton } from "../components/ButtonComponent/BackButton"
 import AddMoneyScreen from "../screens/AddMoneyScreen"
-// import { BillsNav } from "./StackNavigation"
 import CableTvScreen from "../screens/CableTvScreen"
 import ElectricityScreen from "../screens/ElectricityScreen"
 import TransportationScreen from "../screens/TransportationScreen"
@@ -49,21 +48,33 @@ import SavingInsight from "../screens/SavingInsight/SavingInsight";
 import AirtimeInsight from "../screens/AirtimeInsight/AirtimeInsight";
 import DataInsight from "../screens/DataInsight/DataInsight";
 import BillsInsight from "../screens/BillsInsight/BillsInsight";
+import Home from "../screens/home";
+import { HomeNav } from "./StackNavigation"
+import TargetSavingPlan from "../screens/targetSavingPlan"
+import TargetSaving from "../screens/TargetSaving/TargetSaving"
+import NewTargetSaving from "../screens/newTargetSaving"
+import SaveReview from "../screens/saveReview"
+import ConfirmScreen from "../screens/confirmScreen"
+import TransferSucess from "../screens/transferSucess"
+import { TopNavigation } from "./topTab"
+import TransferReview from "../screens/transferReview"
+import DataScreen from "../screens/DataScreen"
+import Airtime from "../screens/airtime"
 
 
 const Stack = createStackNavigator()
 
 export const HomePage = () => {
 
-    // const headerOptions = {
-    //     headerStyle: {
-    //         height: 100
-    //     },
-    //     headerTitleStyle: styles.headerTitleStyle,
-    //     headerTitleAlign: "center",
-    //     headerLeft: () => (<BackButton />),
-    //     headerBackTitleVisible: true,
-    // }
+   
+    const headerOptions = {
+        headerStyle: {
+            height: 90
+        },
+        headerTitleAlign: "center",
+        headerLeft: () => (<BackButton />),
+        headerBackTitleVisible: true,
+    }
 
     return (
         <Stack.Navigator initialRouteName="Onboarding">
@@ -75,14 +86,6 @@ export const HomePage = () => {
                         headerShown: false 
                     }
                 } 
-            />
-
-            <Stack.Screen 
-                name="Home" 
-                component={OnboardingScreen} 
-                options={{ 
-                    headerShown: false 
-                    }} 
             />
             
             <Stack.Screen 
@@ -233,15 +236,7 @@ export const HomePage = () => {
                     }
                 }
             />
-            
-            <Stack.Screen 
-                name="HomePage" 
-                component={BottomNav} 
-                options={{
-                    headerShown: false
-                }} 
-            />
-
+    
             <Stack.Screen 
                 name="Notification" 
                 component={NotificationScreen} 
@@ -489,8 +484,92 @@ export const HomePage = () => {
                     headerShown: false
                 }}
             />
+            
+            <Stack.Screen
+                name="AppHome"
+                component={BottomNav}
+                options={{headerShown:false}}
+            />
 
+            <Stack.Screen
+                name="TargetSavingPlan"
+                component={TargetSavingPlan}
+                options={{ headerShown: false}}
+            />
 
+            <Stack.Screen
+                name="NewTargetSaving"
+                component={NewTargetSaving}
+                options={{ headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="SaveReview"
+                component={SaveReview}
+                options={{ headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="ConfirmScreen"
+                component={ConfirmScreen}
+                options={{ headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="TransferSucess"
+                component={TransferSucess}
+                options={{ headerShown: false}}
+            />
+
+            <Stack.Screen 
+                name="Transfer" 
+                component={TopNavigation} 
+                options={headerOptions}
+            />
+
+            <Stack.Screen
+                name="TransferReview"
+                component={TransferReview}
+                options={{headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="Data"
+                component={DataScreen}
+                options={{ headerShown: false}}
+            />
+            
+            <Stack.Screen
+                name="Airtime"
+                component={Airtime}
+                options={{ headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="ReferFriend"
+                component={ReferFriends}
+                options={{ headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="PayBillsScreen"
+                component={PayBillsScreen}
+                options={{ headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="SwapCurrencyScreen"
+                component={SwapCurrencyScreen}
+                options={{ headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="WalletScreen"
+                component={WalletScreen}
+                options={{ headerShown: false}}
+            />
+
+            
         </Stack.Navigator>
     )
 

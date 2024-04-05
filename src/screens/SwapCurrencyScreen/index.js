@@ -1,4 +1,5 @@
 import { View, Text, Image, TouchableOpacity } from "react-native"
+import React, {useState} from "react";
 import { SafeAreaView } from "react-native-safe-area-context"
 import { styles } from "./styles"
 import InputBox from "../../components/InputBox"

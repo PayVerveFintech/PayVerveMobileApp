@@ -60,7 +60,8 @@ const Login = () => {
                 {/* login function */}
                 <TouchableOpacity
                     style={styles.signupButton} 
-                    onPress={handleLogin}
+                    // onPress={handleLogin}
+                    onPress={ () => navigation.navigate("AppHome")}
                 >
                     <Text style={styles.touchableOpacityText}>
                         Login
