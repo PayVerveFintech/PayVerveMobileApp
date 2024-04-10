@@ -12,17 +12,6 @@ export const styles = StyleSheet.create({
         marginTop: 15
     },
 
-    signupContainer: {
-        backgroundColor: 'white',
-        marginTop: 15
-    },
-
-    signUpcontainer1: {
-        alignContent: 'center',
-        paddingLeft: 20,
-        paddingBottom: '100%',
-        marginTop: 40
-    },
 
     signupTexts: {
         fontSize: 18,
@@ -35,17 +24,6 @@ export const styles = StyleSheet.create({
         resizeMode: 'contain',
         alignSelf: 'center',
         marginTop: 10
-    },
-
-    bg_circle: {
-        alignItems: 'center',
-        marginTop: 20,
-        marginLeft: 30,
-        marginRight: 50,
-        width: 300,
-        height: 300,
-        borderRadius: 170,
-        backgroundColor: 'linear-gradient(180deg, rgba(33, 150, 243, 0.80) -151.46%, rgba(255, 255, 255, 0.40) 77.19%)',
     },
 
     onboarding_bg_img: {
@@ -112,19 +90,20 @@ export const styles = StyleSheet.create({
 
     signupButton: {
         backgroundColor: '#2196F3',
-        width: 200,
+        width: 160,
         height: 50,
         elevation: 10,
         borderRadius: 8,
         justifyContent: "center",
         alignSelf: "center",
-        marginTop: 40,
-        marginBottom: 10
+        // marginTop: 40,
+        // marginBottom: 10
     },
 
     loginButton: {
         height: 50,
-        width: 161,
+        width: 160,
+        left: 10,
         // elevation: 10,
         borderColor: '#2196F3',
         borderRadius: 8,

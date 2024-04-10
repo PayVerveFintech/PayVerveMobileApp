@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
-// import { useAuth } from '../hooks/userAuth';
 import { styles } from '../../styles/styles';
-// import { AuthProvider } from '../hooks/userAuth';
 import Styles from './styles';
 import { useNavigation } from '@react-navigation/native';
 

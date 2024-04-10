@@ -1,10 +1,10 @@
 import { View, Image, Text, ScrollView } from "react-native";
-import styles from "./style";
+import styless from "./style";
 import { styles } from "../../styles/styles";
 
 const AccountLimit = ({navigation}) => {
     return (
-        <View>
+        <View style={styles.container}>
             <View>
                 <TouchableOpacity
                     style={styles.backVector}
@@ -14,12 +14,12 @@ const AccountLimit = ({navigation}) => {
                         source={require('../../../assets/backVector.png')}
                     />
                 </TouchableOpacity>
-                <Text style={styles.headerText}> Account Limit </Text>
+                <Text style={styles.header_Text_1}> Account Limit </Text>
             </View>
 
-            <ScrollView style = {styles.body}>
+            <ScrollView style = {styless.body}>
             
-            <View style = {styles.transferHistory}>
+            <View style = {styless.transferHistory}>
                 <Text>PayVerve to PayVerve</Text>
                 <View style={{flexDirection: 'row'}}>
                     <Text>Daily Transfer Limit</Text>
@@ -35,7 +35,7 @@ const AccountLimit = ({navigation}) => {
                 </View>
             </View>
 
-            <View style = {styles.transferHistory}>
+            <View style = {styless.transferHistory}>
                 <Text>PayVerve to Other Bank</Text>
                 <View style={{flexDirection: 'row'}}>
                     <Text>Daily Transfer Limit</Text>
@@ -51,7 +51,7 @@ const AccountLimit = ({navigation}) => {
                 </View>
             </View>
 
-            <View style = {styles.transferHistory}>
+            <View style = {styless.transferHistory}>
                 <Text>PayVerve to Dollar Account</Text>
                 <View style={{flexDirection: 'row'}}>
                     <Text>Daily Transfer Limit</Text>
@@ -67,7 +67,7 @@ const AccountLimit = ({navigation}) => {
                 </View>
             </View>
 
-            <View style = {styles.transferHistory}>
+            <View style = {styless.transferHistory}>
                 <Text>PayVerve to Pounds Account</Text>
                 <View style={{flexDirection: 'row'}}>
                     <Text>Daily Transfer Limit</Text>

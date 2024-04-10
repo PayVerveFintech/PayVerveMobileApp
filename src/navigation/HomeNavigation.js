@@ -39,7 +39,7 @@ import Login from "../screens/Login/Login";
 import EmailConfirmation from "../screens/EmailConfirmation/EmailConfirmation";
 import VerificationCode from "../screens/VerficcationCode/VerificationCode";
 import ForgetPassword from "../screens/ForgetPassword/ForgetPassword";
-import KYCVerification2 from "../screens/KCVerication2/KYCVerification2";
+import KYCVerification2 from "../screens/KYCVerication2/KYCVerification2";
 import KYCVerification from "../screens/KYCVerification/KYCVerification";
 import CreateNewPW from "../screens/CreatedNewPW/CreateNewPW";
 import KYCVerification3 from "../screens/KYCVerification3/KYCVerification3";
