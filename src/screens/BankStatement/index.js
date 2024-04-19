@@ -1,8 +1,15 @@
-import styles  from '../../styles/styles';
+import { useState } from "react"
+import {styles} from "./styles"
 
-const { View, TextInput } = require('react-native')
+const { View, TextInput, TouchableOpacity, Image, Text } = require('react-native')
 
 const BankStatement = ({navigation}) => {
+
+
+    const [startDate, setStartDate] =useState("");
+    const [endDate, setEndDate] = useState("");
+    const [email, setEmail] = useState("");
+
     return(
         <View style={styles.container}>
             <View>
@@ -21,8 +28,8 @@ const BankStatement = ({navigation}) => {
                 <Text>Start Date</Text>
                 <TextInput
                     placeholder='Text'
-                    value=''
-                    onChangeText={""}
+                    value={startDate}
+                    onChangeText={startDate => setStartDate(startDate)}
                 />
             </View>
 
@@ -30,8 +37,8 @@ const BankStatement = ({navigation}) => {
                 <Text>End Date</Text>
                 <TextInput
                     placeholder='Text'
-                    value=''
-                    onChangeText={""}
+                    value={endDate}
+                    onChangeText={endDate => setEndDate(endDate)}
                 />
             </View>
 
@@ -39,8 +46,8 @@ const BankStatement = ({navigation}) => {
                 <Text>Email Address</Text>
                 <TextInput
                     placeholder='Text'
-                    value=''
-                    onChangeText={""}
+                    value={email}
+                    onChangeText={text => setEmail(text)}
                 />
             </View>
 

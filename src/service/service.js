@@ -5,7 +5,7 @@ export const  service = [
     {
         name: "Transfer",
         screen: "Transfer",
-        icon: "md-swap-horizontal",
+        icon: "swap-horizontal",
         iconFamily: "Ionicons"
     },
     {
@@ -23,7 +23,7 @@ export const  service = [
     {
         name: "Airtime",
         screen: "Airtime",
-        icon: "ios-phone-portrait-outline",
+        icon: "call-outline",
         iconFamily: "Ionicons"
     },
     {
@@ -47,7 +47,7 @@ export const  service = [
     {
         name: "Wallet",
         screen: "WalletScreen",
-        icon: "ios-wallet-outline",
+        icon: "wallet-outline",
         iconFamily: "Ionicons"
     },
 ]

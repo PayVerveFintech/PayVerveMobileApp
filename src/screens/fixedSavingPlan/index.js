@@ -4,7 +4,6 @@ import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from '@react-navigation/native';
 
 import { styles } from './style';
-import SavingScreen from '../savingScreen';
 import { savePlans } from '../../service/savePlans';
 import { Button } from '../../components/ButtonComponent/Button';
 

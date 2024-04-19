@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, Text, ScrollView, TextInput, TouchableOpacity, KeyboardAvoidingView, StyleSheet } from "react-native"
+import { View, Text, ScrollView, TextInput, Platform, TouchableOpacity, KeyboardAvoidingView, StyleSheet } from "react-native"
 import { styles } from "../../styles/styles";
 import { useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -205,7 +205,7 @@ const KYCVerification = () => {
 
                         <TouchableOpacity 
                             style={[styles.signupButton, { opacity: isFormValid ? 1 : 0.5}]}
-                            disabled = {isFormValid}
+                            // disabled = {isFormValid}
                             onPress={handleSubmit}
                         >
                             <Text style={styles.touchableOpacityText}>Next</Text>

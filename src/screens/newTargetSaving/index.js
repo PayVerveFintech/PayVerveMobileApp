@@ -84,8 +84,8 @@ export default function NewTargetSaving() {
                 targetName,
                 targetAmount,
                 frequency,
-                startDate,
-                endDate,
+                // startDate,
+                // endDate,
               })}
             />
           </View>

@@ -60,6 +60,8 @@ import { TopNavigation } from "./topTab"
 import TransferReview from "../screens/transferReview"
 import DataScreen from "../screens/DataScreen"
 import Airtime from "../screens/airtime"
+import FixedSavingPlan from "../screens/fixedSavingPlan"
+import FixedSaving from "../screens/fixedSaving"
 
 
 const Stack = createStackNavigator()
@@ -566,6 +568,18 @@ export const HomePage = () => {
             <Stack.Screen
                 name="WalletScreen"
                 component={WalletScreen}
+                options={{ headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="FixedSavingPlan"
+                component={FixedSavingPlan}
+                options={{ headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="FixedSaving"
+                component={FixedSaving}
                 options={{ headerShown: false}}
             />
 

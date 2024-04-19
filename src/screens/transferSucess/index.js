@@ -1,5 +1,8 @@
 import { View, Text, SafeAreaView } from "react-native";
+import react, { useEffect } from "react";
 import { Ionicons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+
 import { Color } from "../../color/Color";
 import { styles } from "./styles";
 
@@ -10,10 +13,18 @@ import { styles } from "./styles";
 
 
 export default function TransferSucess() {
+
+  const navigation = useNavigation();
+
+  useEffect(() => {
+    setTimeout(() =>{
+      navigation.navigate("AppHome")
+    }, 2000)
+  }, [])
   return(
     <SafeAreaView style={styles.root}>
       <View style={styles.popUp}>
-        <Ionicons name="md-checkmark-circle-outline" size={60} color={Color.green} />
+        <Ionicons name="checkmark-circle-outline" size={60} color={Color.green} />
         <Text style={styles.text}>Your transfer is sucessful</Text>
       </View>
       <View>

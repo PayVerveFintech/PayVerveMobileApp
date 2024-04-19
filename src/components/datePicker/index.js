@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import React, { useState } from 'react';
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 
-import {styles} from "./style";
+import { styles } from "./style";
 import { Color } from '../../color/Color';
 
 const DatePicker = ({ title, onChange }) => {
@@ -20,8 +20,8 @@ const DatePicker = ({ title, onChange }) => {
     const handleConfirm = (date) => {
         hideDatePicker();
         setSelectedDate(date);
-        // Update the onChange prop with the selected date
-        onChange(date);
+        // Update the onChange prop with the timestamp of the selected date
+        onChange(date.getTime()); // Pass the timestamp instead of the Date object
     };
 
     return (

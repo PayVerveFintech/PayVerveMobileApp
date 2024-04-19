@@ -6,10 +6,11 @@ import { useNavigation } from '@react-navigation/native';
 
 import { styles } from './style';
 import { Color } from '../../color/Color';
-import { Selector } from '../../components/selector';
+import { Selector } from "../../components/selector";
 import TransferInput from '../../components/transferInput';
 import { Button } from '../../components/ButtonComponent/Button';
 import CustomTextInput from '../../components/customTextInput';
+import SelectDropdown from 'react-native-select-dropdown';
 
 
 
@@ -49,6 +50,7 @@ export default function OtherBanks() {
             <View style={styles.textInputMainContainer}>
               <Text style={styles.label}>Wallet</Text>
                 <Selector wallet={wallet} setFunc={setWallet} data={walletType} placeholder={"Select your PayVerve wallet"} />
+
               </View>
             <View style={styles.textInputMainContainer}>
               <Text style={styles.label}>Select transfer type</Text>

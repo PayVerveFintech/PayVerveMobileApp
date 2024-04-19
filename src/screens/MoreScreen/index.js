@@ -13,7 +13,7 @@ export const MoreScreen = () => {
         <SupportType 
             icon={<Image source={item.image} style={styles.moreIcon} />} 
             title={item.name}
-            onPress={()=>{navigation.navigate(item.screen)}}
+            onPress={()=>{navigation.navigate(item?.screen)}}
         />
     )
     

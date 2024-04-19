@@ -11,6 +11,18 @@ export const styles = StyleSheet.create({
         borderRadius: 4,
         backgroundColor: Color.white,
         borderColor: Color.gray,
-        height: hp(7)
+        height: hp(7),
+        flexDirection: "row",
+        alignItems: "center",
+        paddingHorizontal: wp(5),
+        justifyContent: "space-between"
+    },
+    dropdownItemTxtStyle: {
+        fontSize: hp(2.2),
+        color: Color.gray
+    },
+    dropdownItemStyle: {
+        marginVertical: hp(1),
+        paddingHorizontal: wp(5)
     }
 })

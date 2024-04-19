@@ -7,6 +7,9 @@ const CreateNewPW = ({navigation}) => {
     const [password, onChangePassword] = useState('');
     const [confirmPSW, onChangeConfirmPSW] = useState('');
 
+    const handleReset = () => {
+        navigation.navigate("AppHome")
+    }
     return (
         <View style={styles.container}>
             <View style={{flexDirection: 'row'}}>
@@ -64,6 +67,7 @@ const CreateNewPW = ({navigation}) => {
 
             <TouchableOpacity 
                 style={styles.signupButton}
+                onPress={() => handleReset() }
             >
                 <Text style={styles.touchableOpacityText}> Reset </Text>
             </TouchableOpacity>
