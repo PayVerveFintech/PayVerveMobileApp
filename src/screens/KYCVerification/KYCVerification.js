@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, Text, ScrollView, TextInput, Platform, TouchableOpacity, KeyboardAvoidingView, StyleSheet } from "react-native"
+import { View, Text, ScrollView, TextInput, Platform, TouchableOpacity, KeyboardAvoidingView, StyleSheet, Image } from "react-native"
 import { styles } from "../../styles/styles";
 import { useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -58,13 +58,13 @@ const KYCVerification = () => {
         // validating the gender text field
         if (!gender) {
             errors.gender = ('gender is required');
-        } else if (M != 'male' && G != "female") {
+        } else if (M !== 'male' && G !== "female") {
             errors.gender = ('gender input incorrect')
         }
 
         // validating the dob text field
         if (!dob) {
-            errors.bvn = ('dob is required');
+            errors.dob = ('dob is required');
         }
 
         // validating the occupation text field
@@ -93,17 +93,26 @@ const KYCVerification = () => {
             </Text>
             <View style={{flexDirection: 'row', justifyContent: 'space-around', paddingTop: 30}}>
                 <View style={{flexDirection: 'column'}}>
-                    <Text>Personal Information</Text>
+                 <Image 
+                        source={require('../../../assets/checked_radio.png')}
+                        style={styles.img_checking}
+                    />
                     <Text>Personal Information</Text>
                 </View>
 
                 <View style={{flexDirection: 'column'}}>
-                    <Text>Selfie</Text>
+                    <Image 
+                        source={require('../../../assets/unchecked_radio.png')}
+                        style={styles.img_checking}
+                    />
                     <Text>Selfie</Text>
                 </View>
 
                 <View style={{flexDirection: 'column'}}>
-                    <Text>Confirmation</Text>
+                    <Image 
+                        source={require('../../../assets/unchecked_radio.png')}
+                        style={styles.img_checking}
+                    />
                     <Text>Confirmation</Text>
                 </View>
             </View>
@@ -141,6 +150,7 @@ const KYCVerification = () => {
                             value={phonenumber} 
                             style={styles.textInput}
                             onChangeText={setPhonenumber}
+                            keyboardType="number-pad"
                         />
 
                         <Text style={styles.signupTexts}>
@@ -151,6 +161,7 @@ const KYCVerification = () => {
                             value={bvn} 
                             style={styles.textInput}
                             onChangeText={setBvn}
+                            keyboardType="number-pad"
                         />
 
                         <Text style={styles.signupTexts}>
@@ -161,13 +172,14 @@ const KYCVerification = () => {
                             value={nin} 
                             style={styles.textInput}
                             onChangeText={setNin}
+                            keyboardType="number-pad"
                         />
 
                         <Text style={styles.signupTexts}>
                             Gender
                         </Text>
                         <TextInput
-                            placeholder="Female"
+                            placeholder="Gender"
                             value={gender} 
                             style={styles.textInput}
                             onChangeText={setGender}

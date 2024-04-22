@@ -1,5 +1,5 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native';
-import { styles } from '../../styles/styles';
+import { styles } from './style';
 
 const KYCVerification3 = ({navigation}) => {
     return (
@@ -10,17 +10,26 @@ const KYCVerification3 = ({navigation}) => {
 
            <View style={{flexDirection: 'row', justifyContent: 'space-around', paddingTop: 30}}>
                 <View style={{flexDirection: 'column'}}>
-                    <Text>Personal Information</Text>
+                    <Image 
+                        source={require('../../../assets/checked_radio.png')}
+                        style={styles.img_checking}
+                    />
                     <Text>Personal Information</Text>
                 </View>
 
                 <View style={{flexDirection: 'column'}}>
-                    <Text>Selfie</Text>
+                    <Image 
+                        source={require('../../../assets/checked_radio.png')}
+                        style={styles.img_checking}
+                    />
                     <Text>Selfie</Text>
                 </View>
 
                 <View style={{flexDirection: 'column'}}>
-                    <Text>Confirmation</Text>
+                <Image 
+                        source={require('../../../assets/checked_radio.png')}
+                        style={styles.img_checking}
+                    />
                     <Text>Confirmation</Text>
                 </View>
             </View>
