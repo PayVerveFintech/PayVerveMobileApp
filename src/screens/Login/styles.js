@@ -1,6 +1,13 @@
 import { StyleSheet } from "react-native";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
+
+
+
 
 const Styles = StyleSheet.create ({
+    container: {
+        flex: 1,
+    },
     loginForgetPSW_txt: { 
         alignSelf: 'flex-end', 
         marginEnd: 30, 
@@ -31,7 +38,7 @@ const Styles = StyleSheet.create ({
         justifyContent: "center",
         alignSelf: "center",
         marginTop: 40,
-        marginBottom: 10
+        marginBottom: 10,
     },
 });
 

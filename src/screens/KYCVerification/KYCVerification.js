@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, Text, ScrollView, TextInput, Platform, TouchableOpacity, KeyboardAvoidingView, StyleSheet, Image } from "react-native"
+import { View, Text, ScrollView, TextInput, Platform, TouchableOpacity, KeyboardAvoidingView, StyleSheet, Image, TouchableWithoutFeedback, Keyboard } from "react-native"
 import { styles } from "../../styles/styles";
 import { useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -87,153 +87,158 @@ const KYCVerification = () => {
     }
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.header_Text_1}>
-                KYC Verification
-            </Text>
-            <View style={{flexDirection: 'row', justifyContent: 'space-around', paddingTop: 30}}>
-                <View style={{flexDirection: 'column'}}>
-                 <Image 
-                        source={require('../../../assets/checked_radio.png')}
-                        style={styles.img_checking}
-                    />
-                    <Text>Personal Information</Text>
-                </View>
-
-                <View style={{flexDirection: 'column'}}>
+        <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+            <View style={styles.container}>
+                <Text style={styles.header_Text_1}>
+                    KYC Verification
+                </Text>
+                <View style={{flexDirection: 'row', justifyContent: 'space-around', paddingTop: 30}}>
+                    <View style={{flexDirection: 'column'}}>
                     <Image 
-                        source={require('../../../assets/unchecked_radio.png')}
-                        style={styles.img_checking}
-                    />
-                    <Text>Selfie</Text>
-                </View>
-
-                <View style={{flexDirection: 'column'}}>
-                    <Image 
-                        source={require('../../../assets/unchecked_radio.png')}
-                        style={styles.img_checking}
-                    />
-                    <Text>Confirmation</Text>
-                </View>
-            </View>
-
-            <KeyboardAvoidingView
-                behavior={Platform.OS === 'ios' ? 'padding' : null}
-            >
-                <ScrollView contentContainerStyle={{flexGrow: 1}}>
-                    <View style={styles.signUpcontainer1}>
-                        <Text style={styles.signupTexts}>
-                            Full Name
-                        </Text>
-                        <TextInput
-                            placeholder="Full name"
-                            value={fullname} 
-                            style={styles.textInput}
-                            onChangeText={setFullname}
+                            source={require('../../../assets/checked_radio.png')}
+                            style={styles.img_checking}
                         />
-
-                        <Text style={styles.signupTexts}>
-                            Email Address
-                        </Text>
-                        <TextInput
-                            placeholder="Email"
-                            value={email} 
-                            style={styles.textInput}
-                            onChangeText={setEmail}
-                        />
-
-                        <Text style={styles.signupTexts}>
-                            Phone Number
-                        </Text>
-                        <TextInput
-                            placeholder="Text field"
-                            value={phonenumber} 
-                            style={styles.textInput}
-                            onChangeText={setPhonenumber}
-                            keyboardType="number-pad"
-                        />
-
-                        <Text style={styles.signupTexts}>
-                            BVN
-                        </Text>
-                        <TextInput
-                            placeholder="Text field"
-                            value={bvn} 
-                            style={styles.textInput}
-                            onChangeText={setBvn}
-                            keyboardType="number-pad"
-                        />
-
-                        <Text style={styles.signupTexts}>
-                            NIN
-                        </Text>
-                        <TextInput
-                            placeholder="Text field"
-                            value={nin} 
-                            style={styles.textInput}
-                            onChangeText={setNin}
-                            keyboardType="number-pad"
-                        />
-
-                        <Text style={styles.signupTexts}>
-                            Gender
-                        </Text>
-                        <TextInput
-                            placeholder="Gender"
-                            value={gender} 
-                            style={styles.textInput}
-                            onChangeText={setGender}
-                        />
-
-                        <Text style={styles.signupTexts}>
-                            D.O.B
-                        </Text>
-                        <TextInput
-                            placeholder="DD/MM/YY"
-                            value={dob} 
-                            style={styles.textInput}
-                            onChangeText={setDOB}
-                        />
-
-                        <Text style={styles.signupTexts}>
-                            Address
-                        </Text>
-                        <TextInput
-                            placeholder="blah blah blah"
-                            value={address} 
-                            style={styles.textInput}
-                            onChangeText={setAddress}
-                        />
-
-                        <Text style={styles.signupTexts}>
-                            Occuption
-                        </Text>
-                        <TextInput
-                            placeholder="Unemployed"
-                            value={occupation} 
-                            style={styles.textInput}
-                            onChangeText={setOccupation}
-                        />
-
-                        <TouchableOpacity 
-                            style={[styles.signupButton, { opacity: isFormValid ? 1 : 0.5}]}
-                            // disabled = {isFormValid}
-                            onPress={handleSubmit}
-                        >
-                            <Text style={styles.touchableOpacityText}>Next</Text>
-                        </TouchableOpacity>
-
-                        {/* Displaying the error messages */}
-                        {Object.values(errors).map((error, index) => (
-                            <Text key = {index} style={STYLE.error}>
-                                {error}
-                            </Text>
-                        ))}
-                        
+                        <Text>Personal Information</Text>
                     </View>
-                </ScrollView>
-            </KeyboardAvoidingView>
-        </View>
+
+                    <View style={{flexDirection: 'column'}}>
+                        <Image 
+                            source={require('../../../assets/unchecked_radio.png')}
+                            style={styles.img_checking}
+                        />
+                        <Text>Selfie</Text>
+                    </View>
+
+                    <View style={{flexDirection: 'column'}}>
+                        <Image 
+                            source={require('../../../assets/unchecked_radio.png')}
+                            style={styles.img_checking}
+                        />
+                        <Text>Confirmation</Text>
+                    </View>
+                </View>
+
+                    <ScrollView 
+                        contentContainerStyle={{flexGrow: 1}}  
+                        showsVerticalScrollIndicator={false}
+                    >
+                        <KeyboardAvoidingView
+                            behavior={Platform.OS === 'ios' ? 'padding' : null}
+                        >
+                        <View style={styles.signUpcontainer1}>
+                            <Text style={styles.signupTexts}>
+                                Full Name
+                            </Text>
+                            <TextInput
+                                placeholder="Full name"
+                                value={fullname} 
+                                style={styles.textInput}
+                                onChangeText={setFullname}
+                            />
+
+                            <Text style={styles.signupTexts}>
+                                Email Address
+                            </Text>
+                            <TextInput
+                                placeholder="Email"
+                                value={email} 
+                                style={styles.textInput}
+                                onChangeText={setEmail}
+                            />
+
+                            <Text style={styles.signupTexts}>
+                                Phone Number
+                            </Text>
+                            <TextInput
+                                placeholder="Text field"
+                                value={phonenumber} 
+                                style={styles.textInput}
+                                onChangeText={setPhonenumber}
+                                keyboardType="number-pad"
+                            />
+
+                            <Text style={styles.signupTexts}>
+                                BVN
+                            </Text>
+                            <TextInput
+                                placeholder="Text field"
+                                value={bvn} 
+                                style={styles.textInput}
+                                onChangeText={setBvn}
+                                keyboardType="number-pad"
+                            />
+
+                            <Text style={styles.signupTexts}>
+                                NIN
+                            </Text>
+                            <TextInput
+                                placeholder="Text field"
+                                value={nin} 
+                                style={styles.textInput}
+                                onChangeText={setNin}
+                                keyboardType="number-pad"
+                            />
+
+                            <Text style={styles.signupTexts}>
+                                Gender
+                            </Text>
+                            <TextInput
+                                placeholder="Gender"
+                                value={gender} 
+                                style={styles.textInput}
+                                onChangeText={setGender}
+                            />
+
+                            <Text style={styles.signupTexts}>
+                                D.O.B
+                            </Text>
+                            <TextInput
+                                placeholder="DD/MM/YY"
+                                value={dob} 
+                                style={styles.textInput}
+                                onChangeText={setDOB}
+                            />
+
+                            <Text style={styles.signupTexts}>
+                                Address
+                            </Text>
+                            <TextInput
+                                placeholder="blah blah blah"
+                                value={address} 
+                                style={styles.textInput}
+                                onChangeText={setAddress}
+                            />
+
+                            <Text style={styles.signupTexts}>
+                                Occuption
+                            </Text>
+                            <TextInput
+                                placeholder="Unemployed"
+                                value={occupation} 
+                                style={styles.textInput}
+                                onChangeText={setOccupation}
+                            />
+
+                            <TouchableOpacity 
+                                style={[styles.signupButton, { opacity: isFormValid ? 1 : 0.5}]}
+                                // disabled = {isFormValid}
+                                onPress={handleSubmit}
+                            >
+                                <Text style={styles.touchableOpacityText}>Next</Text>
+                            </TouchableOpacity>
+
+                            {/* Displaying the error messages */}
+                            {Object.values(errors).map((error, index) => (
+                                <Text key = {index} style={STYLE.error}>
+                                    {error}
+                                </Text>
+                            ))}
+                            
+                        </View>
+                    </KeyboardAvoidingView>
+                    </ScrollView>
+            </View>
+        </TouchableWithoutFeedback>
     )
 }
 

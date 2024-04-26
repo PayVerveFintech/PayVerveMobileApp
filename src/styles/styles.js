@@ -1,11 +1,11 @@
 import { StyleSheet } from "react-native";
-  
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 // primaryColor = rgba(33, 150, 243, 1)
 // primaryColor-1 = #2196F3
 
 export const styles = StyleSheet.create({
     container: {
-        padding: 10,
+        paddingHorizontal: wp(3),
         flex: 1,
         backgroundColor: 'white',
         justifyContent: "center",
@@ -104,10 +104,9 @@ export const styles = StyleSheet.create({
         height: 50,
         width: 160,
         left: 10,
-        // elevation: 10,
         borderColor: '#2196F3',
         borderRadius: 8,
-        borderWidth: 1
+        borderWidth: 1,
     },
 
     buttonText: {

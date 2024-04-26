@@ -34,10 +34,10 @@ const KYCVerification3 = ({navigation}) => {
                 </View>
             </View>
 
-            <View style={{marginTop: "40%", marginBottom: "30%"}}>
+            <View style={{marginTop: "30%", marginBottom: "20%"}}>
                 <Image 
                     source={require("../../../assets/like.png")}
-                    style={{width: 150, height: 150, alignSelf: 'center', resizeMode: 'contain', }}
+                    style={{width: 150, height: 150, alignSelf: 'center', resizeMode: 'contain',marginTop: -90 }}
                 />
 
                 <Text style={
