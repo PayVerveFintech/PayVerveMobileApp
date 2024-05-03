@@ -1,10 +1,11 @@
 import { View, Text, Pressable, Image } from "react-native"
 // import Clipboard from "@react-native-clipboard/clipboard";
 import { Ionicons } from '@expo/vector-icons';
-import { styles } from "./styles";
+import { styles } from "./Styles";
 import { useState, useEffect } from "react";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import copyImg from '../../../assets/copyImage.png'
+import copyImg from '../../../assets/copyImage.png';
+import { useAuth } from "../../context/AuthContext";
 
 export const AccountsComponent = ({ account, accountNum }) => {
     const [copiedValue, setCopiedValue] = useState("")

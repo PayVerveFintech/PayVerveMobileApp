@@ -1,28 +1,33 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Alert, Keyboard, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Alert, Keyboard, TouchableWithoutFeedback, ActivityIndicator } from 'react-native';
 import { styles } from '../../styles/styles';
 import Styles from './styles';
 import { useNavigation } from '@react-navigation/native';
+import { useAuth } from '../../context/AuthContext';
 
 const CORRECT_USERNAME = 'admin';
 const CORRECT_PASSWORD = 'admin'
 
 const Login = () => {
-    // const { login } = useAuth();
-    
+
+    const { authState, login } = useAuth();
+
     // removed navigation from props and implemented navigation from the useNavigation hook
     const navigation = useNavigation();
-    
+
     const [userName, onChangeUserName] = useState('');
     const [password, onChangePassword] = useState('');
 
     // handling functions
     const handleLogin = () => {
-        if (userName === CORRECT_USERNAME && password === CORRECT_PASSWORD) {
-            navigation.navigate('KYCVerify')
-        }else {
-            Alert.alert('Incorrect email/password')
-        }
+
+        login(userName, password);
+
+        // if (userName === CORRECT_USERNAME && password === CORRECT_PASSWORD) {
+        //     navigation.navigate('AppHome')
+        // }else {
+        //     Alert.alert('Incorrect email/password')
+        // }
     };
 
     return (
@@ -50,7 +55,7 @@ const Login = () => {
                         style={styles.textInput}
                         onChangeText={onChangePassword}
                     />
-                    
+
                     {/* forget password button */}
                     <Text style={Styles.loginForgetPSW_txt}
                         onPress={() => navigation.navigate('ForgetPassword')}
@@ -59,31 +64,37 @@ const Login = () => {
                     </Text>
 
                     {/* login function */}
-                    <TouchableOpacity
-                        style={styles.signupButton} 
-                        onPress={handleLogin}
+                    {authState.isLoading ? (
+                        <ActivityIndicator />
+                    ) : (
+                        <TouchableOpacity
+                            style={styles.signupButton}
+                            onPress={handleLogin}
                         // onPress={ () => navigation.navigate("AppHome")}
-                    >
-                        <Text style={styles.touchableOpacityText}>
-                            Login
-                        </Text>
-                    </TouchableOpacity>
-                    
+                        >
+                            <Text style={styles.touchableOpacityText}>
+                                Login
+                            </Text>
+                        </TouchableOpacity>
+                    )}
+                    {authState.error && Alert.alert(authState.error)}
+                    {/* <Text style={styles.error}>{authState.error}</Text> */}
+
                     {/* sign up function */}
                     <Text
                         style={Styles.loginSignUp_outer_txt}
                     >
                         Don't have an account?{' '}
-                        <Text 
-                            onPress={() => navigation.navigate('SignUp1')} 
+                        <Text
+                            onPress={() => navigation.navigate('SignUp')}
                             style={Styles.loginSignUp_inner_txt}
-                        > 
+                        >
                             Sign Up
                         </Text>
                     </Text>
                 </View>
             </View>
-        </TouchableWithoutFeedback>
+        </TouchableWithoutFeedback >
     );
 };
 

@@ -1,5 +1,5 @@
 import { TouchableOpacity, Image, View, Text, Modal } from "react-native"
-import { styles } from "./styles"
+import { styles } from "./Styles"
 import NotificationModal from "./NotificationModal"
 import { useState } from "react"
 

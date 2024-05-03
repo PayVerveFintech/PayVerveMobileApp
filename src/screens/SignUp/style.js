@@ -63,5 +63,11 @@ export const styles = StyleSheet.create({
         alignSelf: 'center',
         padding: 10
     },
+    error: {
+        color:'red',        
+        justifyContent: "center",
+        alignSelf: "center",        
+        marginVertical: 10
+    },
 
 });

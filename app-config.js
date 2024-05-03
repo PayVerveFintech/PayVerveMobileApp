@@ -1,12 +1,12 @@
 const ENV = {
     dev: {
-      apiUrl: 'http://localhost:8001',
+      apiUrl: 'http://192.168.1.108:8001',
     },
     staging: {
-      apiUrl: 'https://your-staging-api-url.herokuapp.com',
+      apiUrl: 'https://payverve.pythonanywhere.com',
     },
     prod: {
-      apiUrl: 'https://your-prod-api-url.herokuapp.com',
+      apiUrl: 'https://payverve.pythonanywhere.com',
     },
 };
   

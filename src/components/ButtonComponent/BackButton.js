@@ -3,7 +3,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 
-import { styles } from "./styles";
+import { styles } from "./Styles";
 
 export const BackButton = () => {
     const navigation = useNavigation()

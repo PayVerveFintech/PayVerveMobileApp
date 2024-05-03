@@ -7,11 +7,12 @@ import {
     TextInput,
     TouchableOpacity,
     View,
-    Alert
+    Alert,
+    ActivityIndicator
 } from 'react-native';
 import { styles } from './style';
 import { useNavigation } from '@react-navigation/native';
-
+import { useAuth } from '../../context/AuthContext';
 
 const SignUp1 = () => {
     // removed navigation from props and implemented navigation from the useNavigation hook
@@ -27,6 +28,7 @@ const SignUp1 = () => {
     const [userName, onChangeUserName] = useState('');
     const [password, onChangePassword] = useState('');
     const [confirmPassword, onChangeConfirmPassword] = useState('');
+    const { authState, signup } = useAuth();
 
     // const handlePasswordMatch =() => {
     //     if (password.value == confirmPassword.value) {
@@ -35,14 +37,18 @@ const SignUp1 = () => {
     //         Alert.alert('Password Mismatch')
     //     }
     // }
-    
+
+    const handleSignUp = (email, fullName, userName, password) => {
+        signup(email, fullName, userName, password);
+    }
+
     return (
         <View style={styles.signupContainer}>
             <Text style={styles.header_Text_1}>SignUp</Text>
 
             <Text style={styles.header_Text_2}>
                 {baseText[0]}
-                <Text style={{fontWeight: 'bold'}}>{appendText[0]}</Text>
+                <Text style={{ fontWeight: 'bold' }}>{appendText[0]}</Text>
             </Text>
 
             <KeyboardAvoidingView
@@ -100,15 +106,22 @@ const SignUp1 = () => {
                             onChangeText={onChangeConfirmPassword}
                             style={styles.textInput}
                         />
+                        {authState.isLoading ? (
+                            <ActivityIndicator />
+                        ) : (
 
-                        <TouchableOpacity 
-                            style={styles.signupButton} 
-                            onPress={() => navigation.navigate('KYCVerify')}
-                        >
-                            <Text style={styles.touchableOpacityText}>
-                                SignUp
-                            </Text>
-                        </TouchableOpacity>
+
+                            <TouchableOpacity
+                                style={styles.signupButton}
+                                // onPress={() => navigation.navigate('KYCVerify')}
+                                onPress={handleSignUp}
+                            >
+                                <Text style={styles.touchableOpacityText}>
+                                    SignUp
+                                </Text>
+                            </TouchableOpacity>
+                        )}
+                        {/* {authState.error && Alert.alert(authState.error)}  */}
 
                         {/* This is temporary */}
                         {/* <TouchableOpacity 
@@ -121,9 +134,9 @@ const SignUp1 = () => {
                         </TouchableOpacity> */}
                         {/* commented the above compponent out */}
 
-                        <Text style={{alignSelf: 'center', fontSize: 14}} onPress={() => navigation.navigate('Login') }>
+                        <Text style={{ alignSelf: 'center', fontSize: 14 }} onPress={() => navigation.navigate('Login')}>
                             {baseText[1]}
-                            <Text style={{color: 'blue', fontSize: 16, fontWeight: 'bold', textDecorationLine: 'underline'}}>{appendText[1]}</Text>
+                            <Text style={{ color: 'blue', fontSize: 16, fontWeight: 'bold', textDecorationLine: 'underline' }}>{appendText[1]}</Text>
                         </Text>
 
                     </View>

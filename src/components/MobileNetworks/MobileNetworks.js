@@ -1,5 +1,5 @@
 import { TouchableOpacity, Image, View } from "react-native"
-import { styles } from "./styles"
+import { styles } from "./Styles"
 import nineMobile from "../../../assets/9mobile-logo.png"
 import airtel from "../../../assets/airtel-logo.png"
 import mtn from "../../../assets/mtn-logo.png"

@@ -2,7 +2,8 @@ import { Constants } from 'expo';
 import ENV from './app-config';
 
 // const currentEnv = Constants.manifest.releaseChannel || 'dev';
-// export const apiUrl = ENV[currentEnv].apiUrl;
+const currentEnv = 'staging';
+export const apiUrl = ENV[currentEnv].apiUrl;
 
 
 // Use apiUrl in your API requests

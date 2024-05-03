@@ -1,6 +1,8 @@
 import React, { createContext, useState, useContext } from "react";
 // import KYCVerification from "../screens/KYCVerification";
 import { useNavigation } from "@react-navigation/native"
+import { signIn } from "./apiRequest";
+import { Alert } from "react-native";
 
 const AuthContext = createContext();
 
@@ -8,15 +10,17 @@ export const AuthProvider = ({children}) => {
     const navigation = useNavigation();
 
     const [user, setUser] = useState(null);
+    conss [token, setToken] = useState(null);
 
     const login = (userName, password) => {
-        if (userName === "admin" && password === "admin") {
-            // setUser({KYCVerification});
-            navigation.navigate('KYCVerification')
-        } else {
+        let response = signIn(userName, password);
+        response.then(res =>{
+            setUser(res.user_data);
+            setToken(res.firebase_access_token);
+        }).catch(()=>{
             setUser(null);
-            throw new Error('Invaild credentials');
-        }
+            Alert.alert('Invalid credentials')
+        });
     }
 
     return (

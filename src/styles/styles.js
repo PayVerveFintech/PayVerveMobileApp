@@ -129,4 +129,11 @@ export const styles = StyleSheet.create({
     freeBold: {
         fontWeight: 'bold'
     },
+
+    error: {
+        color:'red',        
+        justifyContent: "center",
+        alignSelf: "center",        
+        marginVertical: 10
+    },
 })

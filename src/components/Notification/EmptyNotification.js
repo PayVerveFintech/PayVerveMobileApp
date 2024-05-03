@@ -1,5 +1,5 @@
 import { View, Image, Text } from "react-native"
-import { styles } from "./styles"
+import { styles } from "./Styles"
 
 
 const EmptyNotification = () => {
