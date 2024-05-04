@@ -3,12 +3,19 @@ import { TextInput, TouchableOpacity, View, Text } from 'react-native';
 import { styles } from '../../styles/styles';
 import { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
+import { useAuth } from '../../context/AuthContext';
 
 const ForgetPassword = () => {
     // removed navigation from props and implemented navigation from the useNavigation hook
     const navigation = useNavigation();
     
     const [email, onChangeEmail] = useState('');
+
+    const {forgotPassword} = useAuth();
+
+    const handleForgotPassword = () =>{
+        forgotPassword(email);
+    }
 
     return(
         <View style={styles.container}>
@@ -39,7 +46,8 @@ const ForgetPassword = () => {
 
             <TouchableOpacity
                 style={styles.signupButton}
-                onPress={() => navigation.navigate('EmailConfirmation')}
+                // onPress={() => navigation.navigate('EmailConfirmation')}
+                onPress={handleForgotPassword}
             >
                 <Text style={styles.touchableOpacityText}> 
                     Next

@@ -1,14 +1,20 @@
 import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
 import { styles } from "../../styles/styles";
 import { useState } from "react";
+import { useAuth } from "../../context/AuthContext";
 
 const CreateNewPW = ({navigation}) => {
 
     const [password, onChangePassword] = useState('');
     const [confirmPSW, onChangeConfirmPSW] = useState('');
 
+    // import authSate for user data
+    const { changePassword } = useAuth();
+
     const handleReset = () => {
-        navigation.navigate("AppHome")
+        let isSuccess = changePassword(password);
+        if (isSuccess)
+            navigation.navigate("AppHome");
     }
     return (
         <View style={styles.container}>

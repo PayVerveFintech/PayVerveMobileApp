@@ -6,14 +6,18 @@ const InfoContext = createContext();
 export const userInfo = () => useContext(InfoContext);
 
 export const InfoProvider = ({ children }) => {
-    const [beneficiaries, setBeneficiaries] = useState([]);
-    const [point, setPoint] = useState(5500);
+
+    // removed individual declarations and used a joint state [infoState]
+
+    // import authSate for user data
     const { authState } = useAuth();
 
     const [infoState, setInfoState] = useState({
         wallets: [],
         beneficiaries: [],
         point: 5500,
+        isLoading: false,
+        error: null
     })
 
     const fetchWallets = async () => {
@@ -22,35 +26,33 @@ export const InfoProvider = ({ children }) => {
             const data = await response.json();
 
             if (response.ok) {
-                setAuthState({
-                    token: data.token,
-                    userData: data.userData,
-                    isLoading: false,
+                setInfoState(prevState => ({
+                    ...prevState,
+                    wallets: data.wallets,
                     error: null,
-                });
+                }));
             } else {
-                throw new Error(data.message || 'Unable to login');
+                throw new Error(data.message || 'Unable to fetch wallets');
             }
 
         } catch (error) {
+            setAuthState(prevState => ({
+                ...prevState,
+                error: error.message,
+            }));
 
+        } finally {
+            setAuthState(prevState => ({
+                ...prevState,
+                isLoading: false,
+            }));
         }
 
     };
 
-
     return (
-        <InfoContext.Provider
-            value={{
-                beneficiaries, setBeneficiaries,
-                point, setPoint,
-            }}
-        >
+        <InfoContext.Provider value={{ infoState, fetchWallets }}>
             {children}
         </InfoContext.Provider>
     )
-};
-
-export const useInfo = () => {
-    return useContext(InfoContext);
 };

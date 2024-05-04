@@ -8,11 +8,9 @@ import { styles } from './style';
 import { service } from '../../service/service';
 import TransactionHistory from '../../components/transactionHistory';
 import { ScrollView } from 'react-native-gesture-handler';
+import { useAuth } from '../../context/AuthContext';
+import { userInfo } from '../../context/userInfo';
 // import { NewUser } from '../../context/userContext';
-
-
-
-
 
 export default function Home() {
 
@@ -24,10 +22,13 @@ export default function Home() {
 
     const [isVisible, setIsVisible] = useState(true);
 
+    const { fetchWallets } = userInfo();
+
 
     // List of availabe walllet
 
-    const wallet = [
+    const wallet = fetchWallets(); // fetch wallets using the Context API (UserInfoContext)
+    /* [
         {
             id: 1,
             name: "NGR Balance",
@@ -43,28 +44,28 @@ export default function Home() {
             name: "Pound Balance",
             balance: "7900"
         },
-    ]
+    ] */
 
 
     // func to toggle wallet balance
 
     const toggleVisibility = () => {
         setIsVisible(!isVisible);
-      };
+    };
 
-      const [activeWallet, setActiveWallet] = useState(wallet[0])
+    const [activeWallet, setActiveWallet] = useState(wallet === null ? null : wallet[0])
 
-      const flatListRef = useRef(null);
+    const flatListRef = useRef(null);
 
-      const handleScroll = (event) => {
-          const offsetX = event.nativeEvent.contentOffset.x;
-          const index = Math.round(offsetX / absoluteWidth);
-          setActiveWallet(wallet[index]);
-      };
+    const handleScroll = (event) => {
+        const offsetX = event.nativeEvent.contentOffset.x;
+        const index = Math.round(offsetX / absoluteWidth);
+        setActiveWallet(wallet[index]);
+    };
 
     const renderItem = ({ item }) => {
-        return(
-            <TouchableOpacity style={styles.serviceMainContainer} onPress={() => navigation.navigate(item.screen) } >
+        return (
+            <TouchableOpacity style={styles.serviceMainContainer} onPress={() => navigation.navigate(item.screen)} >
                 <View style={styles.serviceContainer}>
                     {item.iconFamily === 'Ionicons' && <Ionicons name={item.icon} size={25} />}
                     <Text style={styles.serviceText}> {item.name} </Text>
@@ -73,7 +74,7 @@ export default function Home() {
         )
     }
 
-        // Assuming your screen width is 100%
+    // Assuming your screen width is 100%
     const screenWidth = 100;
 
     // Convert wp(90) to an absolute width
@@ -83,88 +84,89 @@ export default function Home() {
 
     const getCurrencySymbol = (walletType) => {
         switch (walletType) {
-          case 'NGR Balance':
-            return '₦'; // Nigerian Naira
-          case 'Dollar Balance':
-            return '$'; // US Dollar
-          case 'Pound Balance':
-            return '£'; // British Pound
-          default:
-            return '';
+            case 'NGR Balance':
+                return '₦'; // Nigerian Naira
+            case 'Dollar Balance':
+                return '$'; // US Dollar
+            case 'Pound Balance':
+                return '£'; // British Pound
+            default:
+                return '';
         }
-      };
+    };
 
+    const { authState } = useAuth(); // get user data
 
-  return (
-    <SafeAreaView style={styles.root}>
-        <View style={styles.container}>
-            <View style={styles.header}>
-                <View style={styles.nameContainer}>
-                    <Text style={styles.welcomeText}> {"Welcome back"} </Text>
-                    <Text style={styles.name}> {"Olamide Oladele"} </Text>
+    return (
+        <SafeAreaView style={styles.root}>
+            <View style={styles.container}>
+                <View style={styles.header}>
+                    <View style={styles.nameContainer}>
+                        <Text style={styles.welcomeText}> {"Welcome back"} </Text>
+                        <Text style={styles.name}> {authState.userData.first_name} </Text> {/* first_name is a ref to fullnames  */}
+                    </View>
+                    <View>
+                        <MaterialCommunityIcons name="bell-outline" size={26} color="black" />
+                    </View>
                 </View>
-                <View>
-                    <MaterialCommunityIcons name="bell-outline" size={26} color="black"  />
-                </View>
-            </View>
-            <View style={styles.accountDetailsContainer}>
-                <FlatList 
-                    data={wallet}
-                    ref={flatListRef}
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                    pagingEnabled 
-                    snapToAlignment='center'
-                    onScroll={handleScroll}
-                    snapToInterval={absoluteWidth}
-                    renderItem={({ item, index }) => {
-                        return(
-                            <View style={styles.accountDetails}>
-                                <View style={styles.accountTypeInnerContainer} >
-                                    <Text style={styles.accountType}>{item.name} </Text>
-                                    {
-                                        isVisible? (
-                                            <Text style={styles.balance}>{getCurrencySymbol(activeWallet.name)} {activeWallet.balance} </Text>
-                                        ) : (
-                                            <Text style={styles.hidden}> ****</Text>
-                                        )
-                                    }
-                                </View>
-                                <TouchableOpacity onPress={ () => toggleVisibility()}>
-                                    <Feather name={isVisible? 'eye-off' : "eye"} size={25} />
-                                </TouchableOpacity>
-                            </View>
-                        )
-                    }}
-                />
-            </View>
-            <View style={styles.dotContainer}>
-                {
-                    wallet.map( (item,index) => {
-                        return(
-                         <View key={index} style={[styles.dot, index === activeWallet.id - 1 ? styles.activeDot : null]}>
-                         </View>  
-                        )
-                    })
-                }
-            </View>
-            <View style={styles.serviceRoot}>
-                <Text style={styles.label}>Quick Access</Text>
-                <View style={styles.serviceBg}>
+                <View style={styles.accountDetailsContainer}>
                     <FlatList
-                        data={service}
-                        renderItem={renderItem}
-                        numColumns={4}
-                        decelerationRate={"fast"}
-                        showsVerticalScrollIndicator={false}
-                        scrollEnabled={false}
+                        data={wallet}
+                        ref={flatListRef}
+                        horizontal
+                        showsHorizontalScrollIndicator={false}
+                        pagingEnabled
+                        snapToAlignment='center'
+                        onScroll={handleScroll}
+                        snapToInterval={absoluteWidth}
+                        renderItem={({ item, index }) => {
+                            return (
+                                <View style={styles.accountDetails}>
+                                    <View style={styles.accountTypeInnerContainer} >
+                                        <Text style={styles.accountType}>{item.name} </Text>
+                                        {
+                                            isVisible ? (
+                                                <Text style={styles.balance}>{getCurrencySymbol(activeWallet.name)} {activeWallet.balance} </Text>
+                                            ) : (
+                                                <Text style={styles.hidden}> ****</Text>
+                                            )
+                                        }
+                                    </View>
+                                    <TouchableOpacity onPress={() => toggleVisibility()}>
+                                        <Feather name={isVisible ? 'eye-off' : "eye"} size={25} />
+                                    </TouchableOpacity>
+                                </View>
+                            )
+                        }}
                     />
                 </View>
+                <View style={styles.dotContainer}>
+                    {
+                        wallet.map((item, index) => {
+                            return (
+                                <View key={index} style={[styles.dot, index === activeWallet.id - 1 ? styles.activeDot : null]}>
+                                </View>
+                            )
+                        })
+                    }
+                </View>
+                <View style={styles.serviceRoot}>
+                    <Text style={styles.label}>Quick Access</Text>
+                    <View style={styles.serviceBg}>
+                        <FlatList
+                            data={service}
+                            renderItem={renderItem}
+                            numColumns={4}
+                            decelerationRate={"fast"}
+                            showsVerticalScrollIndicator={false}
+                            scrollEnabled={false}
+                        />
+                    </View>
+                </View>
+                <ScrollView style={styles.history}>
+                    <TransactionHistory history={newUser} />
+                </ScrollView>
             </View>
-            <ScrollView style={styles.history}>
-                <TransactionHistory history={newUser} />
-            </ScrollView>
-        </View>
-    </SafeAreaView>
-  )
+        </SafeAreaView>
+    )
 }

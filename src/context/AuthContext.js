@@ -4,6 +4,7 @@ import React, { createContext, useState, useContext } from 'react';
 import axios from 'axios';
 
 import { apiUrl } from '../../expo-constants';
+import { Alert } from 'react-native';
 
 const AuthContext = createContext();
 
@@ -53,10 +54,14 @@ export const AuthProvider = ({ children }) => {
         } catch (error) {
             setAuthState(prevState => ({
                 ...prevState,
-                isLoading: false,
                 error: error.message,
-            }));            
+            }));
             navigation.navigate('Login');
+        } finally {
+            setAuthState({
+                ...prevState,
+                isLoading: false,
+            });
         }
     };
 
@@ -66,7 +71,7 @@ export const AuthProvider = ({ children }) => {
             userData: null,
             isLoading: false,
             error: null,
-        });        
+        });
         navigation.navigate('Login');
     };
 
@@ -100,11 +105,77 @@ export const AuthProvider = ({ children }) => {
                 isLoading: false,
                 error: error.message,
             }));
+        } finally {
+            setAuthState({
+                ...prevState,
+                isLoading: false,
+            });
+        }
+    };
+
+    const forgotPassword = async (email) => {
+
+        setAuthState(prevState => ({ ...prevState, isLoading: true, error: null }));
+
+        try {
+            console.log("Reset passwrod init...");
+            const response = await axios.post(apiUrl + '/api/v1/users/auth/reset-password/', JSON.stringify({ email }));
+            const data = await response.json();
+            console.log("Response received: " + data);
+            if (response.ok) {
+                Alert.alert('Password reset successfully!')
+                navigation.navigate('Login');
+            } else {
+                console.log("Response received. NOK!!");
+                throw new Error(data.message || 'Unable to Password reset link could not be sent, Please try again.');
+            }
+        } catch (error) {
+            console.log("Error occured. NOK!!");
+            setAuthState(prevState => ({
+                ...prevState,
+                error: error.message,
+            }));
+        } finally {
+            setAuthState({
+                ...prevState,
+                isLoading: false,
+            });
+        }
+    };
+    
+    const changePassword = async (password) => {
+
+        setAuthState(prevState => ({ ...prevState, isLoading: true, error: null }));
+
+        try {
+            console.log("Change passwrod init...");
+            const response = await axios.post(apiUrl + '/api/v1/users/auth/change-password/', JSON.stringify({ password }));
+            const data = await response.json();
+            console.log("Response received: " + data);
+            if (response.ok) {
+                Alert.alert('Password change successfully!')
+                return true;
+            } else {
+                console.log("Response received. NOK!!");
+                throw new Error(data.message || 'Unable to change password, Please try again.');
+            }
+        } catch (error) {
+            console.log("Error occured. NOK!!");
+            setAuthState(prevState => ({
+                ...prevState,
+                error: error.message,
+            }));
+            return false;
+        } finally {
+            setAuthState({
+                ...prevState,
+                isLoading: false,
+            });            
         }
     };
 
     return (
-        <AuthContext.Provider value={{ authState, login, logout, signup }}>
+        <AuthContext.Provider value={{ authState, login, logout, signup, forgotPassword, changePassword }}>
             {children}
         </AuthContext.Provider>
     );

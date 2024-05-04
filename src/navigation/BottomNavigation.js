@@ -15,10 +15,6 @@ const Tab = createBottomTabNavigator()
 
 export const BottomNav = () => {
 
-    const [fetchWallets] = userInfo();
-
-    fetchWallets();
-
     return (
         <Tab.Navigator
             screenOptions={{
