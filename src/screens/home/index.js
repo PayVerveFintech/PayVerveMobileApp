@@ -27,7 +27,25 @@ export default function Home() {
 
     // List of availabe walllet
 
-    const wallet = fetchWallets(); // fetch wallets using the Context API (UserInfoContext)
+    const wallet =  [];
+    //     [
+    //         {
+    //             id: 1,
+    //             name: "NGR Balance",
+    //             balance: "20000"
+    //         },
+    //         {
+    //             id: 2,
+    //             name: "Dollar Balance",
+    //             balance: "1000"
+    //         },
+    //         {
+    //             id: 3,
+    //             name: "Pound Balance",
+    //             balance: "7900"
+    //         },
+    // ]
+    ; // fetch wallets using the Context API (UserInfoContext)
     /* [
         {
             id: 1,
@@ -103,7 +121,7 @@ export default function Home() {
                 <View style={styles.header}>
                     <View style={styles.nameContainer}>
                         <Text style={styles.welcomeText}> {"Welcome back"} </Text>
-                        <Text style={styles.name}> {authState.userData.first_name} </Text> {/* first_name is a ref to fullnames  */}
+                        <Text style={styles.name}> {authState.userData.first_name} {/* first_name is a ref to fullnames  */} </Text>
                     </View>
                     <View>
                         <MaterialCommunityIcons name="bell-outline" size={26} color="black" />
@@ -141,14 +159,15 @@ export default function Home() {
                     />
                 </View>
                 <View style={styles.dotContainer}>
-                    {
+                    <Text style={[styles.dot, styles.activeDot]}> "Wallets go here..." </Text>
+                    {/* {wallet &&
                         wallet.map((item, index) => {
                             return (
                                 <View key={index} style={[styles.dot, index === activeWallet.id - 1 ? styles.activeDot : null]}>
                                 </View>
                             )
                         })
-                    }
+                    } */}
                 </View>
                 <View style={styles.serviceRoot}>
                     <Text style={styles.label}>Quick Access</Text>

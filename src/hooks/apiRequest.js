@@ -49,6 +49,7 @@ export const signIn = async (email, password) => {
 
     let res = await axios.post(apiUrl + '/api/v1/users/auth/sign-in/', payload);
 
+
     let data = res.data;
     console.log(data);
     return data;

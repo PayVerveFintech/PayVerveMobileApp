@@ -60,12 +60,12 @@ export default function TransferReview({ route }) {
         {
             <View style={styles.detailsContainer}>
                 <View>
-                    <Text style={styles.label}>To Olamide Oladele</Text>
+                    <Text style={styles.label}>To {accountName}</Text>
                     <Text  style={styles.label}> {"Wema Bank"} </Text>
                 </View>
                 <View>
                     <Text style={styles.positive}>Credit- {amount}</Text>
-                    <Text style={styles.number}> {"09152777025"} </Text>
+                    <Text style={styles.number}> {accountNumber} </Text>
                 </View>
             </View>
         }

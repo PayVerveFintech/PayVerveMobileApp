@@ -38,7 +38,7 @@ const SignUp1 = () => {
     //     }
     // }
 
-    const handleSignUp = (email, fullName, userName, password) => {
+    const handleSignUp = () => {
         signup(email, fullName, userName, password);
     }
 

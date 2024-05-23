@@ -10,7 +10,7 @@ const WalletScreen = () => {
     const navigation = useNavigation()
 
     const addWallet = () => {
-        navigation.navigate("Add a New Wallet")
+        navigation.navigate("AddNewWallet")
     }
 
     return (

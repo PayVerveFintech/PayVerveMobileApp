@@ -12,11 +12,9 @@ api.interceptors.request.use(
     // const token = 'your_auth_token'; // default auth code
     const token = AsyncStorage
 
-
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
-
     return config;
   },
   (error) => {
