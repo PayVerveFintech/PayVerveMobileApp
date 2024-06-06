@@ -82,6 +82,9 @@ export default function Home() {
     };
 
     const renderItem = ({ item }) => {
+        
+        // console.log('Logged in... Token: ' + authState.token);
+        
         return (
             <TouchableOpacity style={styles.serviceMainContainer} onPress={() => navigation.navigate(item.screen)} >
                 <View style={styles.serviceContainer}>

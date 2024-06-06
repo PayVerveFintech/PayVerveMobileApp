@@ -1,11 +1,13 @@
 // AuthContext.js
 
-import React, { createContext, useContext, useState } from 'react';
 import axios from 'axios';
+import React, { createContext, useContext, useState } from 'react';
 
-import { apiUrl } from '../../expo-constants';
-import { Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { Alert } from 'react-native';
+import { apiUrl } from '../../expo-constants';
+
+
 
 const AuthContext = createContext();
 
@@ -14,6 +16,7 @@ const initialState = {
 }
 
 export const useAuth = () => useContext(AuthContext);
+
 
 export const AuthProvider = ({ children }) => {
     const [authState, setAuthState] = useState(initialState);
@@ -37,8 +40,7 @@ export const AuthProvider = ({ children }) => {
                 setAuthState({
                     ...authState, token: data.firebase_access_token, userData: data.user_data, isLoading: false,
                 });
-                console.log('Logged in... Token: ' + authState.token);
-                Alert.alert('Logged in successfully!')
+                Alert.alert('Logged in successfully!');
                 navigation.navigate('AppHome');
             }
         } catch (error) {

@@ -5,6 +5,10 @@ import axios from "axios";
 
 const InfoContext = createContext();
 
+const initialState = {
+    wallets: [], beneficiaries: [], point: 5500, isLoading: false, error: null
+}
+
 export const userInfo = () => useContext(InfoContext);
 
 export const InfoProvider = ({children}) => {
@@ -14,16 +18,14 @@ export const InfoProvider = ({children}) => {
     // import authSate for user data
     const {authState} = useAuth();
 
-    const [infoState, setInfoState] = useState({
-        wallets: [], beneficiaries: [], point: 5500, isLoading: false, error: null
-    })
+    const [infoState, setInfoState] = useState(initialState);
 
     const fetchWallets = async () => {
         setInfoState({
             ...infoState, isLoading: true
         })
         try {
-            const response = await axios.post(apiUrl + `/api/v1/wallets/${authState.user_data.id}/`);
+            const response = await axios.post(apiUrl + `/api/v1/wallets/${authState.userData.id}/`);
             const data = await response.data;
             console.log(data);
             setInfoState({

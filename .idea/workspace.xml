@@ -5,22 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a86759bc-5623-444e-b870-a822ca735f93" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PayVerveMobileApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PayVerveMobileApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/app-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/expo-constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/expo-constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/context/AuthContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/AuthContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/context/userInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/userInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/apiRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/apiRequest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/interceptor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/interceptor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/AddNewWallet/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AddNewWallet/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/ProofOfAddress/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ProofOfAddress/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/WalletScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/WalletScreen/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/transferReview/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/transferReview/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +54,7 @@
 
   }
 }</component>
-  <component name="RunManager" selected="npm.android">
+  <component name="RunManager">
     <configuration name="dev" type="ReactNative" factoryName="React Native">
       <node-interpreter value="project" />
       <react-native value="$PROJECT_DIR$/node_modules/react-native" />
@@ -99,11 +87,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="npm.start" />
-      <item itemvalue="npm.android" />
-      <item itemvalue="React Native.dev" />
-    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -121,6 +104,7 @@
       <workItem from="1715896966063" duration="1040000" />
       <workItem from="1715943268408" duration="5206000" />
       <workItem from="1716459967041" duration="621000" />
+      <workItem from="1717189249927" duration="74000" />
     </task>
     <servers />
   </component>
