@@ -73,7 +73,7 @@ import { Color } from "../../color/Color";
 
 export const styles = StyleSheet.create({
     root: {
-        flex: 1,
+        flex: 0.7,
         backgroundColor: Color.white
     },
     logo: {
