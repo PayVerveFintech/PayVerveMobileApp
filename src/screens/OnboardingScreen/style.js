@@ -111,7 +111,7 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         marginHorizontal: wp(3),
-        marginTop: hp(2)
+        marginTop: hp(1)
     },
     btnContainer: {
         backgroundColor: 'linear-gradient(180deg, rgba(33, 150, 243, 0.80) -151.46%, rgba(255, 255, 255, 0.40) 77.19%)',
