@@ -116,12 +116,12 @@ export const styles = StyleSheet.create({
     btnContainer: {
         backgroundColor: 'linear-gradient(180deg, rgba(33, 150, 243, 0.80) -151.46%, rgba(255, 255, 255, 0.40) 77.19%)',
         paddingHorizontal: wp(15),
-        paddingVertical: hp(2.5),
+        paddingVertical: hp(2.0),
         borderRadius: 10
     },
     btnContainer2: {
         paddingHorizontal: wp(15),
-        paddingVertical: hp(2.5),
+        paddingVertical: hp(2.0),
         borderRadius: 10,
         borderWidth: 1,
         borderColor: 'linear-gradient(180deg, rgba(33, 150, 243, 0.80) -151.46%, rgba(255, 255, 255, 0.40) 77.19%)',
