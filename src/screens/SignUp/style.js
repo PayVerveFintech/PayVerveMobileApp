@@ -42,7 +42,6 @@ export const styles = StyleSheet.create({
         justifyContent: "center",
         alignSelf: "center",
         marginTop: 40,
-        marginBottom: 10
     },
 
     textInput: {

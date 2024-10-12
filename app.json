@@ -7,7 +7,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/chartFrame.png",
+      "image": "./assets/splash.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -22,15 +22,19 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.payverve.PayVerveMobileApp"
+      "versionCode": 20,
+      "package": "com.thefantastictechfactory.payvervemobile"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "0b98f2cb-dfc5-4e30-9508-442f4df07cad"
+        "projectId": "6d6754f3-048d-4c88-aa77-bb1327345bca"
       }
-    }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }

@@ -21,7 +21,9 @@ const Login = () => {
     // handling functions
     const handleLogin = () => {
 
-        login(userName, password);
+        navigation.navigate('AppHome')
+
+        // login(userName, password);
 
         // if (userName === CORRECT_USERNAME && password === CORRECT_PASSWORD) {
         //     navigation.navigate('AppHome')
@@ -60,7 +62,7 @@ const Login = () => {
                     <Text style={Styles.loginForgetPSW_txt}
                         onPress={() => navigation.navigate('ForgetPassword')}
                     >
-                        Forgetten Password?
+                        Forgot Password?
                     </Text>
 
                     {/* login function */}

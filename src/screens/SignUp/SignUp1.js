@@ -39,11 +39,14 @@ const SignUp1 = () => {
     // }
 
     const handleSignUp = () => {
-        signup(email, fullName, userName, password);
+
+        navigation.navigate('AppHome')
+        //signup(email, fullName, userName, password);
+      
     }
 
     return (
-        <View style={styles.signupContainer}>
+        <ScrollView style={styles.signupContainer}>
             <Text style={styles.header_Text_1}>SignUp</Text>
 
             <Text style={styles.header_Text_2}>
@@ -54,7 +57,7 @@ const SignUp1 = () => {
             <KeyboardAvoidingView
                 behavior={Platform.OS === 'ios' ? 'padding' : null}
             >
-                <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+                <View contentContainerStyle={{ flexGrow: 1 }}>
                     <View style={styles.signUpcontainer1}>
                         {/* Email */}
                         <Text style={styles.signupTexts}>Email</Text>
@@ -113,7 +116,7 @@ const SignUp1 = () => {
 
                             <TouchableOpacity
                                 style={styles.signupButton}
-                                // onPress={() => navigation.navigate('KYCVerify')}
+                                //onPress={() => navigation.navigate('KYCVerify')}
                                 onPress={handleSignUp}
                             >
                                 <Text style={styles.touchableOpacityText}>
@@ -140,9 +143,9 @@ const SignUp1 = () => {
                         </Text>
 
                     </View>
-                </ScrollView>
+                </View>
             </KeyboardAvoidingView>
-        </View>
+        </ScrollView>
     );
 };
 

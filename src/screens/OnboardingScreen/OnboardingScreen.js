@@ -81,7 +81,7 @@
 
 
 
-import { SafeAreaView, View, Text, Image, TouchableOpacity } from "react-native";
+import { SafeAreaView, View, Text, Image, TouchableOpacity, ScrollView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import { styles } from "./style"
