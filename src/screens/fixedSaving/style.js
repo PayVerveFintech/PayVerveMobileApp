@@ -12,14 +12,14 @@ export const styles = StyleSheet.create({
     header: {
         flexDirection: "row",
         alignItems: "center",
-        marginTop: hp(3)
+        marginTop: hp(5)
     },
     icon: {
         marginLeft: wp(3),
         marginRight: wp(25)
     },
     title: {
-        fontSize: hp(2.8),
+        fontSize: 20,
         fontWeight: "700"
     },
     titleContainer: {
@@ -30,7 +30,7 @@ export const styles = StyleSheet.create({
         marginTop: hp(5)
     },
     titleText: {
-        fontSize: hp(2.5),
+        fontSize: 16,
         lineHeight: hp(4)
     },
     input: {

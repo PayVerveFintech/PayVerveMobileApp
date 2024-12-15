@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
         backgroundColor: Color.white,
     },
     header: {
-        marginTop: hp(2.8),
+        marginTop: hp(5),
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center"
@@ -22,34 +22,35 @@ export const styles = StyleSheet.create({
         paddingHorizontal: wp(3)
     },
     welcomeText: {
-        fontSize: hp(3.8),
+        fontSize: 24,
         fontWeight: "700",
         color: Color.black
     },
     name: {
-        fontSize: hp(3),
+        fontSize: 18,
         fontWeight: "400",
         color: Color.gray
     },
     accountDetailsContainer: {
         backgroundColor: Color.primary,
-        height: hp(20),
+        height: hp(15),
         borderRadius: 8,
         marginTop: hp(3),
+        marginHorizontal: wp(1)
     },
     accountDetails: {
-        width: wp(94),
+        width: wp(100),
         flexDirection: "row",
         justifyContent: "space-around",
-        alignItems: "center"
+        alignItems: "center",
     },
     accountType: {
-        fontSize: hp(3.2),
-        fontWeight: "400"
+        fontSize: 18,
+        fontWeight: "500"
     },
     balance: {
         fontWeight: "700",
-        fontSize: hp(3.5),
+        fontSize: 18,
         marginTop: hp(2)
     },
     serviceRoot: {
@@ -57,11 +58,11 @@ export const styles = StyleSheet.create({
     },
     label: {
         fontWeight: "700",
-        fontSize: hp(2.7),
+        fontSize: 18,
         marginBottom: hp(2)
     },
     serviceText: {
-        fontSize: hp(2.2),
+        fontSize: 14,
         fontWeight: "400",
         marginTop: hp(0.5)
     },
@@ -79,7 +80,7 @@ export const styles = StyleSheet.create({
         marginTop: hp(3)
     },
     hidden: {
-        fontSize: hp(4),
+        fontSize: 16,
         marginTop: hp(2)
     },
     dot: {

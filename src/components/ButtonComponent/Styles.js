@@ -1,4 +1,8 @@
 import { StyleSheet } from "react-native";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
+
+
+
 
 export const styles = StyleSheet.create({
     btn_wrapper: {
@@ -7,8 +11,8 @@ export const styles = StyleSheet.create({
     },
 
     btn: {
-        width: 200,
-        height: 40,
+        width: wp(90),
+        height: hp(6.5),
         paddingHorizontal: 12,
         paddingVertical: 10,
         alignItems: "center",

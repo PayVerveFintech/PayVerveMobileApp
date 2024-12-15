@@ -11,121 +11,142 @@ import {
 } from 'react-native';
 import { styles } from './style';
 import { useNavigation } from '@react-navigation/native';
-
+import CustomTextInput from '../../components/customTextInput';
+import { Button } from '../../components/ButtonComponent/Button';
 
 const SignUp1 = () => {
-    // removed navigation from props and implemented navigation from the useNavigation hook
-    const navigation = useNavigation();
 
-    const baseText = [
-        "Creating an account with PayVerve is completely ",
-        "Already have an account? ",
-    ];
-    const appendText = ["FREE", "Log in"];
+    const navigation = useNavigation();
     const [email, onChangeEmail] = useState('');
     const [fullName, onChangeFullName] = useState('');
     const [userName, onChangeUserName] = useState('');
     const [password, onChangePassword] = useState('');
     const [confirmPassword, onChangeConfirmPassword] = useState('');
 
-    // const handlePasswordMatch =() => {
-    //     if (password.value == confirmPassword.value) {
-    //         navigation.navigate('KYCVerify')
-    //     } else {
-    //         Alert.alert('Password Mismatch')
-    //     }
-    // }
-    
+    // State for error messages
+    const [errors, setErrors] = useState({});
+
+    const validateInputs = () => {
+        let valid = true;
+        const newErrors = {};
+
+        // Email validation
+        if (!email.trim()) {
+            valid = false;
+            newErrors.email = "Email is required.";
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
+            valid = false;
+            newErrors.email = "Enter a valid email address.";
+        }
+
+        // Full Name validation
+        if (!fullName.trim()) {
+            valid = false;
+            newErrors.fullName = "Full Name is required.";
+        }
+
+        // Username validation
+        if (!userName.trim()) {
+            valid = false;
+            newErrors.userName = "Username is required.";
+        }
+
+        // Password validation
+        if (!password.trim()) {
+            valid = false;
+            newErrors.password = "Password is required.";
+        } else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}/.test(password)) {
+            valid = false;
+            newErrors.password = "Password must contain uppercase, lowercase, number, and a special character.";
+        }
+
+        // Confirm Password validation
+        if (!confirmPassword.trim()) {
+            valid = false;
+            newErrors.confirmPassword = "Confirm your password.";
+        } else if (confirmPassword !== password) {
+            valid = false;
+            newErrors.confirmPassword = "Passwords do not match.";
+        }
+
+        setErrors(newErrors);
+        return valid;
+    };
+
+    const handleSignUp = () => {
+        if (validateInputs()) {
+            // Proceed with sign-up logic
+            Alert.alert("Sign-Up Successful!");
+        }
+    };
+
     return (
         <View style={styles.signupContainer}>
-            <Text style={styles.header_Text_1}>SignUp</Text>
-
-            <Text style={styles.header_Text_2}>
-                {baseText[0]}
-                <Text style={{fontWeight: 'bold'}}>{appendText[0]}</Text>
-            </Text>
-
+            <Text style={styles.signUp}>SignUp</Text>
+            <View style={{alignItems: "center", justifyContent: "center"}}>
+            <Text style={styles.desc}>Creating an account with PayVerve is {"\n"} completely <Text style={{fontWeight: "900", fontSize: 18}}>Free</Text> </Text>
+            </View>
             <KeyboardAvoidingView
                 behavior={Platform.OS === 'ios' ? 'padding' : null}
+                style={{flex: 1}}
             >
-                <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+                <ScrollView 
+                    showsVerticalScrollIndicator={false}
+                >
                     <View style={styles.signUpcontainer1}>
-                        {/* Email */}
-                        <Text style={styles.signupTexts}>Email</Text>
-                        <TextInput
+                        <CustomTextInput
+                            placeHolder={"Email"}
                             value={email}
-                            placeholder="Email"
-                            onChangeText={onChangeEmail}
-                            style={styles.textInput}
+                            setValue={onChangeEmail}
+                            title={"Email"}
                         />
+                        {errors.email && <Text style={{ color: 'red', fontSize: 11 }}>{errors.email}</Text>}
 
-                        {/* Full name */}
-                        <Text style={styles.signupTexts}>Full Name</Text>
-                        <TextInput
+                        <CustomTextInput
+                            placeHolder={"eg Olamide"}
+                            title={"Full Name"}
                             value={fullName}
-                            placeholder="Full name"
-                            onChangeText={onChangeFullName}
-                            style={styles.textInput}
+                            setValue={onChangeFullName}
                         />
+                        {errors.fullName && <Text style={{ color: 'red', fontSize: 11 }}>{errors.fullName}</Text>}
 
-                        {/* User name */}
-                        <Text style={styles.signupTexts}>Username</Text>
-                        <TextInput
+                        <CustomTextInput
+                            placeHolder={"username"}
+                            title={"UserName"}
                             value={userName}
-                            placeholder="Username"
-                            onChangeText={onChangeUserName}
-                            style={styles.textInput}
+                            setValue={onChangeUserName}
                         />
+                        {errors.userName && <Text style={{ color: 'red', fontSize: 11 }}>{errors.userName}</Text>}
 
-                        {/* Password */}
-                        <Text style={styles.signupTexts}>Password</Text>
-                        <TextInput
+                        <CustomTextInput
+                            placeHolder={"password"}
+                            title={"Password"}
                             value={password}
-                            secureTextEntry
-                            placeholder="Password"
-                            onChangeText={onChangePassword}
-                            style={styles.textInput}
+                            setValue={onChangePassword}
                         />
+                        {errors.password && <Text style={{ color: 'red', fontSize: 11 }}>{errors.password}</Text>}
 
-                        <Text>
-                            Your password should have a upperCase, lowerCase letter, number and a special characters.
+                        <Text style={{ fontSize: 11, marginBottom: 5, marginTop: 5 }}>
+                            Your password should have an uppercase, lowercase letter, number and {"\n"}a special character.
                         </Text>
-
-                        {/* Confirm password */}
-                        <Text style={styles.signupTexts}>Confirm Password</Text>
-                        <TextInput
+                        
+                        <CustomTextInput
+                            placeHolder={"confirm password"}
+                            title={"Confirm Password"}
                             value={confirmPassword}
-                            secureTextEntry
-                            placeholder="Confirm Password"
-                            onChangeText={onChangeConfirmPassword}
-                            style={styles.textInput}
+                            setValue={onChangeConfirmPassword}
                         />
+                        {errors.confirmPassword && <Text style={{ color: 'red', fontSize: 11 }}>{errors.confirmPassword}</Text>}
 
-                        <TouchableOpacity 
-                            style={styles.signupButton} 
-                            onPress={() => navigation.navigate('KYCVerify')}
+                        <Button
+                            btn_text={"Signup"}
+                            onPress={handleSignUp}
+                        />
+                        <Text 
+                            style={{ fontSize: 12, alignSelf: "center", marginTop: 5 }}
                         >
-                            <Text style={styles.touchableOpacityText}>
-                                SignUp
-                            </Text>
-                        </TouchableOpacity>
-
-                        {/* This is temporary */}
-                        {/* <TouchableOpacity 
-                            style={styles.signupButton} 
-                            onPress={() => navigation.navigate('Finance')}
-                        >
-                            <Text style={styles.touchableOpacityText}>
-                                Finance
-                            </Text>
-                        </TouchableOpacity> */}
-                        {/* commented the above compponent out */}
-
-                        <Text style={{alignSelf: 'center', fontSize: 14}} onPress={() => navigation.navigate('Login') }>
-                            {baseText[1]}
-                            <Text style={{color: 'blue', fontSize: 16, fontWeight: 'bold', textDecorationLine: 'underline'}}>{appendText[1]}</Text>
+                            Already have an account? <Text onPress={() => navigation.navigate("Login")} style={{ color: "#2196F3", fontWeight: "900" }}>Login</Text> 
                         </Text>
-
                     </View>
                 </ScrollView>
             </KeyboardAvoidingView>

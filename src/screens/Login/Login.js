@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Alert, Keyboard, TouchableWithoutFeedback } from 'react-native';
-import { styles } from '../../styles/styles';
-import Styles from './styles';
+import { View, Text, TextInput, TouchableOpacity, Alert, Keyboard, TouchableWithoutFeedback, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import CustomTextInput from '../../components/customTextInput';
+import { Button } from '../../components/ButtonComponent/Button';
+
+
+
+
 
 const CORRECT_USERNAME = 'admin';
 const CORRECT_PASSWORD = 'admin'
@@ -26,57 +31,49 @@ const Login = () => {
     };
 
     return (
-        <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-            <View style={styles.container}>
-                <Text style={styles.header_Text_1}>Login</Text>
-                <Text style={styles.header_Text_2}>
+        <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()} >
+            <View style={styles.root}>
+                <Text style={styles.title}>Login</Text>
+                <Text style={styles.text}>
                     Let's transform the way you manage, invest, and expand your financial resources.
                 </Text>
 
-                <View style={styles.signUpcontainer1}>
-                    <Text style={styles.signupTexts}>Username</Text>
-                    <TextInput
+                <View>
+                   <View style={styles.inputContainer}>
+                    <CustomTextInput
+                        title={"Username"}
+                        placeHolder={"eg Olamide"}
                         value={userName}
-                        placeholder="username"
-                        style={styles.textInput}
-                        onChangeText={onChangeUserName}
+                        setValue={onChangeUserName}
                     />
-
-                    <Text style={styles.signupTexts}>Password</Text>
-                    <TextInput
-                        secureTextEntry
-                        value={password}
-                        placeholder="password"
-                        style={styles.textInput}
-                        onChangeText={onChangePassword}
+                    <CustomTextInput
+                        title={"Password"}
+                        placeHolder={"password"}
+                         value={password}
+                         setValue={onChangePassword}
                     />
-                    
+                   </View>
                     {/* forget password button */}
-                    <Text style={Styles.loginForgetPSW_txt}
+                    <Text 
+                        style={styles.forgot}
                         onPress={() => navigation.navigate('ForgetPassword')}
                     >
                         Forgetten Password?
                     </Text>
 
                     {/* login function */}
-                    <TouchableOpacity
-                        style={styles.signupButton} 
-                        onPress={handleLogin}
-                        // onPress={ () => navigation.navigate("AppHome")}
-                    >
-                        <Text style={styles.touchableOpacityText}>
-                            Login
-                        </Text>
-                    </TouchableOpacity>
+                    <Button
+                        btn_text={"Login"}
+                        onPress={() => navigation.navigate("AppHome")}
+                    />
                     
                     {/* sign up function */}
                     <Text
-                        style={Styles.loginSignUp_outer_txt}
+                        style={styles.signUp}
                     >
                         Don't have an account?{' '}
                         <Text 
-                            onPress={() => navigation.navigate('SignUp1')} 
-                            style={Styles.loginSignUp_inner_txt}
+                            onPress={() => navigation.navigate('SignUp')} 
                         > 
                             Sign Up
                         </Text>
@@ -88,3 +85,37 @@ const Login = () => {
 };
 
 export default Login;
+
+
+const styles = StyleSheet.create({
+    root: {
+        flex: 1,
+        backgroundColor: "#fff",
+        paddingHorizontal: wp(3),
+    paddingTop: hp(10)
+    },
+    title: {
+        fontSize: 20,
+        fontWeight: "900",
+        alignSelf: "center",
+        marginBottom: hp(5)
+    },
+    text: {
+        fontSize: 16,
+        fontWeight: "500",
+        alignSelf: "center"
+    },
+    forgot: {
+        alignSelf: "flex-end",
+        paddingRight: wp(2)
+    },
+    signUp: {
+        marginTop: hp(3),
+        alignSelf: "center"
+    },
+    inputContainer: {
+        marginTop: hp(5),
+        paddingHorizontal: wp(2),
+        marginBottom: hp(5)
+    }
+})

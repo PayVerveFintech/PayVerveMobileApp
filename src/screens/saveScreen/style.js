@@ -14,39 +14,38 @@ export const styles = StyleSheet.create({
     header:{
         flexDirection: "row",
         alignItems: "center",
-        paddingTop: hp(3)
+        paddingTop: hp(5)
     },
     iconContainer: {
-        paddingLeft: wp(3),
-        marginRight: wp(28)
+        marginRight: wp(37)
     },
     title: {
-        fontSize: hp(4),
+        fontSize: 20,
         fontWeight: "600"
     },
     saveContainer: {
         flexDirection: "row",
-        height: hp(18),
+        height: hp(15),
         backgroundColor: "#f5f5f5",
-        marginVertical: hp(1),
+        marginVertical: hp(2),
         borderRadius: 15,
         alignItems: "center",
         justifyContent: "center"
     },
     saveTitle: {
-        fontSize: hp(2.7),
+        fontSize: 18,
         fontWeight: "700",
         marginBottom: hp(1)
     },
     saveDesc: {
-        fontSize: hp(2.4),
-        fontWeight: "500",
-        lineHeight: 24,
+        fontSize: 17,
+        fontWeight: "400",
+        lineHeight: 22,
         paddingRight: wp(2)
     },
    image: {
-    width: 30,
-    height: 30,
+    width: 25,
+    height: 25,
     marginHorizontal:hp(3)
    },
    contentContainer: {

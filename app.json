@@ -4,10 +4,10 @@
     "slug": "PayVerveMobileApp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/payverve.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/chartFrame.png",
+      "image": "./assets/payverve.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,7 +19,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/payverve.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.olamide00.PayVerveMobileApp"
@@ -28,9 +28,6 @@
       "favicon": "./assets/favicon.png"
     },
     "extra": {
-      "eas": {
-        "projectId": "426d6926-ec4b-4ec7-96cd-3a3843d799c4"
-      }
     }
   }
 }

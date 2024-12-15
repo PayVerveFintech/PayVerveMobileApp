@@ -41,7 +41,7 @@ export default function FixedSaving() {
             <Text style={styles.title}>Fixed Saving</Text>
         </View>
         <View style={styles.titleContainer}>
-            <Text style={styles.titleText}>Resist temptation, and take comfort in the certainty of saving for a promising future.</Text>
+            <Text style={styles.titleText}>Resist temptation, and take comfort in the certainty of {"\n"}saving for a promising future.</Text>
         </View>
         <ScrollView 
             style={styles.input}

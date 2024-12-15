@@ -20,22 +20,22 @@ export const styles = StyleSheet.create({
         flexDirection: "row"
     },
     historyLabel: {
-        fontSize: hp(2.8),
+        fontSize: 16,
         fontWeight: "700",
         marginBottom: hp(0)
     },
     date: {
-        fontSize: hp(2.4),
+        fontSize: 13,
         fontWeight: "400",
         color: Color.gray,
         marginBottom: hp(2),
-        marginTop: hp(3)
+        marginTop: hp(2)
     },
     icon: {
         marginRight: wp(3)
     },
     label: {
-        fontSize: hp(2.4),
+        fontSize: 13,
         fontWeight: "400"
     },
     transactionDetailsContainer: {
@@ -44,7 +44,7 @@ export const styles = StyleSheet.create({
     name: {
 
         fontWeight: "500",
-        fontSize: hp(2.7)
+        fontSize: 15
     },
     amountContainer: {
         justifyContent: "center",
@@ -52,25 +52,26 @@ export const styles = StyleSheet.create({
     },
     amount: {
         color: Color.red,
-        fontSize: hp(2.4),
+        fontSize: 15,
         fontWeight: "500"
     },
     transactionType: {
         color: Color.red,
-        fontSize: hp(2.2),
+        fontSize: 13,
         fontWeight: "400"
     },
     noHistoryContainer: {
-        marginTop: hp(10),
+        marginTop: hp(5),
         alignItems: "center",
         justifyContent: "center"
-    },noHistoryLabel: {
-        fontSize: hp(2.8),
+    },
+    noHistoryLabel: {
+        fontSize: 18,
         fontWeight: "700",
         marginBottom: hp(2)
     },
     noHistory: {
-        fontSize: hp(2.4),
+        fontSize: 14,
         fontWeight: "400"
     }
 })

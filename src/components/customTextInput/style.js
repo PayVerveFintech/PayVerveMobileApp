@@ -8,19 +8,19 @@ import { Color } from "../../color/Color";
 
 export const styles = StyleSheet.create({
     inputContainer: {
-       marginVertical: hp(2)
+       marginVertical: hp(1)
     },
     input: {
         borderWidth: 1,
-        height: hp(7),
-        borderRadius: 4,
+        height: hp(6.5),
+        borderRadius: 10,
         borderColor: Color.gray,
         paddingLeft: wp(5)
     },
     title: {
-        fontSize: hp(2.5),
+        fontSize: 16,
         fontWeight: "500",
-        marginBottom: hp(1.2)
+        marginBottom: hp(1)
     },
 
 })

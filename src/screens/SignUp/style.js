@@ -1,32 +1,29 @@
 import { StyleSheet } from "react-native"
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
+
+
+
 
 export const styles = StyleSheet.create({
     signupContainer: {
         flex: 1,
         backgroundColor: 'white',
-        marginTop: 15
+        paddingTop: hp(5),
+        paddingHorizontal: wp(3)
     },
-
-    header_Text_1: {
-        fontSize: 40,
-        paddingTop: 50,
-        alignSelf: 'center',
-        fontWeight: 'bold'
+    signUp: {
+        fontSize: 18,
+        fontWeight: "900",
+        alignSelf: "center"
     },
-
-    header_Text_2: {
-        fontSize: 20,
-        padding: 40,
-        paddingTop: 20,
-        alignSelf: 'center',
-        textAlign: 'center',
+    desc: {
+        marginTop: hp(1),
+        fontSize: 16,
+        fontWeight: "500",
+        textAlign: "center"
     },
-
     signUpcontainer1: {
-        alignContent: 'center',
-        paddingLeft: 20,
-        paddingBottom: '100%',
-        marginTop: 40
+        flex: 1
     },
 
     signupTexts: {
